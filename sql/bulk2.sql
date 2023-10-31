@@ -1,5 +1,5 @@
 BULK INSERT ARTIST
-FROM 'C:\Users\Ja\Downloads\HD\Zad2\DataGenerator\Data\artists2.csv'
+FROM 'C:\Users\Ja\Downloads\HD\Spotify-Data-Warehouse\DataGenerator\Data\artists2.csv'
 WITH (
     FIRSTROW = 2
     , FIELDTERMINATOR = ','
@@ -8,7 +8,7 @@ WITH (
     );
 
 BULK INSERT CUSTOMER
-FROM 'C:\Users\Ja\Downloads\HD\Zad2\DataGenerator\Data\customers2.csv'
+FROM 'C:\Users\Ja\Downloads\HD\Spotify-Data-Warehouse\DataGenerator\Data\customers2.csv'
 WITH (
     FIRSTROW = 2
     , FIELDTERMINATOR = ','
@@ -17,7 +17,7 @@ WITH (
     );
 
 BULK INSERT ALBUM
-FROM 'C:\Users\Ja\Downloads\HD\Zad2\DataGenerator\Data\albums2.csv'
+FROM 'C:\Users\Ja\Downloads\HD\Spotify-Data-Warehouse\DataGenerator\Data\albums2.csv'
 WITH (
     FIRSTROW = 2
     , FIELDTERMINATOR = ','
@@ -26,7 +26,7 @@ WITH (
     );
 
 BULK INSERT TRACK
-FROM 'C:\Users\Ja\Downloads\HD\Zad2\DataGenerator\Data\tracks2.csv'
+FROM 'C:\Users\Ja\Downloads\HD\Spotify-Data-Warehouse\DataGenerator\Data\tracks2.csv'
 WITH (
     FIRSTROW = 2
     , FIELDTERMINATOR = ','
@@ -35,7 +35,7 @@ WITH (
     );
 
 BULK INSERT PLAYLIST
-FROM 'C:\Users\Ja\Downloads\HD\Zad2\DataGenerator\Data\playlists2.csv'
+FROM 'C:\Users\Ja\Downloads\HD\Spotify-Data-Warehouse\DataGenerator\Data\playlists2.csv'
 WITH (
     FIRSTROW = 2
     , FIELDTERMINATOR = ','
@@ -44,7 +44,7 @@ WITH (
     );
 
 BULK INSERT TempPlaylistTrack
-FROM 'C:\Users\Ja\Downloads\HD\Zad2\DataGenerator\Data\playlistTracks2.csv'
+FROM 'C:\Users\Ja\Downloads\HD\Spotify-Data-Warehouse\DataGenerator\Data\playlistTracks2.csv'
 WITH (
     FIRSTROW = 2
     , FIELDTERMINATOR = ','
@@ -64,7 +64,7 @@ WHERE NOT EXISTS (
 TRUNCATE TABLE TempPlaylistTrack;
 
 BULK INSERT PLAYBACK
-FROM 'C:\Users\Ja\Downloads\HD\Zad2\DataGenerator\Data\playbacks2.csv'
+FROM 'C:\Users\Ja\Downloads\HD\Spotify-Data-Warehouse\DataGenerator\Data\playbacks2.csv'
 WITH (
     FIRSTROW = 2
     , FIELDTERMINATOR = ';'
