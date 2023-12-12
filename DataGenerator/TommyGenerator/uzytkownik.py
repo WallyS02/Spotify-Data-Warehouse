@@ -13,9 +13,10 @@ ostatnie_logowanie = []
 ilosc_dni_premium = []
 najczestrze_urzadzenie = []
 
-liczba_rekordow = 350000
+liczba_rekordow = 3500
 
 gatunki_piosenek = ["Pop", "Rock", "Hip-hop", "R&B", "Jazz", "Reggae", "Country", "Metal", "Electro", "Indie"]
+device_types = ['mobile', 'desktop', 'web application']
 
 existing_ids = set()
 min = 1
@@ -40,7 +41,7 @@ def dadanie_rekorow(id,data_rejestracji,gatunek,liczba_utworow_biblioteka,liczba
         liczba_obserwujacych.append(random.randint(1, 10000))
         ostatnie_logowanie.append(fake.date_time_between(start_date='-2y', end_date='-1y'))
         ilosc_dni_premium.append(random.randint(0, 5 * 365))
-        najczestrze_urzadzenie.append(fake.company() )
+        najczestrze_urzadzenie.append(device_types[random.randint(0, len(device_types) - 1)])
 
     dane = {
         'ID': id,
@@ -70,9 +71,9 @@ def modyfikuj_losowe_elementy(df, wspolczynnik_modyfikacji):
         df.at[index, 'Liczba obserwujących'] = df.at[index, 'Liczba obserwujących'] + random.randint(1, 500) # dodana wartość obserwójaćych
         df.at[index, 'Ostatnie logowanie'] = fake.date_time_between(start_date='-1y', end_date='now') #nowa data
         df.at[index, 'Ilość dni Premium'] = df.at[index, 'Ilość dni Premium'] + random.randint(0, 365) #dodana ilość dni
-        df.at[index, 'Najczęstsze urządzenie'] = fake.company() #nowa urządzenie
+        df.at[index, 'Najczęstsze urządzenie'] = device_types[random.randint(0, len(device_types) - 1)] #nowa urządzenie
 
-nowe_rekordy = 50000
+nowe_rekordy = 3500
 liczba_rekordow += nowe_rekordy
 max += nowe_rekordy
 dane = dadanie_rekorow(id,data_rejestracji,gatunek,liczba_utworow_biblioteka,liczba_obserwujacych,ostatnie_logowanie,ilosc_dni_premium,najczestrze_urzadzenie, nowe_rekordy)

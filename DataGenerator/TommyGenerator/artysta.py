@@ -4,7 +4,7 @@ import random
 
 fake = Faker()
 
-liczba_rekordow = 250000
+liczba_rekordow = 2500
 
 id = []
 kraj = []
@@ -73,7 +73,7 @@ def modyfikuj_losowe_elementy(df, wspolczynnik_modyfikacji):
         df.at[index, 'Średnia długość'] = random.uniform(1,5)  # Nowa średnia długość
         df.at[index, 'Liczba godzin'] = df.at[index, 'Średnia długość'] * df.at[index, 'Liczba utworów']  # Aktualizacja liczby godzin
 
-nowe_rekordy = 70000
+nowe_rekordy = 2500
 liczba_rekordow += nowe_rekordy
 max += nowe_rekordy
 dane = dodawanie_rekordow(id,kraj,liczba_obserwujacych,liczba_utworow,gatunek,data_debiutu,liczba_godzin,srednia_dlugosc,nowe_rekordy)
