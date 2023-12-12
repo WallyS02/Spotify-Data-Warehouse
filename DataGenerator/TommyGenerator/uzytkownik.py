@@ -13,7 +13,7 @@ ostatnie_logowanie = []
 ilosc_dni_premium = []
 najczestrze_urzadzenie = []
 
-liczba_rekordow = 200000
+liczba_rekordow = 350000
 
 gatunki_piosenek = ["Pop", "Rock", "Hip-hop", "R&B", "Jazz", "Reggae", "Country", "Metal", "Electro", "Indie"]
 

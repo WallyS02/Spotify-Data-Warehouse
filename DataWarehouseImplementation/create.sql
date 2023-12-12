@@ -8,7 +8,7 @@ CREATE TABLE Date (
     DayOfWeekNumber INT,
     WorkingDay VARCHAR(20),
     Vacation VARCHAR(20),
-    VacationType VARCHAR(20)
+    VacationType VARCHAR(100)
 );
 
 CREATE TABLE Time (
@@ -25,8 +25,8 @@ CREATE TABLE Artist (
     NameAndSurname VARCHAR(41),
     AgeCategory VARCHAR(20),
     Email VARCHAR(50),
-    PhoneNumber VARCHAR(20),
-    OriginCountry VARCHAR(20),
+    PhoneNumber VARCHAR(100),
+    OriginCountry VARCHAR(80),
     FollowerNumberCategory VARCHAR(20),
     SongQuantityCategory VARCHAR(20),
     MusicGenre VARCHAR(20),
@@ -38,22 +38,22 @@ CREATE TABLE Artist (
 
 CREATE TABLE Customer (
     ID INT IDENTITY(1,1) PRIMARY KEY,
-    NameAndSurname VARCHAR(41),
+    NameAndSurname VARCHAR(75),
     Login VARCHAR(20),
     LoginID INT,
     Subscription VARCHAR(9),
-    AgeCategory VARCHAR(20),
+    AgeCategory VARCHAR(75),
     Email VARCHAR(50),
-    PhoneNumber VARCHAR(20),
-    CustomerExperienceCategory VARCHAR(20),
-    PreferredMusicGenre VARCHAR(20),
-    PreferredDevice VARCHAR(20),
+    PhoneNumber VARCHAR(100),
+    CustomerExperienceCategory VARCHAR(75),
+    PreferredMusicGenre VARCHAR(75),
+    PreferredDevice VARCHAR(75),
     UpToDate BIT
 );
 
 CREATE TABLE Album (
     ID INT IDENTITY(1,1) PRIMARY KEY,
-    Title VARCHAR(20),
+    Title VARCHAR(75),
     DurationCategory VARCHAR(20),
     IDDate INT REFERENCES Date,
     IDArtist INT REFERENCES Artist
@@ -61,15 +61,15 @@ CREATE TABLE Album (
 
 CREATE TABLE Song (
     ID INT IDENTITY(1,1) PRIMARY KEY,
-    Title VARCHAR(20),
+    Title VARCHAR(75),
     NumberInAlbum INT,
     IDAlbum INT REFERENCES Album
 );
 
 CREATE TABLE Playlist (
     ID INT IDENTITY(1,1) PRIMARY KEY,
-    Name VARCHAR(20),
-    Privacy VARCHAR(20)
+    Name VARCHAR(75),
+    Privacy VARCHAR(50)
 );
 
 CREATE TABLE PlaylistSong (
@@ -88,7 +88,7 @@ CREATE TABLE PlaylistCreation (
 
 CREATE TABLE Junk (
     ID INT IDENTITY(1,1) PRIMARY KEY,
-    Device VARCHAR(20)
+    Device VARCHAR(75) UNIQUE
 );
 
 CREATE TABLE Playback (
@@ -99,7 +99,6 @@ CREATE TABLE Playback (
     IDCustomer INT REFERENCES Customer,
     IDJunk INT REFERENCES Junk,
     NumberOfSongsInLibrary INT,
-    NumberOfSongsInPrivateLibrary INT,
     NumberOfFollowedArtists INT,
     NumberOfDaysWithPremiumAccount INT,
     NumberOfHoursSinceLastLogin INT,

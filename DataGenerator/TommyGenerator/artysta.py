@@ -4,7 +4,7 @@ import random
 
 fake = Faker()
 
-liczba_rekordow = 280000
+liczba_rekordow = 250000
 
 id = []
 kraj = []
