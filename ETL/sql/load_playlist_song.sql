@@ -17,14 +17,22 @@ FETCH NEXT FROM playlist_song_cursor INTO @ID_P, @ID_T;
 
 WHILE @@FETCH_STATUS = 0
 BEGIN
-    INSERT INTO PlaylistSong (
-        IDPlaylist,
-        IDSong
+    IF NOT EXISTS (
+        SELECT 1
+        FROM PlaylistSong
+        WHERE IDPlaylist = @ID_P
+        AND IDSong = @ID_T
     )
-    VALUES (
-        @ID_P,
-        @ID_T
-    );
+    BEGIN
+        INSERT INTO PlaylistSong (
+            IDPlaylist,
+            IDSong
+        )
+        VALUES (
+            @ID_P,
+            @ID_T
+        );
+    END
 
     FETCH NEXT FROM playlist_song_cursor INTO @ID_P, @ID_T;
 END;

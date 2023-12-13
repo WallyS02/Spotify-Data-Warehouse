@@ -11,8 +11,7 @@ Kolejność odpalania skryptów:
 10. load_playlist_creation.sql
 11. load_junk.sql
 12. load_playback.sql
+13. drop_auxiliary_tables.sql
 
-Możliwe rzeczy do poprawki:
+Rzeczy do poprawki:
 - aktualizacja UpToDate, SCD 2
-- klucz obcy albumu do artysty, utworzenia playlisty i odtworzenia do klienta
-- update danych

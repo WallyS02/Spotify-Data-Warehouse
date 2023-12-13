@@ -18,14 +18,22 @@ FETCH NEXT FROM playlist_cursor INTO @ID, @Name, @Privacy;
 
 WHILE @@FETCH_STATUS = 0
 BEGIN
-    INSERT INTO Playlist (
-        Name,
-        Privacy
+    IF NOT EXISTS (
+        SELECT 1
+        FROM Playlist
+        WHERE Name = @Name
+        AND Privacy = @Privacy
     )
-    VALUES (
-        @Name,
-        @Privacy
-    );
+    BEGIN
+        INSERT INTO Playlist (
+            Name,
+            Privacy
+        )
+        VALUES (
+            @Name,
+            @Privacy
+        );
+    END
 
     FETCH NEXT FROM playlist_cursor INTO @ID, @Name, @Privacy;
 END;

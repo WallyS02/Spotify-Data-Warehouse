@@ -1,13 +1,9 @@
 USE SpotifyDW;
 
 DECLARE @ID INT, @Name CHAR(15), @Surname CHAR(15), @Birth_date DATE, @Phone_Number CHAR(50), @Email CHAR(75), @Login CHAR(30), @Subscription CHAR(30);
-DECLARE @CustomerID INT, @RegistrationDate Date, @MostListenedGenre VARCHAR(100), @SongsInPrivateLibrary INT, @FollowersNumber INT, @LastLoginDatetime Datetime, @NumberOfDaysOfPremiumAccount INT, @MostUsedDevice VARCHAR(100);
 
 CLOSE customer_cursor;
 DEALLOCATE customer_cursor;
-
-CLOSE customer_csv_cursor;
-DEALLOCATE customer_csv_cursor;
 
 DECLARE customer_cursor CURSOR FOR
 SELECT
@@ -25,24 +21,10 @@ FROM
 OPEN customer_cursor;
 FETCH NEXT FROM customer_cursor INTO @ID, @Name, @Surname, @Birth_date, @Phone_Number, @Email, @Login, @Subscription;
 
-DECLARE customer_csv_cursor CURSOR FOR
-SELECT
-    CustomerID,
-    RegistrationDate,
-    MostListenedGenre,
-    SongsInPrivateLibrary,
-    FollowersNumber,
-    LastLoginDatetime,
-    NumberOfDaysOfPremiumAccount,
-    MostUsedDevice
-FROM
-    auxiliary.dbo.SpotifyCustomersCSV ORDER BY CustomerID;
-
-OPEN customer_csv_cursor;
-FETCH NEXT FROM customer_csv_cursor INTO @CustomerID, @RegistrationDate, @MostListenedGenre, @SongsInPrivateLibrary, @FollowersNumber, @LastLoginDatetime, @NumberOfDaysOfPremiumAccount, @MostUsedDevice;
-
 WHILE @@FETCH_STATUS = 0
 BEGIN
+    DECLARE @RegistrationDate Date, @MostListenedGenre VARCHAR(100), @SongsInPrivateLibrary INT, @FollowersNumber INT, @LastLoginDatetime Datetime, @NumberOfDaysOfPremiumAccount INT, @MostUsedDevice VARCHAR(100);
+    SELECT @RegistrationDate = RegistrationDate, @MostListenedGenre = MostListenedGenre, @SongsInPrivateLibrary = SongsInPrivateLibrary, @FollowersNumber = FollowersNumber, @LastLoginDatetime = LastLoginDatetime, @NumberOfDaysOfPremiumAccount = NumberOfDaysOfPremiumAccount, @MostUsedDevice = MostUsedDevice FROM auxiliary.dbo.SpotifyCustomersCSV WHERE CustomerID = @ID
     DECLARE @Age INT = YEAR(GETDATE()) - YEAR(@Birth_date)
     DECLARE @CustomerExperience INT = DATEDIFF(DAY, @RegistrationDate, GETDATE())
     INSERT INTO Customer (
@@ -91,11 +73,7 @@ BEGIN
     );
 
     FETCH NEXT FROM customer_cursor INTO @ID, @Name, @Surname, @Birth_date, @Phone_Number, @Email, @Login, @Subscription;
-    FETCH NEXT FROM customer_csv_cursor INTO @CustomerID, @RegistrationDate, @MostListenedGenre, @SongsInPrivateLibrary, @FollowersNumber, @LastLoginDatetime, @NumberOfDaysOfPremiumAccount, @MostUsedDevice;
 END;
 
 CLOSE customer_cursor;
 DEALLOCATE customer_cursor;
-
-CLOSE customer_csv_cursor;
-DEALLOCATE customer_csv_cursor;

@@ -1,13 +1,9 @@
 USE SpotifyDW;
 
 DECLARE @ID INT, @Name CHAR(15), @Surname CHAR(15), @Birth_date DATE, @Phone_Number CHAR(50), @Email CHAR(75), @Pseudonym CHAR(30);
-DECLARE @ArtistID INT, @Country VARCHAR(100), @Followers INT, @NumberOfTracks INT, @Genre VARCHAR(100), @DebutDate DATE, @TotalListeningHours DECIMAL(10, 2), @AverageTrackLength DECIMAL(10, 2);
 
 CLOSE artist_cursor;
 DEALLOCATE artist_cursor;
-
-CLOSE artist_csv_cursor;
-DEALLOCATE artist_csv_cursor;
 
 DECLARE artist_cursor CURSOR FOR
 SELECT
@@ -24,27 +20,11 @@ FROM
 OPEN artist_cursor;
 FETCH NEXT FROM artist_cursor INTO @ID, @Name, @Surname, @Birth_date, @Phone_Number, @Email, @Pseudonym;
 
-DECLARE artist_csv_cursor CURSOR FOR
-SELECT
-    ArtistID,
-    Country,
-    Followers,
-    NumberOfTracks,
-    Genre,
-    DebutDate,
-    TotalListeningHours,
-    AverageTrackLength
-FROM
-    auxiliary.dbo.SpotifyArtistsCSV ORDER BY ArtistID;
-
-OPEN artist_csv_cursor;
-FETCH NEXT FROM artist_csv_cursor INTO @ArtistID, @Country, @Followers, @NumberOfTracks, @Genre, @DebutDate, @TotalListeningHours, @AverageTrackLength
-
 WHILE @@FETCH_STATUS = 0
 BEGIN
+    DECLARE @Country VARCHAR(100), @Followers INT, @NumberOfTracks INT, @Genre VARCHAR(100), @DebutDate DATE, @TotalListeningHours DECIMAL(10, 2), @AverageTrackLength DECIMAL(10, 2);
+    SELECT @Country = Country, @Followers = Followers, @NumberOfTracks = NumberOfTracks, @Genre = Genre, @DebutDate = DebutDate, @TotalListeningHours = TotalListeningHours, @AverageTrackLength = AverageTrackLength FROM auxiliary.dbo.SpotifyArtistsCSV WHERE ArtistID = @ID
     DECLARE @Age INT = YEAR(GETDATE()) - YEAR(@Birth_date)
-    DECLARE @DateId INT
-    SELECT @DateId = ID FROM Date WHERE Year = YEAR(@DebutDate) AND MonthNumber = MONTH(@DebutDate) AND Day = DAY(@DebutDate)
     DECLARE @ArtistExperience INT = DATEDIFF(DAY, @DebutDate, GETDATE())
     INSERT INTO Artist (
         Pseudonym,
@@ -57,7 +37,9 @@ BEGIN
         FollowerNumberCategory,
         SongQuantityCategory,
         MusicGenre,
-        IDDate,
+        Year,
+	    MonthNumber,
+	    Day,
         TotalHoursOfSongsCategory,
         UpToDate,
         ArtistExperienceCategory
@@ -108,7 +90,9 @@ BEGIN
             ELSE '100-'
         END,
         @Genre,
-        @DateId,
+        YEAR(@DebutDate),
+        MONTH(@DebutDate),
+        DAY(@DebutDate),
         CASE
             WHEN @TotalListeningHours BETWEEN 0 AND 1 THEN '0-1'
             WHEN @TotalListeningHours BETWEEN 1 AND 2 THEN '1-2'
@@ -134,11 +118,7 @@ BEGIN
     );
 
     FETCH NEXT FROM artist_cursor INTO @ID, @Name, @Surname, @Birth_date, @Phone_Number, @Email, @Pseudonym;
-    FETCH NEXT FROM artist_csv_cursor INTO @ArtistID, @Country, @Followers, @NumberOfTracks, @Genre, @DebutDate, @TotalListeningHours, @AverageTrackLength
 END;
 
 CLOSE artist_cursor;
 DEALLOCATE artist_cursor;
-
-CLOSE artist_csv_cursor;
-DEALLOCATE artist_csv_cursor;

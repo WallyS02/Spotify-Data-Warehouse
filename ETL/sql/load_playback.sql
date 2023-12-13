@@ -21,38 +21,67 @@ FETCH NEXT FROM playback_cursor INTO @ID, @Date, @Device, @Listening_Time, @ID_c
 
 WHILE @@FETCH_STATUS = 0
 BEGIN
-    DECLARE @DateId INT, @TimeId INT, @JunkId INT, @NumberOfSongsInLibrary INT, @NumberOfDaysWithPremiumAccount INT, @NumberOfFollowedArtists INT, @NumberOfHoursSinceLastLogin INT, @ListenedSongDuration INT
-    SELECT @DateId = ID FROM Date WHERE Year = YEAR(@Date) AND MonthNumber = MONTH(@Date) AND Day = DAY(@Date)
-    SELECT @TimeId = ID FROM Time WHERE Hour = DATEPART(HOUR, @Date) AND Minute = DATEPART(MINUTE, @Date)  AND Second = DATEPART(SECOND, @Date)
+    DECLARE @JunkId INT, @NumberOfSongsInLibrary INT, @NumberOfDaysWithPremiumAccount INT, @NumberOfFollowedArtists INT, @NumberOfHoursSinceLastLogin INT, @ListenedSongDuration INT, @CustomerId INT
     SELECT @JunkId = ID FROM Junk WHERE Device = @Device
     SELECT @NumberOfSongsInLibrary = SongsInPrivateLibrary, @NumberOfDaysWithPremiumAccount = NumberOfDaysOfPremiumAccount, @NumberOfFollowedArtists = FollowersNumber, @NumberOfHoursSinceLastLogin = DATEPART(HOUR, LastLoginDatetime) FROM auxiliary.dbo.SpotifyCustomersCSV WHERE CustomerID = @ID_c
+    SELECT @CustomerId = ID FROM Customer WHERE LoginID = @ID_c AND UpToDate = 1
     SELECT @ListenedSongDuration = DATEPART(SECOND, LENGTH) FROM Spotify.dbo.TRACK WHERE ID = @ID_t
-    INSERT INTO Playback (
-        IDDate,
-        IDTime,
-        IDSong,
-        IDCustomer,
-        IDJunk,
-        NumberOfSongsInLibrary,
-        NumberOfFollowedArtists,
-        NumberOfDaysWithPremiumAccount,
-        NumberOfHoursSinceLastLogin,
-        ListenedSongDuration,
-        CustomerListeningTimeDuration
+
+    IF NOT EXISTS (
+        SELECT 1
+        FROM Playback
+        WHERE Year = YEAR(@Date)
+        AND MonthNumber = MONTH(@Date)
+        AND Day = DAY(@Date)
+        AND Hour = DATEPART(HOUR, @Date)
+        AND Minute = DATEPART(MINUTE, @Date)
+        AND Second = DATEPART(SECOND, @Date)
+        AND IDSong = @ID_t
+        AND IDCustomer = @CustomerId
+        AND IDJunk = @JunkId
+        AND NumberOfSongsInLibrary = @NumberOfSongsInLibrary
+        AND NumberOfFollowedArtists = @NumberOfFollowedArtists
+        AND NumberOfDaysWithPremiumAccount = @NumberOfDaysWithPremiumAccount
+        AND NumberOfHoursSinceLastLogin = @NumberOfHoursSinceLastLogin
+        AND ListenedSongDuration = @ListenedSongDuration
+        AND CustomerListeningTimeDuration = DATEDIFF(SECOND, CAST('00:00:00' AS TIME), @Listening_Time)
     )
-    VALUES (
-        @DateId,
-        @TimeId,
-        @ID_t,
-        @ID_c,
-        @JunkId,
-        @NumberOfSongsInLibrary,
-        @NumberOfFollowedArtists,
-        @NumberOfDaysWithPremiumAccount,
-        @NumberOfHoursSinceLastLogin,
-        @ListenedSongDuration,
-        DATEDIFF(SECOND, CAST('00:00:00' AS TIME), @Listening_Time)
-    );
+    BEGIN
+        INSERT INTO Playback (
+            Year,
+            MonthNumber,
+            Day,
+            Hour,
+            Minute,
+            Second,
+            IDSong,
+            IDCustomer,
+            IDJunk,
+            NumberOfSongsInLibrary,
+            NumberOfFollowedArtists,
+            NumberOfDaysWithPremiumAccount,
+            NumberOfHoursSinceLastLogin,
+            ListenedSongDuration,
+            CustomerListeningTimeDuration
+        )
+        VALUES (
+            YEAR(@Date),
+            MONTH(@Date),
+            DAY(@Date),
+            DATEPART(HOUR, @Date),
+            DATEPART(MINUTE, @Date),
+            DATEPART(SECOND, @Date),
+            @ID_t,
+            @CustomerId,
+            @JunkId,
+            @NumberOfSongsInLibrary,
+            @NumberOfFollowedArtists,
+            @NumberOfDaysWithPremiumAccount,
+            @NumberOfHoursSinceLastLogin,
+            @ListenedSongDuration,
+            DATEDIFF(SECOND, CAST('00:00:00' AS TIME), @Listening_Time)
+        );
+    END
 
     FETCH NEXT FROM playback_cursor INTO @ID, @Date, @Device, @Listening_Time, @ID_c, @ID_t;
 END;

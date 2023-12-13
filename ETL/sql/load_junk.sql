@@ -17,12 +17,19 @@ FETCH NEXT FROM junk_cursor INTO @ID, @Device;
 
 WHILE @@FETCH_STATUS = 0
 BEGIN
-    INSERT INTO Junk (
-        Device
+    IF NOT EXISTS (
+        SELECT 1
+        FROM Junk
+        WHERE Device = @Device
     )
-    VALUES (
-        @Device
-    );
+    BEGIN
+        INSERT INTO Junk (
+            Device
+        )
+        VALUES (
+            @Device
+        );
+    END
 
     FETCH NEXT FROM junk_cursor INTO @ID, @Device;
 END;

@@ -19,16 +19,25 @@ FETCH NEXT FROM song_cursor INTO @ID, @Title, @Number_In_Album, @ID_a;
 
 WHILE @@FETCH_STATUS = 0
 BEGIN
-    INSERT INTO Song (
-        Title,
-        NumberInAlbum,
-        IDAlbum
+    IF NOT EXISTS (
+        SELECT 1
+        FROM Song
+        WHERE Title = @Title
+        AND NumberInAlbum = @Number_In_Album
+        AND IDAlbum = @ID_a
     )
-    VALUES (
-        @Title,
-        @Number_In_Album,
-        @ID_a
-    );
+    BEGIN
+        INSERT INTO Song (
+            Title,
+            NumberInAlbum,
+            IDAlbum
+        )
+        VALUES (
+            @Title,
+            @Number_In_Album,
+            @ID_a
+        );
+    END
 
     FETCH NEXT FROM song_cursor INTO @ID, @Title, @Number_In_Album, @ID_a;
 END;
