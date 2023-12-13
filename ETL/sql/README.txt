@@ -12,6 +12,3 @@ Kolejność odpalania skryptów:
 11. load_junk.sql
 12. load_playback.sql
 13. drop_auxiliary_tables.sql
-
-Rzeczy do poprawki:
-- debug SCD 2
