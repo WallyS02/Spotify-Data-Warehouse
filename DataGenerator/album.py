@@ -23,3 +23,18 @@ def generate_albums():
         df = pd.concat([df, entity], ignore_index=True)
     df.to_csv(os.path.join(path, 'albums1.csv'), index=False)
     print('Albums generated')
+
+
+def expand_albums():
+    print('Albums generation start')
+    df = pd.read_csv(os.path.join(path, 'albums1.csv'))
+    for _ in range(ALBUM_NUMBER):
+        entity = pd.DataFrame({
+            "TITLE": [faker.word().capitalize() + " " + faker.word().capitalize()],
+            "LENGTH": [faker.time()],
+            "RELEASE_DATE": [faker.date()],
+            "ID_A": [random.randint(1, ARTISTS_NUMBER)]
+        })
+        df = pd.concat([df, entity], ignore_index=True)
+    df.to_csv(os.path.join(path, 'albums2.csv'), index=False)
+    print('Albums generated')

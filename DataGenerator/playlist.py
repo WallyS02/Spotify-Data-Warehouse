@@ -37,3 +37,19 @@ def update_playlists():
             df.at[i, 'PRIVACY'] = 'private'
         df.at[i, 'LENGTH'] = faker.time()
     df.to_csv(os.path.join(path, 'playlists2.csv'), index=False)
+
+
+def expand_playlists():
+    print('Playlists generation start')
+    df = pd.read_csv(os.path.join(path, 'playlists1.csv'))
+    for _ in range(PLAYLIST_NUMBER):
+        entity = pd.DataFrame({
+            "NAME": [faker.word().capitalize() + " " + faker.word().capitalize()],
+            "CREATION_DATE": [faker.date()],
+            "PRIVACY": [random.choice(privacy_type)],
+            "LENGTH": [faker.time()],
+            "ID_C": [random.randint(1, CUSTOMER_NUMBER)],
+        })
+        df = pd.concat([df, entity], ignore_index=True)
+    df.to_csv(os.path.join(path, 'playlists2.csv'), index=False)
+    print('Playlists generated')

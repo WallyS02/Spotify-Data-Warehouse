@@ -1,0 +1,11 @@
+drop table Playback
+drop table Junk
+drop table PlaylistSong
+drop table PlaylistCreation
+drop table Playlist
+drop table Customer
+drop table Song
+drop table Album
+drop table Artist
+drop table Date
+drop table Time

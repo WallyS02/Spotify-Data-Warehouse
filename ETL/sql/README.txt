@@ -14,4 +14,4 @@ Kolejność odpalania skryptów:
 13. drop_auxiliary_tables.sql
 
 Rzeczy do poprawki:
-- aktualizacja UpToDate, SCD 2
+- debug SCD 2

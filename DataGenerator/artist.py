@@ -23,3 +23,20 @@ def generate_artists():
         df = pd.concat([df, entity], ignore_index=True)
     df.to_csv(os.path.join(path, 'artists1.csv'), index=False)
     print('Artists generated')
+
+
+def expand_artists():
+    print('Artists generation start')
+    df = pd.read_csv(os.path.join(path, 'artists1.csv'))
+    for _ in range(ARTISTS_NUMBER):
+        entity = pd.DataFrame({
+            "NAME": [faker.first_name()],
+            "SURNAME": [faker.last_name()],
+            "BIRTH_DATE": [faker.date_of_birth(minimum_age=18).strftime('%Y-%m-%d')],
+            "PHONE_NUMBER": [faker.phone_number()],
+            "EMAIL": [faker.ascii_email()],
+            "PSEUDONYM": [faker.user_name()]
+        })
+        df = pd.concat([df, entity], ignore_index=True)
+    df.to_csv(os.path.join(path, 'artists2.csv'), index=False)
+    print('Artists generated')
