@@ -44,7 +44,7 @@ CREATE TABLE Artist (
 CREATE TABLE Customer (
     ID INT IDENTITY(1,1) PRIMARY KEY,
     NameAndSurname VARCHAR(75),
-    Login VARCHAR(20),
+    Login VARCHAR(75),
     LoginID INT,
     Subscription VARCHAR(9),
     AgeCategory VARCHAR(75),

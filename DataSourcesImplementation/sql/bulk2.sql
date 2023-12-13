@@ -43,7 +43,7 @@ WITH (
     , KEEPNULLS
     );
 
-BULK INSERT TempPlaylistTrack
+BULK INSERT PLAYLIST_TRACK
 FROM 'C:\Users\Ja\Downloads\HD\Spotify-Data-Warehouse\DataGenerator\Data\playlistTracks2.csv'
 WITH (
     FIRSTROW = 2
@@ -52,22 +52,11 @@ WITH (
     , KEEPNULLS
     );
 
-INSERT INTO PLAYLIST_TRACK (ID_P, ID_T)
-SELECT ID_P, ID_T
-FROM TempPlaylistTrack AS src
-WHERE NOT EXISTS (
-    SELECT 1
-    FROM PLAYLIST_TRACK AS dest
-    WHERE dest.ID_P = src.ID_P AND dest.ID_T = src.ID_T
-);
-
-TRUNCATE TABLE TempPlaylistTrack;
-
 BULK INSERT PLAYBACK
 FROM 'C:\Users\Ja\Downloads\HD\Spotify-Data-Warehouse\DataGenerator\Data\playbacks2.csv'
 WITH (
     FIRSTROW = 2
-    , FIELDTERMINATOR = ';'
+    , FIELDTERMINATOR = ','
     , ROWTERMINATOR = '\n'
     , KEEPNULLS
     );
