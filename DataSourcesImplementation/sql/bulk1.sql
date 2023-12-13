@@ -56,7 +56,7 @@ BULK INSERT PLAYBACK
 FROM 'C:\Users\Ja\Downloads\HD\Spotify-Data-Warehouse\DataGenerator\Data\playbacks1.csv'
 WITH (
     FIRSTROW = 2
-    , FIELDTERMINATOR = ';'
+    , FIELDTERMINATOR = ','
     , ROWTERMINATOR = '\n'
     , KEEPNULLS
     );
