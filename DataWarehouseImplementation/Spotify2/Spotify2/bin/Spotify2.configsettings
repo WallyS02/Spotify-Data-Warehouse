@@ -2,8 +2,8 @@
   <Database>
     <DataSources>
       <DataSource>
-        <ID>Spotify2</ID>
-        <ConnectionString>Provider=SQLOLEDB.1;Data Source=LAPTOP-SA60QDT0;Integrated Security=SSPI;Initial Catalog=Spotify2</ConnectionString>
+        <ID>Spotify DW</ID>
+        <ConnectionString>Provider=SQLNCLI11.1;Data Source=DESKTOP-4SNGB4R;Integrated Security=SSPI;Initial Catalog=SpotifyDW</ConnectionString>
         <ImpersonationInfo>
           <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">ImpersonateServiceAccount</ImpersonationMode>
           <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
@@ -12,13 +12,13 @@
     </DataSources>
     <Dimensions>
       <Dimension>
-        <ID>Customer</ID>
-      </Dimension>
-      <Dimension>
         <ID>Date</ID>
       </Dimension>
       <Dimension>
-        <ID>Playlist</ID>
+        <ID>Time</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Customer</ID>
       </Dimension>
       <Dimension>
         <ID>Song</ID>
@@ -27,13 +27,21 @@
         <ID>Junk</ID>
       </Dimension>
       <Dimension>
-        <ID>Time</ID>
+        <ID>Playlist</ID>
       </Dimension>
     </Dimensions>
     <Cubes>
       <Cube>
-        <ID>Spotify2</ID>
+        <ID>Spotify DW</ID>
         <MeasureGroups>
+          <MeasureGroup>
+            <ID>Playback</ID>
+            <Partitions>
+              <Partition>
+                <ID>Playback</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
           <MeasureGroup>
             <ID>Playlist Creation</ID>
             <Partitions>
@@ -47,14 +55,6 @@
             <Partitions>
               <Partition>
                 <ID>Playlist Song</ID>
-              </Partition>
-            </Partitions>
-          </MeasureGroup>
-          <MeasureGroup>
-            <ID>Playback</ID>
-            <Partitions>
-              <Partition>
-                <ID>Playback</ID>
               </Partition>
             </Partitions>
           </MeasureGroup>

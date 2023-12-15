@@ -1,14 +1,14 @@
 ﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
   <Target>
-    <Database>Spotify2</Database>
-    <Server>localhost</Server>
-    <ConnectionString>Data Source=localhost;Timeout=0</ConnectionString>
+    <Database>SpotifyDW</Database>
+    <Server>DESKTOP-4SNGB4R</Server>
+    <ConnectionString>Data Source=DESKTOP-4SNGB4R;Timeout=0</ConnectionString>
   </Target>
   <Options>
     <TransactionalDeployment>false</TransactionalDeployment>
     <PartitionDeployment>DeployPartitions</PartitionDeployment>
     <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
-    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <ProcessingOption>Default</ProcessingOption>
     <OutputScript></OutputScript>
     <ImpactAnalysisFile></ImpactAnalysisFile>
     <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
@@ -19,78 +19,78 @@
     <ObjectSnapshots>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
-        <TimeStamp>lVOQ9y/4kFVvzxxSHWnkuKcPyeE=14.12.2023 13:15:1814.12.2023 13:12:00</TimeStamp>
+        <TimeStamp>9NB7hzZuLbDN7C7+FarBv7jnRS0=15.12.2023 12:45:4015.12.2023 12:45:40</TimeStamp>
         <ID>
-          <String>Spotify2</String>
+          <String>Spotify DW</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>ndWLOil+qf3D8qGeUsL9biszdb4=14.12.2023 13:16:2014.12.2023 13:16:20</TimeStamp>
+        <TimeStamp>z4aAL8m+va5AkHBM8bm8IlEegs8=15.12.2023 12:46:2315.12.2023 12:46:23</TimeStamp>
         <ID>
-          <String>Spotify2</String>
+          <String>Spotify DW</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>jfYxDc4uZu03G8Gtt2mDICjPhCw=14.12.2023 13:18:3414.12.2023 13:18:34</TimeStamp>
-        <ID>
-          <String>Customer</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>NzeYGsfrpT78KoaauSR7/eZRBOc=14.12.2023 13:38:4414.12.2023 13:18:34</TimeStamp>
+        <TimeStamp>XYGJmUac1dXoqQS1/FQH8x8rj64=15.12.2023 12:48:3815.12.2023 10:15:58</TimeStamp>
         <ID>
           <String>Date</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>TfGcz5m7hcCso3EU3m0trTXOKqY=14.12.2023 13:18:3414.12.2023 13:18:34</TimeStamp>
+        <TimeStamp>6l88ElaFEETA/Y2YVOyvpWvIWa8=15.12.2023 12:48:3815.12.2023 10:15:58</TimeStamp>
         <ID>
-          <String>Playlist</String>
+          <String>Time</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>eMp6omjlcaf1PaEA/GBCsuugI1M=14.12.2023 13:31:4314.12.2023 13:18:34</TimeStamp>
+        <TimeStamp>j+frYWFGWBuQbrGQK8uCpbh+74o=15.12.2023 12:48:3815.12.2023 12:48:38</TimeStamp>
+        <ID>
+          <String>Customer</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>GbyDSdnVv2E67PELT0siymxUV10=15.12.2023 12:48:3815.12.2023 12:48:38</TimeStamp>
         <ID>
           <String>Song</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>vP5cFHH/l/kIxyTXVFPzD9yPU6U=14.12.2023 13:18:3414.12.2023 13:18:34</TimeStamp>
+        <TimeStamp>vn3309UwWsMWkMtasgafIkZkd+Q=15.12.2023 12:48:3815.12.2023 12:48:38</TimeStamp>
         <ID>
           <String>Junk</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>0JiJUmJCC9JiJ/IGF1+SAcfLmLU=14.12.2023 13:38:4414.12.2023 13:18:34</TimeStamp>
+        <TimeStamp>o3dUFvGsSd5sPbM2gbPmTFfAulw=15.12.2023 12:48:3815.12.2023 12:48:38</TimeStamp>
         <ID>
-          <String>Time</String>
+          <String>Playlist</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>yT/WnznoGaU3eCnDQTJ+PSVq3H0=14.12.2023 13:38:4414.12.2023 13:18:33Ud6/iUMWXmb4uOqPWhO8cF+kM4Q=14.12.2023 13:18:3414.12.2023 13:18:33</TimeStamp>
+        <TimeStamp>IIDjohHRXTW7foD4UNsnnHQ86ZQ=15.12.2023 14:35:0915.12.2023 12:47:07br6K0MwgWzfOsbTvih7fckxx5q8=15.12.2023 12:48:3815.12.2023 12:47:07</TimeStamp>
         <ID>
-          <String>Spotify2</String>
+          <String>Spotify DW</String>
         </ID>
       </ObjectSnapshot>
     </ObjectSnapshots>
     <DatabaseSnapshot>
       <Type>Microsoft.AnalysisServices.Database</Type>
-      <TimeStamp>OQ84zQRQackSOvoL4Him+sE0Okw=14.12.2023 13:07:1914.12.2023 13:07:19</TimeStamp>
+      <TimeStamp>OQ84zQRQackSOvoL4Him+sE0Okw=15.12.2023 10:15:5815.12.2023 10:15:58</TimeStamp>
       <ID>
-        <String>Spotify2</String>
+        <String>SpotifyDW</String>
       </ID>
     </DatabaseSnapshot>
     <Granularity>Coarse</Granularity>
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2023-12-14T16:38:57.43Z</LastDeployed>
+  <LastDeployed>2023-12-15T13:35:13.306667Z</LastDeployed>
 </DeploymentSnapshot>

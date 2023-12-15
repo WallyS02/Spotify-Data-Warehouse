@@ -3,8 +3,8 @@
     <Configuration>
       <Name>Development</Name>
       <Options>
-        <TargetServer>localhost</TargetServer>
-        <TargetDatabase>Spotify2</TargetDatabase>
+        <TargetServer>DESKTOP-4SNGB4R</TargetServer>
+        <TargetDatabase>SpotifyDW</TargetDatabase>
         <StartObject>
           <ObjectId></ObjectId>
           <ObjectType>Current</ObjectType>

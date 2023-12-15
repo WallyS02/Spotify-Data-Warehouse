@@ -7,12 +7,12 @@
   DTS:CreatorName="LAPTOP-SA60QDT0\toomm"
   DTS:DTSID="{D1A2C59B-1F8D-49D0-9201-938B0FF4B28D}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LastModifiedProductVersion="16.0.5270.0"
   DTS:LocaleID="1045"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="72"
-  DTS:VersionGUID="{649C57EA-E2AC-46D6-8824-DD64D2BC7964}">
+  DTS:VersionBuild="74"
+  DTS:VersionGUID="{2D8C8D54-4D2B-4EC8-9FF2-4A33CEDE8DA1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -97,6 +97,42 @@
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-4SNGB4R.Spotify]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{310D2DC6-654D-445D-9EB9-10FFA18460B9}"
+      DTS:ObjectName="DESKTOP-4SNGB4R.Spotify">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-4SNGB4R;Initial Catalog=Spotify;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{310D2DC6-654D-445D-9EB9-10FFA18460B9}DESKTOP-4SNGB4R.Spotify;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-4SNGB4R.Spotify 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3F806793-30A7-434D-9C25-AE8D557DB723}"
+      DTS:ObjectName="DESKTOP-4SNGB4R.Spotify 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-4SNGB4R;Initial Catalog=Spotify;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{3F806793-30A7-434D-9C25-AE8D557DB723}DESKTOP-4SNGB4R.Spotify 1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-4SNGB4R.SpotifyDW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C9F067E3-7B95-488C-B037-1F4F2F5C4587}"
+      DTS:ObjectName="DESKTOP-4SNGB4R.SpotifyDW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-4SNGB4R;Initial Catalog=SpotifyDW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{C9F067E3-7B95-488C-B037-1F4F2F5C4587}DESKTOP-4SNGB4R.SpotifyDW;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -2031,7 +2067,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Customer]</property>
+                  name="OpenRowset">[dbo].[CUSTOMER]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -2066,8 +2102,8 @@
               <connections>
                 <connection
                   refId="Package\Populing costumer table\Costumer.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LAPTOP-SA60QDT0.Spotify2]"
-                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-SA60QDT0.Spotify2]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-4SNGB4R.Spotify]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-4SNGB4R.Spotify]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2086,121 +2122,79 @@
                       name="ID"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[NameAndSurname]"
+                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[NAME]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[NameAndSurname]"
-                      length="41"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[NameAndSurname]"
-                      name="NameAndSurname"
+                      externalMetadataColumnId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[NAME]"
+                      length="15"
+                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[NAME]"
+                      name="NAME"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[Login]"
+                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[SURNAME]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[Login]"
-                      length="20"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[Login]"
-                      name="Login"
+                      externalMetadataColumnId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[SURNAME]"
+                      length="15"
+                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[SURNAME]"
+                      name="SURNAME"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[LoginID]"
-                      dataType="i4"
+                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[BIRTH_DATE]"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[LoginID]"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[LoginID]"
-                      name="LoginID"
+                      externalMetadataColumnId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[BIRTH_DATE]"
+                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[BIRTH_DATE]"
+                      name="BIRTH_DATE"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[Subscription]"
+                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[PHONE_NUMBER]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[Subscription]"
-                      length="9"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[Subscription]"
-                      name="Subscription"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[AgeCategory]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[AgeCategory]"
-                      length="20"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[AgeCategory]"
-                      name="AgeCategory"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[Email]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[Email]"
+                      externalMetadataColumnId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[PHONE_NUMBER]"
                       length="50"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[Email]"
-                      name="Email"
+                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[PHONE_NUMBER]"
+                      name="PHONE_NUMBER"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[PhoneNumber]"
+                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[EMAIL]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[PhoneNumber]"
-                      length="20"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[PhoneNumber]"
-                      name="PhoneNumber"
+                      externalMetadataColumnId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[EMAIL]"
+                      length="75"
+                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[EMAIL]"
+                      name="EMAIL"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[CustomerExperienceCategory]"
+                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[LOGIN]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[CustomerExperienceCategory]"
-                      length="20"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[CustomerExperienceCategory]"
-                      name="CustomerExperienceCategory"
+                      externalMetadataColumnId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[LOGIN]"
+                      length="30"
+                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[LOGIN]"
+                      name="LOGIN"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[PreferredMusicGenre]"
+                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[SUBSCRIPTION]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[PreferredMusicGenre]"
-                      length="20"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[PreferredMusicGenre]"
-                      name="PreferredMusicGenre"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[PreferredDevice]"
-                      codePage="1250"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[PreferredDevice]"
-                      length="20"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[PreferredDevice]"
-                      name="PreferredDevice"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[UpToDate]"
-                      dataType="bool"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[UpToDate]"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[UpToDate]"
-                      name="UpToDate"
+                      externalMetadataColumnId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[SUBSCRIPTION]"
+                      length="9"
+                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[SUBSCRIPTION]"
+                      name="SUBSCRIPTION"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -2210,67 +2204,45 @@
                       dataType="i4"
                       name="ID" />
                     <externalMetadataColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[NameAndSurname]"
+                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[NAME]"
                       codePage="1250"
                       dataType="str"
-                      length="41"
-                      name="NameAndSurname" />
+                      length="15"
+                      name="NAME" />
                     <externalMetadataColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[Login]"
+                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[SURNAME]"
                       codePage="1250"
                       dataType="str"
-                      length="20"
-                      name="Login" />
+                      length="15"
+                      name="SURNAME" />
                     <externalMetadataColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[LoginID]"
-                      dataType="i4"
-                      name="LoginID" />
+                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[BIRTH_DATE]"
+                      dataType="dbDate"
+                      name="BIRTH_DATE" />
                     <externalMetadataColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[Subscription]"
-                      codePage="1250"
-                      dataType="str"
-                      length="9"
-                      name="Subscription" />
-                    <externalMetadataColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[AgeCategory]"
-                      codePage="1250"
-                      dataType="str"
-                      length="20"
-                      name="AgeCategory" />
-                    <externalMetadataColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[Email]"
+                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[PHONE_NUMBER]"
                       codePage="1250"
                       dataType="str"
                       length="50"
-                      name="Email" />
+                      name="PHONE_NUMBER" />
                     <externalMetadataColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[PhoneNumber]"
+                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[EMAIL]"
                       codePage="1250"
                       dataType="str"
-                      length="20"
-                      name="PhoneNumber" />
+                      length="75"
+                      name="EMAIL" />
                     <externalMetadataColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[CustomerExperienceCategory]"
+                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[LOGIN]"
                       codePage="1250"
                       dataType="str"
-                      length="20"
-                      name="CustomerExperienceCategory" />
+                      length="30"
+                      name="LOGIN" />
                     <externalMetadataColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[PreferredMusicGenre]"
+                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[SUBSCRIPTION]"
                       codePage="1250"
                       dataType="str"
-                      length="20"
-                      name="PreferredMusicGenre" />
-                    <externalMetadataColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[PreferredDevice]"
-                      codePage="1250"
-                      dataType="str"
-                      length="20"
-                      name="PreferredDevice" />
-                    <externalMetadataColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].ExternalColumns[UpToDate]"
-                      dataType="bool"
-                      name="UpToDate" />
+                      length="9"
+                      name="SUBSCRIPTION" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2284,78 +2256,52 @@
                       lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[ID]"
                       name="ID" />
                     <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[NameAndSurname]"
+                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[NAME]"
                       codePage="1250"
                       dataType="str"
-                      length="41"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[NameAndSurname]"
-                      name="NameAndSurname" />
+                      length="15"
+                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[NAME]"
+                      name="NAME" />
                     <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[Login]"
+                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[SURNAME]"
                       codePage="1250"
                       dataType="str"
-                      length="20"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[Login]"
-                      name="Login" />
+                      length="15"
+                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[SURNAME]"
+                      name="SURNAME" />
                     <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[LoginID]"
-                      dataType="i4"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[LoginID]"
-                      name="LoginID" />
+                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[BIRTH_DATE]"
+                      dataType="dbDate"
+                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[BIRTH_DATE]"
+                      name="BIRTH_DATE" />
                     <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[Subscription]"
-                      codePage="1250"
-                      dataType="str"
-                      length="9"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[Subscription]"
-                      name="Subscription" />
-                    <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[AgeCategory]"
-                      codePage="1250"
-                      dataType="str"
-                      length="20"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[AgeCategory]"
-                      name="AgeCategory" />
-                    <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[Email]"
+                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[PHONE_NUMBER]"
                       codePage="1250"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[Email]"
-                      name="Email" />
+                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[PHONE_NUMBER]"
+                      name="PHONE_NUMBER" />
                     <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[PhoneNumber]"
+                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[EMAIL]"
                       codePage="1250"
                       dataType="str"
-                      length="20"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[PhoneNumber]"
-                      name="PhoneNumber" />
+                      length="75"
+                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[EMAIL]"
+                      name="EMAIL" />
                     <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[CustomerExperienceCategory]"
+                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[LOGIN]"
                       codePage="1250"
                       dataType="str"
-                      length="20"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[CustomerExperienceCategory]"
-                      name="CustomerExperienceCategory" />
+                      length="30"
+                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[LOGIN]"
+                      name="LOGIN" />
                     <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[PreferredMusicGenre]"
+                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[SUBSCRIPTION]"
                       codePage="1250"
                       dataType="str"
-                      length="20"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[PreferredMusicGenre]"
-                      name="PreferredMusicGenre" />
-                    <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[PreferredDevice]"
-                      codePage="1250"
-                      dataType="str"
-                      length="20"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[PreferredDevice]"
-                      name="PreferredDevice" />
-                    <outputColumn
-                      refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[UpToDate]"
-                      dataType="bool"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[UpToDate]"
-                      name="UpToDate" />
+                      length="9"
+                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[SUBSCRIPTION]"
+                      name="SUBSCRIPTION" />
                     <outputColumn
                       refId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -2452,29 +2398,29 @@
                       cachedLength="41"
                       cachedName="NameAndSurname"
                       externalMetadataColumnId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].ExternalColumns[NameAndSurname]"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[NameAndSurname]" />
+                      lineageId="Package\Populing costumer table\627:invalid" />
                     <inputColumn
-                      refId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].Columns[Login]"
+                      refId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].Columns[LOGIN]"
                       cachedCodepage="1250"
                       cachedDataType="str"
-                      cachedLength="20"
-                      cachedName="Login"
+                      cachedLength="30"
+                      cachedName="LOGIN"
                       externalMetadataColumnId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].ExternalColumns[Login]"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[Login]" />
+                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[LOGIN]" />
                     <inputColumn
                       refId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].Columns[LoginID]"
                       cachedDataType="i4"
                       cachedName="LoginID"
                       externalMetadataColumnId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].ExternalColumns[LoginID]"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[LoginID]" />
+                      lineageId="Package\Populing costumer table\628:invalid" />
                     <inputColumn
-                      refId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].Columns[Subscription]"
+                      refId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].Columns[SUBSCRIPTION]"
                       cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="9"
-                      cachedName="Subscription"
+                      cachedName="SUBSCRIPTION"
                       externalMetadataColumnId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].ExternalColumns[Subscription]"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[Subscription]" />
+                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[SUBSCRIPTION]" />
                     <inputColumn
                       refId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].Columns[AgeCategory]"
                       cachedCodepage="1250"
@@ -2482,15 +2428,15 @@
                       cachedLength="20"
                       cachedName="AgeCategory"
                       externalMetadataColumnId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].ExternalColumns[AgeCategory]"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[AgeCategory]" />
+                      lineageId="Package\Populing costumer table\629:invalid" />
                     <inputColumn
-                      refId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].Columns[Email]"
+                      refId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].Columns[EMAIL]"
                       cachedCodepage="1250"
                       cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Email"
+                      cachedLength="75"
+                      cachedName="EMAIL"
                       externalMetadataColumnId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].ExternalColumns[Email]"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[Email]" />
+                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[EMAIL]" />
                     <inputColumn
                       refId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].Columns[PhoneNumber]"
                       cachedCodepage="1250"
@@ -2498,7 +2444,7 @@
                       cachedLength="20"
                       cachedName="PhoneNumber"
                       externalMetadataColumnId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].ExternalColumns[PhoneNumber]"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[PhoneNumber]" />
+                      lineageId="Package\Populing costumer table\630:invalid" />
                     <inputColumn
                       refId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].Columns[CustomerExperienceCategory]"
                       cachedCodepage="1250"
@@ -2506,7 +2452,7 @@
                       cachedLength="20"
                       cachedName="CustomerExperienceCategory"
                       externalMetadataColumnId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].ExternalColumns[CustomerExperienceCategory]"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[CustomerExperienceCategory]" />
+                      lineageId="Package\Populing costumer table\631:invalid" />
                     <inputColumn
                       refId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].Columns[PreferredMusicGenre]"
                       cachedCodepage="1250"
@@ -2514,7 +2460,7 @@
                       cachedLength="20"
                       cachedName="PreferredMusicGenre"
                       externalMetadataColumnId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].ExternalColumns[PreferredMusicGenre]"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[PreferredMusicGenre]" />
+                      lineageId="Package\Populing costumer table\632:invalid" />
                     <inputColumn
                       refId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].Columns[PreferredDevice]"
                       cachedCodepage="1250"
@@ -2522,13 +2468,13 @@
                       cachedLength="20"
                       cachedName="PreferredDevice"
                       externalMetadataColumnId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].ExternalColumns[PreferredDevice]"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[PreferredDevice]" />
+                      lineageId="Package\Populing costumer table\633:invalid" />
                     <inputColumn
                       refId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].Columns[UpToDate]"
                       cachedDataType="bool"
                       cachedName="UpToDate"
                       externalMetadataColumnId="Package\Populing costumer table\Costumer dw.Inputs[OLE DB Destination Input].ExternalColumns[UpToDate]"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[UpToDate]" />
+                      lineageId="Package\Populing costumer table\634:invalid" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2645,7 +2591,7 @@
                       cachedDataType="str"
                       cachedLength="41"
                       cachedName="NameAndSurname"
-                      lineageId="Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[NameAndSurname]" />
+                      lineageId="Package\Populing costumer table\627:invalid" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -2671,7 +2617,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[LEN](#{Package\Populing costumer table\Costumer.Outputs[OLE DB Source Output].Columns[NameAndSurname]})</property>
+                          name="Expression">[LEN](#{Package\Populing costumer table\627:invalid})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -11582,39 +11528,39 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="236,41.6"
+          Size="236,41.3333333333334"
           Id="Package\Analysis Services Processing Task"
           TopLeft="194.642857557201,650.852940869811" />
         <NodeLayout
-          Size="181.6,41.6"
+          Size="181.333333333334,41.3333333333334"
           Id="Package\Populating atrist table"
           TopLeft="205.542857541235,19.1176470420661" />
         <NodeLayout
-          Size="177.6,41.6"
+          Size="177.333333333334,41.3333333333334"
           Id="Package\Populing album table"
           TopLeft="204.914286024473,113.176470489032" />
         <NodeLayout
-          Size="192,41.6"
+          Size="192,41.3333333333334"
           Id="Package\Populing costumer table"
           TopLeft="1.9714285364559,237.058823321621" />
         <NodeLayout
-          Size="189.6,41.6"
+          Size="189.333333333334,41.3333333333334"
           Id="Package\Populing playback table"
           TopLeft="95.0571429590176,394.588234948246" />
         <NodeLayout
-          Size="221.6,41.6"
+          Size="221.333333333334,41.3333333333334"
           Id="Package\Populing playlist creation table"
           TopLeft="40.7142858009557,510.058823082325" />
         <NodeLayout
-          Size="180.8,41.6"
+          Size="180.666666666667,41.3333333333334"
           Id="Package\Populing playlist table"
           TopLeft="421.971429430526,233.235293913207" />
         <NodeLayout
-          Size="204.8,41.6"
+          Size="204.666666666667,41.3333333333334"
           Id="Package\Populing playlistSong table"
           TopLeft="320.000000681196,393.478431061309" />
         <NodeLayout
-          Size="171.2,41.6"
+          Size="171.333333333334,41.3333333333334"
           Id="Package\Populing song table"
           TopLeft="211.971428983491,235.529411558255" />
         <EdgeLayout
@@ -11962,11 +11908,15 @@
     design-time-name="Package.ConnectionManagers[LAPTOP-SA60QDT0]">
     <ProjectReferenceName></ProjectReferenceName>
   </ConnectionManager>
+  <ConnectionManager
+    design-time-name="Package.ConnectionManagers[LAPTOP-SA60QDT0 1]">
+    <ProjectReferenceName></ProjectReferenceName>
+  </ConnectionManager>
   <TaskHost
     design-time-name="Package\Populating atrist table">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="120,41.6"
           Id="Package\Populating atrist table\Artist dw"
@@ -11979,28 +11929,6 @@
           Size="103.2,41.6"
           Id="Package\Populating atrist table\Artist"
           TopLeft="380.999994322658,125.999998122454" />
-        <EdgeLayout
-          Id="Package\Populating atrist table.Paths[OLE DB Source Output]"
-          TopLeft="435.199994263053,167.599998122454">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,107.399997779727"
-              Start="0,0"
-              End="0,99.8999977797268">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,99.8999977797268" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Populating atrist table.Paths[Sort Output]"
           TopLeft="434.399994337559,316.599995902181">
@@ -12020,7 +11948,33 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating atrist table.Paths[OLE DB Source Output]"
+          TopLeft="435.199994263053,167.599998122454">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,107.399997779727"
+              Start="0,0"
+              End="0,99.8999977797268">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,99.8999977797268" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -12056,7 +12010,11 @@
     design-time-name="Package\Populing album table">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\Populing album table\Sort"
+          TopLeft="332.999995037913,183.999997258186" />
         <NodeLayout
           Size="124.8,41.6"
           Id="Package\Populing album table\Album dw"
@@ -12065,32 +12023,6 @@
           Size="108,41.6"
           Id="Package\Populing album table\Album"
           TopLeft="330.999995067716,71.9999989271164" />
-        <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\Populing album table\Sort"
-          TopLeft="332.999995037913,183.999997258186" />
-        <EdgeLayout
-          Id="Package\Populing album table.Paths[OLE DB Source Output]"
-          TopLeft="383.399995052815,113.599998927116">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,70.39999833107"
-              Start="0,0"
-              End="0,62.89999833107">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,62.89999833107" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Populing album table.Paths[Sort Output]"
           TopLeft="381.799995037913,225.599997258186">
@@ -12122,7 +12054,33 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populing album table.Paths[OLE DB Source Output]"
+          TopLeft="383.399995052815,113.599998927116">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,70.39999833107"
+              Start="0,0"
+              End="0,62.89999833107">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.89999833107" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -12158,61 +12116,65 @@
     design-time-name="Package\Populing costumer table">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="138.4,41.6"
+          Size="140,42.6666666666667"
           Id="Package\Populing costumer table\Name length"
           TopLeft="345.999994844198,213.999996811152" />
         <NodeLayout
-          Size="140.8,41.6"
+          Size="140.666666666667,41.3333333333334"
           Id="Package\Populing costumer table\Costumer dw"
           TopLeft="338.999994948506,330.999995067716" />
         <NodeLayout
-          Size="123.2,41.6"
+          Size="123.333333333334,41.3333333333334"
           Id="Package\Populing costumer table\Costumer"
           TopLeft="353.999994724989,76.9999988526106" />
         <EdgeLayout
           Id="Package\Populing costumer table.Paths[OLE DB Source Output]"
-          TopLeft="415.399994784594,118.599998852611">
+          TopLeft="415.833328117927,118.333332185944">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,95.3999979585409"
+              EndConnector="0,95.6666646252081"
               Start="0,0"
-              End="0,87.8999979585409">
+              End="0,88.1666646252081">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,87.8999979585409" />
+                    End="0,88.1666646252081" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,36.083332312604,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Populing costumer table.Paths[Derived Column Output]"
-          TopLeft="412.299994896352,255.599996811151">
+          TopLeft="412.666661563019,256.666663477819">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,75.3999982565641"
+              EndConnector="0,74.3333315898973"
               Start="0,0"
-              End="0,67.8999982565641">
+              End="0,66.8333315898973">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,67.8999982565641" />
+                    End="0,66.8333315898973" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,25.4166657949487,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -12248,7 +12210,7 @@
     design-time-name="Package\Populing playback table">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="136.8,41.6"
           Id="Package\Populing playback table\Playback dw"
@@ -12320,7 +12282,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12354,7 +12318,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12388,7 +12354,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12422,7 +12390,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12456,7 +12426,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12490,7 +12462,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12512,7 +12486,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12546,7 +12522,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12568,7 +12546,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -12630,23 +12610,19 @@
     design-time-name="Package\Populing playlist creation table">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="106.4,41.6"
-          Id="Package\Populing playlist creation table\Sort 2"
-          TopLeft="164.999997541308,400.999997004867" />
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="97.6,41.6"
           Id="Package\Populing playlist creation table\Sort"
           TopLeft="60,173.999997407198" />
         <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\Populing playlist creation table\Sort 3"
+          TopLeft="428.999993607402,446.999993339181" />
+        <NodeLayout
           Size="138.4,41.6"
           Id="Package\Populing playlist creation table\Merge Join 1"
           TopLeft="235.999996483326,545.999995082617" />
-        <NodeLayout
-          Size="106.4,41.6"
-          Id="Package\Populing playlist creation table\Sort 1"
-          TopLeft="271.999995946884,178.999997332692" />
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Populing playlist creation table\PlaylistCreation"
@@ -12655,6 +12631,10 @@
           Size="111.2,41.6"
           Id="Package\Populing playlist creation table\Playlist"
           TopLeft="61.0000008791685,60" />
+        <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\Populing playlist creation table\Sort 1"
+          TopLeft="271.999995946884,178.999997332692" />
         <NodeLayout
           Size="129.6,41.6"
           Id="Package\Populing playlist creation table\Merge Join"
@@ -12665,8 +12645,8 @@
           TopLeft="220.999997600913,650.199990597367" />
         <NodeLayout
           Size="106.4,41.6"
-          Id="Package\Populing playlist creation table\Sort 3"
-          TopLeft="428.999993607402,446.999993339181" />
+          Id="Package\Populing playlist creation table\Sort 2"
+          TopLeft="164.999997541308,400.999997004867" />
         <NodeLayout
           Size="123.2,41.6"
           Id="Package\Populing playlist creation table\Costumer"
@@ -12702,7 +12682,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12736,7 +12718,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12770,7 +12754,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12804,7 +12790,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12826,7 +12814,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12860,7 +12850,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12882,7 +12874,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12904,7 +12898,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -12926,7 +12922,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -12975,7 +12973,7 @@
     design-time-name="Package\Populing playlist table">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="97.6,41.6"
           Id="Package\Populing playlist table\Sort"
@@ -13007,7 +13005,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13029,7 +13029,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -13065,7 +13067,7 @@
     design-time-name="Package\Populing playlistSong table">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="111.2,41.6"
           Id="Package\Populing playlistSong table\Playlist"
@@ -13137,7 +13139,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13171,7 +13175,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13205,7 +13211,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13239,7 +13247,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13261,7 +13271,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13283,7 +13295,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13317,7 +13331,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13351,7 +13367,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13373,7 +13391,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -13435,7 +13455,7 @@
     design-time-name="Package\Populing song table">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="97.6,41.6"
           Id="Package\Populing song table\Sort"
@@ -13467,7 +13487,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13489,7 +13511,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -13521,9 +13545,5 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <ConnectionManager
-    design-time-name="Package.ConnectionManagers[LAPTOP-SA60QDT0 1]">
-    <ProjectReferenceName></ProjectReferenceName>
-  </ConnectionManager>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>

@@ -7,94 +7,173 @@
   DTS:CreatorName="LAPTOP-SA60QDT0\toomm"
   DTS:DTSID="{0B0E08CB-20C7-4F4A-8AF5-3D53AFCB9AAB}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LastModifiedProductVersion="16.0.5270.0"
   DTS:LocaleID="1045"
   DTS:ObjectName="Insert Data"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{76E170C6-E8A9-4ADC-A799-B0DF9F680669}">
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{1B57EA11-2AA0-4C46-9AD4-B9C8EB8F4A38}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[LAPTOP-SA60QDT0.Spotify2]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{9D26513D-7884-4825-924D-D1D22A8F9032}"
-      DTS:ObjectName="LAPTOP-SA60QDT0.Spotify2">
+      DTS:refId="Package.ConnectionManagers[DESKTOP-4SNGB4R]"
+      DTS:CreationName="MSOLAP100"
+      DTS:DTSID="{56684948-F68D-44F9-892B-71E12D402D35}"
+      DTS:ObjectName="DESKTOP-4SNGB4R">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=LAPTOP-SA60QDT0;Initial Catalog=Spotify2;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package-{9D26513D-7884-4825-924D-D1D22A8F9032}LAPTOP-SA60QDT0.Spotify2;Auto Translate=False;" />
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Data Source=DESKTOP-4SNGB4R;Provider=MSOLAP.8;Integrated Security=SSPI;Impersonation Level=Impersonate;Location=SpotifyDW;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[LAPTOP-SA60QDT0.SpotifyDW]"
+      DTS:refId="Package.ConnectionManagers[DESKTOP-4SNGB4R.Spotify]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{A63E671E-B848-47B0-BCF1-D2501D7C3296}"
-      DTS:ObjectName="LAPTOP-SA60QDT0.SpotifyDW">
+      DTS:DTSID="{23B60B00-9BE3-465C-96A4-F6AB8FA2E1EB}"
+      DTS:ObjectName="DESKTOP-4SNGB4R.Spotify">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=LAPTOP-SA60QDT0;Initial Catalog=SpotifyDW;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Insert Data-{A63E671E-B848-47B0-BCF1-D2501D7C3296}LAPTOP-SA60QDT0.SpotifyDW;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-4SNGB4R;Initial Catalog=Spotify;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Insert Data-{23B60B00-9BE3-465C-96A4-F6AB8FA2E1EB}DESKTOP-4SNGB4R.Spotify;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-4SNGB4R.SpotifyDW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0FEE9FD4-5C0A-4E35-92C9-BED367967BEB}"
+      DTS:ObjectName="DESKTOP-4SNGB4R.SpotifyDW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-4SNGB4R;Initial Catalog=SpotifyDW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Insert Data-{0FEE9FD4-5C0A-4E35-92C9-BED367967BEB}DESKTOP-4SNGB4R.SpotifyDW;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
+      DTS:refId="Package\Analysis Services Processing Task"
+      DTS:CreationName="Microsoft.DTSProcessingTask"
+      DTS:Description="Analysis Services Processing Task"
+      DTS:DTSID="{13AFBC4A-6C3B-45EC-8357-C128095DE003}"
+      DTS:ExecutableType="Microsoft.DTSProcessingTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Analysis Services Processing Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ASProcessingData
+          ConnectionName="DESKTOP-4SNGB4R"
+          ProcessingCommands="" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Drop auxiliary tables"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
+      DTS:Description="Drop auxiliary tables"
       DTS:DTSID="{12B864AA-6ABE-4F10-B6C1-7C0A6DFFF88B}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Drop auxiliary tables"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{9D26513D-7884-4825-924D-D1D22A8F9032}"
+          SQLTask:Connection="{0FEE9FD4-5C0A-4E35-92C9-BED367967BEB}"
           SQLTask:SqlStatementSource="USE master;&#xA;GO&#xA;DROP DATABASE auxiliary;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load Album"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Load Album"
+      DTS:DTSID="{8142ABA9-160E-492F-93A6-67B2B074649A}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Album"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0FEE9FD4-5C0A-4E35-92C9-BED367967BEB}"
+          SQLTask:SqlStatementSource="USE SpotifyDW;&#xA;&#xA;DECLARE @ID INT, @Title CHAR(30), @Length TIME(0), @Release_date DATE, @ID_a INT;&#xA;&#xA;/*CLOSE album_cursor;&#xA;DEALLOCATE album_cursor;*/&#xA;&#xA;DECLARE album_cursor CURSOR FOR&#xA;SELECT&#xA;    ID,&#xA;    TITLE,&#xA;    LENGTH,&#xA;    RELEASE_DATE,&#xA;    ID_A&#xA;FROM&#xA;    Spotify.dbo.ALBUM ORDER BY ID;&#xA;&#xA;OPEN album_cursor;&#xA;FETCH NEXT FROM album_cursor INTO @ID, @Title, @Length, @Release_date, @ID_a;&#xA;&#xA;WHILE @@FETCH_STATUS = 0&#xA;BEGIN&#xA;    DECLARE @SecondsLength INT = DATEDIFF(SECOND, CAST('00:00:00' AS TIME), @Length)&#xA;    DECLARE @ArtistId INT&#xA;    SELECT @ArtistId = ID FROM Artist WHERE PseudonymID = @ID_a AND UpToDate = 1&#xA;    IF NOT EXISTS (&#xA;        SELECT 1&#xA;        FROM Album&#xA;        WHERE Title = @Title&#xA;        AND DurationCategory =&#xA;            CASE&#xA;                WHEN @SecondsLength BETWEEN 0 AND 60 THEN '0-60'&#xA;                WHEN @SecondsLength BETWEEN 60 AND 120 THEN '60-120'&#xA;                WHEN @SecondsLength BETWEEN 120 AND 180 THEN '120-180'&#xA;                WHEN @SecondsLength BETWEEN 180 AND 240 THEN '180-240'&#xA;                WHEN @SecondsLength BETWEEN 240 AND 300 THEN '240-300'&#xA;                WHEN @SecondsLength BETWEEN 300 AND 360 THEN '300-360'&#xA;                WHEN @SecondsLength BETWEEN 360 AND 420 THEN '360-420'&#xA;                ELSE '420-'&#xA;            END&#xA;        AND Year = YEAR(@Release_date)&#xA;        AND MonthNumber = MONTH(@Release_date)&#xA;        AND Day = DAY(@Release_date)&#xA;        AND IDArtist = @ArtistId&#xA;    )&#xA;    BEGIN&#xA;        INSERT INTO Album (&#xA;            Title,&#xA;            DurationCategory,&#xA;            Year,&#xA;            MonthNumber,&#xA;            Day,&#xA;            IDArtist&#xA;        )&#xA;        VALUES (&#xA;            @Title,&#xA;            CASE&#xA;                WHEN @SecondsLength BETWEEN 0 AND 60 THEN '0-60'&#xA;                WHEN @SecondsLength BETWEEN 60 AND 120 THEN '60-120'&#xA;                WHEN @SecondsLength BETWEEN 120 AND 180 THEN '120-180'&#xA;                WHEN @SecondsLength BETWEEN 180 AND 240 THEN '180-240'&#xA;                WHEN @SecondsLength BETWEEN 240 AND 300 THEN '240-300'&#xA;                WHEN @SecondsLength BETWEEN 300 AND 360 THEN '300-360'&#xA;                WHEN @SecondsLength BETWEEN 360 AND 420 THEN '360-420'&#xA;                ELSE '420-'&#xA;            END,&#xA;            YEAR(@Release_date),&#xA;            MONTH(@Release_date),&#xA;            DAY(@Release_date),&#xA;            @ArtistId&#xA;        );&#xA;    END&#xA;&#xA;    FETCH NEXT FROM album_cursor INTO @ID, @Title, @Length, @Release_date, @ID_a;&#xA;END;&#xA;&#xA;CLOSE album_cursor;&#xA;DEALLOCATE album_cursor;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load Artist"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Load Artist"
+      DTS:DTSID="{8A985F89-3BA6-4779-AE8B-157443352009}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Artist"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0FEE9FD4-5C0A-4E35-92C9-BED367967BEB}"
+          SQLTask:SqlStatementSource="USE SpotifyDW;&#xA;&#xA;DECLARE @ID INT, @Name CHAR(15), @Surname CHAR(15), @Birth_date DATE, @Phone_Number CHAR(50), @Email CHAR(75), @Pseudonym CHAR(30);&#xA;&#xA;/*CLOSE artist_cursor;&#xA;DEALLOCATE artist_cursor;*/&#xA;&#xA;DECLARE artist_cursor CURSOR FOR&#xA;SELECT&#xA;    ID,&#xA;    Name,&#xA;    Surname,&#xA;    Birth_date,&#xA;    Phone_Number,&#xA;    Email,&#xA;    Pseudonym&#xA;FROM&#xA;    Spotify.dbo.ARTIST ORDER BY ID;&#xA;&#xA;OPEN artist_cursor;&#xA;FETCH NEXT FROM artist_cursor INTO @ID, @Name, @Surname, @Birth_date, @Phone_Number, @Email, @Pseudonym;&#xA;&#xA;WHILE @@FETCH_STATUS = 0&#xA;BEGIN&#xA;    DECLARE @Country VARCHAR(100), @Followers INT, @NumberOfTracks INT, @Genre VARCHAR(100), @DebutDate DATE, @TotalListeningHours DECIMAL(10, 2), @AverageTrackLength DECIMAL(10, 2);&#xA;    SELECT @Country = Country, @Followers = Followers, @NumberOfTracks = NumberOfTracks, @Genre = Genre, @DebutDate = DebutDate, @TotalListeningHours = TotalListeningHours, @AverageTrackLength = AverageTrackLength FROM auxiliary.dbo.SpotifyArtistsCSV WHERE ArtistID = @ID&#xA;    DECLARE @Age INT = YEAR(GETDATE()) - YEAR(@Birth_date)&#xA;    DECLARE @ArtistExperience INT = DATEDIFF(DAY, @DebutDate, GETDATE())&#xA;    IF NOT EXISTS (&#xA;        SELECT 1&#xA;        FROM Artist&#xA;        WHERE NameAndSurname = @Name + ' ' + @Surname&#xA;        AND Pseudonym = @Pseudonym&#xA;        AND PseudonymID = @ID&#xA;        AND AgeCategory =&#xA;            CASE&#xA;                WHEN @Age BETWEEN 10 AND 20 THEN '10-20'&#xA;                WHEN @Age BETWEEN 20 AND 30 THEN '20-30'&#xA;                WHEN @Age BETWEEN 30 AND 40 THEN '30-40'&#xA;                WHEN @Age BETWEEN 40 AND 50 THEN '40-50'&#xA;                WHEN @Age BETWEEN 50 AND 60 THEN '50-60'&#xA;                WHEN @Age BETWEEN 60 AND 70 THEN '60-70'&#xA;                WHEN @Age BETWEEN 70 AND 80 THEN '70-80'&#xA;                WHEN @Age BETWEEN 80 AND 90 THEN '80-90'&#xA;                WHEN @Age BETWEEN 90 AND 100 THEN '90-100'&#xA;                ELSE '100-'&#xA;            END&#xA;        AND Email = @Email&#xA;        AND PhoneNumber = @Phone_Number&#xA;        AND OriginCountry = @Country&#xA;        AND FollowerNumberCategory =&#xA;            CASE&#xA;                WHEN @Followers BETWEEN 0 AND 100 THEN '0-100'&#xA;                WHEN @Followers BETWEEN 100 AND 200 THEN '100-200'&#xA;                WHEN @Followers BETWEEN 200 AND 300 THEN '200-300'&#xA;                WHEN @Followers BETWEEN 300 AND 400 THEN '300-400'&#xA;                WHEN @Followers BETWEEN 400 AND 500 THEN '400-500'&#xA;                WHEN @Followers BETWEEN 500 AND 600 THEN '500-600'&#xA;                WHEN @Followers BETWEEN 600 AND 700 THEN '600-700'&#xA;                WHEN @Followers BETWEEN 700 AND 800 THEN '700-800'&#xA;                WHEN @Followers BETWEEN 800 AND 900 THEN '800-900'&#xA;                WHEN @Followers BETWEEN 900 AND 1000 THEN '900-1000'&#xA;                ELSE '1000-'&#xA;            END&#xA;        AND SongQuantityCategory =&#xA;            CASE&#xA;                WHEN @NumberOfTracks BETWEEN 0 AND 10 THEN '0-10'&#xA;                WHEN @NumberOfTracks BETWEEN 10 AND 20 THEN '10-20'&#xA;                WHEN @NumberOfTracks BETWEEN 20 AND 30 THEN '20-30'&#xA;                WHEN @NumberOfTracks BETWEEN 30 AND 40 THEN '30-40'&#xA;                WHEN @NumberOfTracks BETWEEN 40 AND 50 THEN '40-50'&#xA;                WHEN @NumberOfTracks BETWEEN 50 AND 60 THEN '50-60'&#xA;                WHEN @NumberOfTracks BETWEEN 60 AND 70 THEN '60-70'&#xA;                WHEN @NumberOfTracks BETWEEN 70 AND 80 THEN '70-80'&#xA;                WHEN @NumberOfTracks BETWEEN 80 AND 90 THEN '80-90'&#xA;                WHEN @NumberOfTracks BETWEEN 90 AND 100 THEN '90-100'&#xA;                ELSE '100-'&#xA;            END&#xA;        AND MusicGenre = @Genre&#xA;        AND Year = YEAR(@DebutDate)&#xA;        AND MonthNumber = MONTH(@DebutDate)&#xA;        AND Day = DAY(@DebutDate)&#xA;        AND TotalHoursOfSongsCategory =&#xA;            CASE&#xA;                WHEN @TotalListeningHours BETWEEN 0 AND 1 THEN '0-1'&#xA;                WHEN @TotalListeningHours BETWEEN 1 AND 2 THEN '1-2'&#xA;                WHEN @TotalListeningHours BETWEEN 2 AND 3 THEN '2-3'&#xA;                WHEN @TotalListeningHours BETWEEN 3 AND 4 THEN '3-4'&#xA;                WHEN @TotalListeningHours BETWEEN 4 AND 5 THEN '4-5'&#xA;                WHEN @TotalListeningHours BETWEEN 5 AND 6 THEN '5-6'&#xA;                WHEN @TotalListeningHours BETWEEN 6 AND 7 THEN '6-7'&#xA;                WHEN @TotalListeningHours BETWEEN 7 AND 8 THEN '7-8'&#xA;                WHEN @TotalListeningHours BETWEEN 8 AND 9 THEN '8-9'&#xA;                WHEN @TotalListeningHours BETWEEN 9 AND 10 THEN '9-10'&#xA;                ELSE '10-'&#xA;            END&#xA;        AND ArtistExperienceCategory =&#xA;            CASE&#xA;                WHEN @ArtistExperience BETWEEN 0 AND 20 THEN '0-10'&#xA;                WHEN @ArtistExperience BETWEEN 20 AND 40 THEN '20-40'&#xA;                WHEN @ArtistExperience BETWEEN 40 AND 60 THEN '40-60'&#xA;                WHEN @ArtistExperience BETWEEN 60 AND 80 THEN '60-80'&#xA;                WHEN @ArtistExperience BETWEEN 80 AND 100 THEN '80-100'&#xA;                ELSE '100-'&#xA;            END&#xA;        AND UpToDate = 1&#xA;    )&#xA;    BEGIN&#xA;&#x9;&#x9;IF NOT EXISTS (&#xA;&#x9;&#x9;&#x9;SELECT 1&#xA;&#x9;&#x9;&#x9;FROM Artist&#xA;&#x9;&#x9;&#x9;WHERE PseudonymID = @ID&#xA;&#x9;&#x9;)&#xA;&#x9;&#x9;BEGIN&#xA;&#x9;&#x9;&#x9;INSERT INTO Artist (&#xA;&#x9;&#x9;&#x9;&#x9;Pseudonym,&#xA;&#x9;&#x9;&#x9;&#x9;PseudonymID,&#xA;&#x9;&#x9;&#x9;&#x9;NameAndSurname,&#xA;&#x9;&#x9;&#x9;&#x9;AgeCategory,&#xA;&#x9;&#x9;&#x9;&#x9;Email,&#xA;&#x9;&#x9;&#x9;&#x9;PhoneNumber,&#xA;&#x9;&#x9;&#x9;&#x9;OriginCountry,&#xA;&#x9;&#x9;&#x9;&#x9;FollowerNumberCategory,&#xA;&#x9;&#x9;&#x9;&#x9;SongQuantityCategory,&#xA;&#x9;&#x9;&#x9;&#x9;MusicGenre,&#xA;&#x9;&#x9;&#x9;&#x9;Year,&#xA;&#x9;&#x9;&#x9;&#x9;MonthNumber,&#xA;&#x9;&#x9;&#x9;&#x9;Day,&#xA;&#x9;&#x9;&#x9;&#x9;TotalHoursOfSongsCategory,&#xA;&#x9;&#x9;&#x9;&#x9;UpToDate,&#xA;&#x9;&#x9;&#x9;&#x9;ArtistExperienceCategory&#xA;&#x9;&#x9;&#x9;)&#xA;&#x9;&#x9;&#x9;VALUES (&#xA;&#x9;&#x9;&#x9;&#x9;@Pseudonym,&#xA;&#x9;&#x9;&#x9;&#x9;@ID,&#xA;&#x9;&#x9;&#x9;&#x9;@Name + ' ' + @Surname,&#xA;&#x9;&#x9;&#x9;&#x9;CASE&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Age BETWEEN 10 AND 20 THEN '10-20'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Age BETWEEN 20 AND 30 THEN '20-30'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Age BETWEEN 30 AND 40 THEN '30-40'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Age BETWEEN 40 AND 50 THEN '40-50'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Age BETWEEN 50 AND 60 THEN '50-60'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Age BETWEEN 60 AND 70 THEN '60-70'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Age BETWEEN 70 AND 80 THEN '70-80'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Age BETWEEN 80 AND 90 THEN '80-90'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Age BETWEEN 90 AND 100 THEN '90-100'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ELSE '100-'&#xA;&#x9;&#x9;&#x9;&#x9;END,&#xA;&#x9;&#x9;&#x9;&#x9;@Email,&#xA;&#x9;&#x9;&#x9;&#x9;@Phone_Number,&#xA;&#x9;&#x9;&#x9;&#x9;@Country,&#xA;&#x9;&#x9;&#x9;&#x9;CASE&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Followers BETWEEN 0 AND 100 THEN '0-100'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Followers BETWEEN 100 AND 200 THEN '100-200'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Followers BETWEEN 200 AND 300 THEN '200-300'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Followers BETWEEN 300 AND 400 THEN '300-400'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Followers BETWEEN 400 AND 500 THEN '400-500'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Followers BETWEEN 500 AND 600 THEN '500-600'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Followers BETWEEN 600 AND 700 THEN '600-700'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Followers BETWEEN 700 AND 800 THEN '700-800'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Followers BETWEEN 800 AND 900 THEN '800-900'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Followers BETWEEN 900 AND 1000 THEN '900-1000'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ELSE '1000-'&#xA;&#x9;&#x9;&#x9;&#x9;END,&#xA;&#x9;&#x9;&#x9;&#x9;CASE&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @NumberOfTracks BETWEEN 0 AND 10 THEN '0-10'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @NumberOfTracks BETWEEN 10 AND 20 THEN '10-20'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @NumberOfTracks BETWEEN 20 AND 30 THEN '20-30'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @NumberOfTracks BETWEEN 30 AND 40 THEN '30-40'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @NumberOfTracks BETWEEN 40 AND 50 THEN '40-50'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @NumberOfTracks BETWEEN 50 AND 60 THEN '50-60'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @NumberOfTracks BETWEEN 60 AND 70 THEN '60-70'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @NumberOfTracks BETWEEN 70 AND 80 THEN '70-80'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @NumberOfTracks BETWEEN 80 AND 90 THEN '80-90'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @NumberOfTracks BETWEEN 90 AND 100 THEN '90-100'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ELSE '100-'&#xA;&#x9;&#x9;&#x9;&#x9;END,&#xA;&#x9;&#x9;&#x9;&#x9;@Genre,&#xA;&#x9;&#x9;&#x9;&#x9;YEAR(@DebutDate),&#xA;&#x9;&#x9;&#x9;&#x9;MONTH(@DebutDate),&#xA;&#x9;&#x9;&#x9;&#x9;DAY(@DebutDate),&#xA;&#x9;&#x9;&#x9;&#x9;CASE&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @TotalListeningHours BETWEEN 0 AND 1 THEN '0-1'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @TotalListeningHours BETWEEN 1 AND 2 THEN '1-2'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @TotalListeningHours BETWEEN 2 AND 3 THEN '2-3'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @TotalListeningHours BETWEEN 3 AND 4 THEN '3-4'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @TotalListeningHours BETWEEN 4 AND 5 THEN '4-5'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @TotalListeningHours BETWEEN 5 AND 6 THEN '5-6'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @TotalListeningHours BETWEEN 6 AND 7 THEN '6-7'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @TotalListeningHours BETWEEN 7 AND 8 THEN '7-8'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @TotalListeningHours BETWEEN 8 AND 9 THEN '8-9'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @TotalListeningHours BETWEEN 9 AND 10 THEN '9-10'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ELSE '10-'&#xA;&#x9;&#x9;&#x9;&#x9;END,&#xA;&#x9;&#x9;&#x9;&#x9;1,&#xA;&#x9;&#x9;&#x9;&#x9;CASE&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @ArtistExperience BETWEEN 0 AND 20 THEN '0-10'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @ArtistExperience BETWEEN 20 AND 40 THEN '20-40'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @ArtistExperience BETWEEN 40 AND 60 THEN '40-60'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @ArtistExperience BETWEEN 60 AND 80 THEN '60-80'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @ArtistExperience BETWEEN 80 AND 100 THEN '80-100'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ELSE '100-'&#xA;&#x9;&#x9;&#x9;&#x9;END&#xA;        );&#xA;&#x9;&#x9;END&#xA;&#x9;&#x9;ELSE&#xA;        BEGIN&#xA;&#x9;&#x9;&#x9;DECLARE @OldArtistId INT;&#xA;&#x9;&#x9;&#x9;SELECT @OldArtistId = ID FROM Artist WHERE PseudonymID = @ID AND UpToDate = 1;&#xA;&#x9;&#x9;&#x9;UPDATE Artist SET UpToDate = 0 WHERE PseudonymID = @ID;&#xA;&#x9;&#x9;&#x9;INSERT INTO Artist (&#xA;&#x9;&#x9;&#x9;&#x9;Pseudonym,&#xA;&#x9;&#x9;&#x9;&#x9;PseudonymID,&#xA;&#x9;&#x9;&#x9;&#x9;NameAndSurname,&#xA;&#x9;&#x9;&#x9;&#x9;AgeCategory,&#xA;&#x9;&#x9;&#x9;&#x9;Email,&#xA;&#x9;&#x9;&#x9;&#x9;PhoneNumber,&#xA;&#x9;&#x9;&#x9;&#x9;OriginCountry,&#xA;&#x9;&#x9;&#x9;&#x9;FollowerNumberCategory,&#xA;&#x9;&#x9;&#x9;&#x9;SongQuantityCategory,&#xA;&#x9;&#x9;&#x9;&#x9;MusicGenre,&#xA;&#x9;&#x9;&#x9;&#x9;Year,&#xA;&#x9;&#x9;&#x9;&#x9;MonthNumber,&#xA;&#x9;&#x9;&#x9;&#x9;Day,&#xA;&#x9;&#x9;&#x9;&#x9;TotalHoursOfSongsCategory,&#xA;&#x9;&#x9;&#x9;&#x9;UpToDate,&#xA;&#x9;&#x9;&#x9;&#x9;ArtistExperienceCategory&#xA;&#x9;&#x9;&#x9;)&#xA;&#x9;&#x9;&#x9;VALUES (&#xA;&#x9;&#x9;&#x9;&#x9;@Pseudonym,&#xA;&#x9;&#x9;&#x9;&#x9;@ID,&#xA;&#x9;&#x9;&#x9;&#x9;@Name + ' ' + @Surname,&#xA;&#x9;&#x9;&#x9;&#x9;CASE&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Age BETWEEN 10 AND 20 THEN '10-20'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Age BETWEEN 20 AND 30 THEN '20-30'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Age BETWEEN 30 AND 40 THEN '30-40'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Age BETWEEN 40 AND 50 THEN '40-50'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Age BETWEEN 50 AND 60 THEN '50-60'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Age BETWEEN 60 AND 70 THEN '60-70'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Age BETWEEN 70 AND 80 THEN '70-80'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Age BETWEEN 80 AND 90 THEN '80-90'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Age BETWEEN 90 AND 100 THEN '90-100'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ELSE '100-'&#xA;&#x9;&#x9;&#x9;&#x9;END,&#xA;&#x9;&#x9;&#x9;&#x9;@Email,&#xA;&#x9;&#x9;&#x9;&#x9;@Phone_Number,&#xA;&#x9;&#x9;&#x9;&#x9;@Country,&#xA;&#x9;&#x9;&#x9;&#x9;CASE&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Followers BETWEEN 0 AND 100 THEN '0-100'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Followers BETWEEN 100 AND 200 THEN '100-200'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Followers BETWEEN 200 AND 300 THEN '200-300'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Followers BETWEEN 300 AND 400 THEN '300-400'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Followers BETWEEN 400 AND 500 THEN '400-500'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Followers BETWEEN 500 AND 600 THEN '500-600'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Followers BETWEEN 600 AND 700 THEN '600-700'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Followers BETWEEN 700 AND 800 THEN '700-800'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Followers BETWEEN 800 AND 900 THEN '800-900'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @Followers BETWEEN 900 AND 1000 THEN '900-1000'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ELSE '1000-'&#xA;&#x9;&#x9;&#x9;&#x9;END,&#xA;&#x9;&#x9;&#x9;&#x9;CASE&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @NumberOfTracks BETWEEN 0 AND 10 THEN '0-10'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @NumberOfTracks BETWEEN 10 AND 20 THEN '10-20'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @NumberOfTracks BETWEEN 20 AND 30 THEN '20-30'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @NumberOfTracks BETWEEN 30 AND 40 THEN '30-40'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @NumberOfTracks BETWEEN 40 AND 50 THEN '40-50'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @NumberOfTracks BETWEEN 50 AND 60 THEN '50-60'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @NumberOfTracks BETWEEN 60 AND 70 THEN '60-70'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @NumberOfTracks BETWEEN 70 AND 80 THEN '70-80'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @NumberOfTracks BETWEEN 80 AND 90 THEN '80-90'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @NumberOfTracks BETWEEN 90 AND 100 THEN '90-100'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ELSE '100-'&#xA;&#x9;&#x9;&#x9;&#x9;END,&#xA;&#x9;&#x9;&#x9;&#x9;@Genre,&#xA;&#x9;&#x9;&#x9;&#x9;YEAR(@DebutDate),&#xA;&#x9;&#x9;&#x9;&#x9;MONTH(@DebutDate),&#xA;&#x9;&#x9;&#x9;&#x9;DAY(@DebutDate),&#xA;&#x9;&#x9;&#x9;&#x9;CASE&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @TotalListeningHours BETWEEN 0 AND 1 THEN '0-1'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @TotalListeningHours BETWEEN 1 AND 2 THEN '1-2'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @TotalListeningHours BETWEEN 2 AND 3 THEN '2-3'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @TotalListeningHours BETWEEN 3 AND 4 THEN '3-4'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @TotalListeningHours BETWEEN 4 AND 5 THEN '4-5'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @TotalListeningHours BETWEEN 5 AND 6 THEN '5-6'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @TotalListeningHours BETWEEN 6 AND 7 THEN '6-7'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @TotalListeningHours BETWEEN 7 AND 8 THEN '7-8'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @TotalListeningHours BETWEEN 8 AND 9 THEN '8-9'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @TotalListeningHours BETWEEN 9 AND 10 THEN '9-10'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ELSE '10-'&#xA;&#x9;&#x9;&#x9;&#x9;END,&#xA;&#x9;&#x9;&#x9;&#x9;1,&#xA;&#x9;&#x9;&#x9;&#x9;CASE&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @ArtistExperience BETWEEN 0 AND 20 THEN '0-10'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @ArtistExperience BETWEEN 20 AND 40 THEN '20-40'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @ArtistExperience BETWEEN 40 AND 60 THEN '40-60'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @ArtistExperience BETWEEN 60 AND 80 THEN '60-80'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;WHEN @ArtistExperience BETWEEN 80 AND 100 THEN '80-100'&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;ELSE '100-'&#xA;&#x9;&#x9;&#x9;&#x9;END&#xA;&#x9;&#x9;&#x9;);&#xA;&#xA;&#x9;&#x9;&#x9;DECLARE @NewArtistId INT;&#xA;&#x9;&#x9;&#x9;SELECT @NewArtistId = ID FROM Artist WHERE PseudonymID = @ID AND UpToDate = 1;&#xA;&#xA;&#x9;&#x9;&#x9;UPDATE Album SET IDArtist = @NewArtistId WHERE IDArtist = @OldArtistId;&#xA;        END&#xA;    END&#xA;&#xA;    FETCH NEXT FROM artist_cursor INTO @ID, @Name, @Surname, @Birth_date, @Phone_Number, @Email, @Pseudonym;&#xA;END;&#xA;&#xA;CLOSE artist_cursor;&#xA;DEALLOCATE artist_cursor;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Load auxility tables"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
+      DTS:Description="Load auxility tables"
       DTS:DTSID="{7B30EF31-73B0-41DA-BD30-6D7B859DAC07}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Load auxility tables"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{A63E671E-B848-47B0-BCF1-D2501D7C3296}"
-          SQLTask:SqlStatementSource="USE master; DROP DATABASE auxiliary; CREATE DATABASE auxiliary; GO USE auxiliary; CREATE TABLE SpotifyArtistsCSV(ArtistID INT, Country VARCHAR(100), Followers INT, NumberOfTracks INT, Genre VARCHAR(100), DebutDate DATE, &#xA;TotalListeningHours DECIMAL(10, 2), AverageTrackLength DECIMAL(10, 2)); BULK INSERT  SpotifyArtistsCSV&#xA;                                                                                                                                                                  FROM      'C:\Users\Ja\Downloads\HD\Spotify-Data-Warehouse\DataGenerator\TommyGenerator\Data\dane_artysta1.csv' WITH (FIELDTERMINATOR = ',', &#xA;                                                                                                                                                                                    ROWTERMINATOR = '\n', FIRSTROW = 2, KEEPNULLS); CREATE TABLE SpotifyCustomersCSV(CustomerID INT, RegistrationDate Date, &#xA;                                                                                                                                                                                    MostListenedGenre VARCHAR(100), SongsInPrivateLibrary INT, FollowersNumber INT, LastLoginDatetime Datetime, &#xA;                                                                                                                                                                                    NumberOfDaysOfPremiumAccount INT, MostUsedDevice VARCHAR(100)); BULK INSERT SpotifyCustomersCSV&#xA;FROM     'C:\Users\Ja\Downloads\HD\Spotify-Data-Warehouse\DataGenerator\TommyGenerator\Data\dane_uzytkownik1.csv' WITH (FIELDTERMINATOR = ',', ROWTERMINATOR = '\n', FIRSTROW = 2, KEEPNULLS); &#xA;                  CREATE TABLE holidays(date DATE, name VARCHAR(500), PRIMARY KEY (date, name)); DECLARE ? INT = 2035; DECLARE ? INT = YEAR(GETDATE()); WHILE ? &lt;= ? BEGIN&#xA;                      /* Nowy Rok*/ INSERT &#xA;                      INTO        holidays(date, name)&#xA;VALUES (CAST(? AS VARCHAR(4)) + '-01-01', 'New Years Eve');&#xA;                      /* Święto Trzech Króli*/ INSERT &#xA;                      INTO        holidays(date, name)&#xA;VALUES (CAST(? AS VARCHAR(4)) + '-01-06', 'Epiphany'); /* Wielkanoc*/ DECLARE ? INT, ? INT, ? INT, ? INT, ? INT;&#xA;SET          ? = ? / 100;&#xA;SET          ? = ? % 19;&#xA;SET          ? = (19 * ? + ? - ? / 4 - ((8 * ? + 13) / 25) + 15) % 30;&#xA;SET          ? = ? - ? / 28 * (1 - 29 / (? + 1) * ((21 - ?) / 11));&#xA;SET          ? = (? + ? / 4 + ? + 2 - ? + ? / 4) % 7; DECLARE ? INT, ? INT, ? INT;&#xA;SET          ? = ? - ?;&#xA;SET          ? = 3 + (? + 40) / 44;&#xA;SET          ? = ? + 28 - 31 * (? / 4); DECLARE ? DATE = CAST(? AS VARCHAR(4)) + '-' + RIGHT('0' + CAST(? AS VARCHAR(2)), 2) + '-' + RIGHT('0' + CAST(? AS VARCHAR(2)), 2);&#xA;                      INSERT  &#xA;                      INTO        holidays(date, name)&#xA;VALUES (?, 'Easter'); /* Wielkanocny Poniedziałek*/ DECLARE ? DATE;&#xA;                      SELECT ? = DATEADD(DAY, 1, ?);&#xA;                                            INSERT  &#xA;                                            INTO        holidays(date, name)&#xA;VALUES (?, 'Easter monday');&#xA;                      /* Święto Pracy*/ INSERT &#xA;                      INTO        holidays(date, name)&#xA;VALUES (CAST(? AS VARCHAR(4)) + '-05-01', 'Labour Day');&#xA;                      /* Święto Konstytucji 3 Maja*/ INSERT &#xA;                      INTO        holidays(date, name)&#xA;VALUES (CAST(? AS VARCHAR(4)) + '-05-03', 'Constitution Day May 3'); /* Zielone Świątki*/ DECLARE ? DATE;&#xA;                      SELECT ? = DATEADD(WEEK, 7, ?);&#xA;                                            INSERT  &#xA;                                            INTO        holidays(date, name)&#xA;VALUES (?, 'Pentecost'); /* Boże Ciało*/ DECLARE ? DATE;&#xA;                      SELECT ? = DATEADD(WEEK, 10, ?);&#xA;                                            INSERT  &#xA;                                            INTO        holidays(date, name)&#xA;VALUES (?, 'Corpus Christi');&#xA;                      /* Wniebowzięcie Najświętszej Maryi Panny*/ INSERT &#xA;                      INTO        holidays(date, name)&#xA;VALUES (CAST(? AS VARCHAR(4)) + '-08-15', 'Assumption of the Blessed Virgin Mary');&#xA;                      /* Wszystkich Świętych*/ INSERT &#xA;                      INTO        holidays(date, name)&#xA;VALUES (CAST(? AS VARCHAR(4)) + '-11-01', 'All the saints');&#xA;                      /* Święto Niepodległości*/ INSERT &#xA;                      INTO        holidays(date, name)&#xA;VALUES (CAST(? AS VARCHAR(4)) + '-11-11', 'Independence Day');&#xA;                      /* Boże Narodzenie*/ INSERT &#xA;                      INTO        holidays(date, name)&#xA;VALUES (CAST(? AS VARCHAR(4)) + '-12-25', 'Christmas first day');&#xA;                      INSERT  &#xA;                      INTO        holidays(date, name)&#xA;VALUES (CAST(? AS VARCHAR(4)) + '-12-26', 'Christmas second day');&#xA;SET          ? + = 1; END;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{0FEE9FD4-5C0A-4E35-92C9-BED367967BEB}"
+          SQLTask:SqlStatementSource="USE master;&#xA;DROP DATABASE auxiliary;&#xA;CREATE DATABASE auxiliary;&#xA;GO&#xA;&#xA;USE auxiliary;&#xA;&#xA;CREATE TABLE SpotifyArtistsCSV (&#xA;    ArtistID INT,&#xA;    Country VARCHAR(100),&#xA;    Followers INT,&#xA;    NumberOfTracks INT,&#xA;    Genre VARCHAR(100),&#xA;    DebutDate DATE,&#xA;    TotalListeningHours DECIMAL(10, 2),&#xA;    AverageTrackLength DECIMAL(10, 2)&#xA;);&#xA;&#xA;BULK INSERT SpotifyArtistsCSV&#xA;FROM 'C:\Users\Ja\Downloads\HD\Spotify-Data-Warehouse\DataGenerator\TommyGenerator\Data\dane_artysta1.csv'&#xA;WITH (&#xA;    FIELDTERMINATOR = ',',&#xA;    ROWTERMINATOR = '\n',&#xA;    FIRSTROW = 2,&#xA;    KEEPNULLS&#xA;);&#xA;&#xA;CREATE TABLE SpotifyCustomersCSV (&#xA;    CustomerID INT,&#xA;    RegistrationDate Date,&#xA;    MostListenedGenre VARCHAR(100),&#xA;    SongsInPrivateLibrary INT,&#xA;    FollowersNumber INT,&#xA;    LastLoginDatetime Datetime,&#xA;    NumberOfDaysOfPremiumAccount INT,&#xA;    MostUsedDevice VARCHAR(100)&#xA;);&#xA;&#xA;BULK INSERT SpotifyCustomersCSV&#xA;FROM 'C:\Users\Ja\Downloads\HD\Spotify-Data-Warehouse\DataGenerator\TommyGenerator\Data\dane_uzytkownik1.csv'&#xA;WITH (&#xA;    FIELDTERMINATOR = ',',&#xA;    ROWTERMINATOR = '\n',&#xA;    FIRSTROW = 2,&#xA;    KEEPNULLS&#xA;);&#xA;&#xA;CREATE TABLE holidays(date DATE, name VARCHAR(500), PRIMARY KEY(date, name));&#xA;&#xA;DECLARE @EndYear INT = 2035;&#xA;DECLARE @CurrentYear INT = YEAR(GETDATE());&#xA;&#xA;WHILE @CurrentYear &lt;= @EndYear&#xA;BEGIN&#xA;    -- Nowy Rok&#xA;    INSERT INTO holidays (date, name) VALUES (CAST(@CurrentYear AS VARCHAR(4)) + '-01-01', 'New Years Eve');&#xA;&#xA;    -- Święto Trzech Króli&#xA;    INSERT INTO holidays (date, name) VALUES (CAST(@CurrentYear AS VARCHAR(4)) + '-01-06', 'Epiphany');&#xA;&#xA;    -- Wielkanoc&#xA;    DECLARE @Century INT, @G INT, @H INT, @I INT, @J INT;&#xA;&#xA;    SET @Century = @CurrentYear / 100;&#xA;    SET @G = @CurrentYear % 19;&#xA;    SET @H = (19 * @G + @Century - @Century / 4 - ((8 * @Century + 13) / 25) + 15) % 30;&#xA;    SET @I = @H - @H / 28 * (1 - 29 / (@H + 1) * ((21 - @G) / 11));&#xA;    SET @J = (@CurrentYear + @CurrentYear / 4 + @I + 2 - @Century + @Century / 4) % 7;&#xA;&#xA;    DECLARE @L INT, @Month INT, @Day INT;&#xA;    SET @L = @I - @J;&#xA;    SET @Month = 3 + (@L + 40) / 44;&#xA;    SET @Day = @L + 28 - 31 * (@Month / 4);&#xA;&#xA;    DECLARE @EasterDate DATE = CAST(@CurrentYear AS VARCHAR(4)) + '-' + RIGHT('0' + CAST(@Month AS VARCHAR(2)), 2) + '-' + RIGHT('0' + CAST(@Day AS VARCHAR(2)), 2);&#xA;&#xA;    INSERT INTO holidays (date, name) VALUES (@EasterDate, 'Easter');&#xA;&#xA;    -- Wielkanocny Poniedziałek&#xA;    DECLARE @EasterMonday DATE;&#xA;    SELECT @EasterMonday = DATEADD(DAY, 1, @EasterDate);&#xA;    INSERT INTO holidays (date, name) VALUES (@EasterMonday, 'Easter monday');&#xA;&#xA;    -- Święto Pracy&#xA;    INSERT INTO holidays (date, name) VALUES (CAST(@CurrentYear AS VARCHAR(4)) + '-05-01', 'Labour Day');&#xA;&#xA;    -- Święto Konstytucji 3 Maja&#xA;    INSERT INTO holidays (date, name) VALUES (CAST(@CurrentYear AS VARCHAR(4)) + '-05-03', 'Constitution Day May 3');&#xA;&#xA;    -- Zielone Świątki&#xA;    DECLARE @PentecostDate DATE;&#xA;    SELECT @PentecostDate = DATEADD(WEEK, 7, @EasterDate);&#xA;    INSERT INTO holidays (date, name) VALUES (@PentecostDate, 'Pentecost');&#xA;&#xA;    -- Boże Ciało&#xA;    DECLARE @CorpusChristiDate DATE;&#xA;    SELECT @CorpusChristiDate = DATEADD(WEEK, 10, @EasterDate);&#xA;    INSERT INTO holidays (date, name) VALUES (@CorpusChristiDate, 'Corpus Christi');&#xA;&#xA;    -- Wniebowzięcie Najświętszej Maryi Panny&#xA;    INSERT INTO holidays (date, name) VALUES (CAST(@CurrentYear AS VARCHAR(4)) + '-08-15', 'Assumption of the Blessed Virgin Mary');&#xA;&#xA;    -- Wszystkich Świętych&#xA;    INSERT INTO holidays (date, name) VALUES (CAST(@CurrentYear AS VARCHAR(4)) + '-11-01', 'All the saints');&#xA;&#xA;    -- Święto Niepodległości&#xA;    INSERT INTO holidays (date, name) VALUES (CAST(@CurrentYear AS VARCHAR(4)) + '-11-11', 'Independence Day');&#xA;&#xA;    -- Boże Narodzenie&#xA;    INSERT INTO holidays (date, name) VALUES (CAST(@CurrentYear AS VARCHAR(4)) + '-12-25', 'Christmas first day');&#xA;    INSERT INTO holidays (date, name) VALUES (CAST(@CurrentYear AS VARCHAR(4)) + '-12-26', 'Christmas second day');&#xA;&#xA;    SET @CurrentYear += 1;&#xA;END;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Load Data"
+      DTS:refId="Package\Load Customer"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{ADC6DF9B-5BF5-4556-95DD-5C9B1E9F8603}"
+      DTS:Description="Load Customer"
+      DTS:DTSID="{CA4C09A6-46B7-4E17-A16A-78C5D0F60697}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Load Data"
-      DTS:ThreadHint="1">
+      DTS:ObjectName="Load Customer"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{9D26513D-7884-4825-924D-D1D22A8F9032}"
-          SQLTask:SqlStatementSource="DECLARE @EndDate DATE = '2035-12-31';&#xA;DECLARE @CurrentDate DATE = '1970-01-01';&#xA;&#xA;WHILE @CurrentDate &lt;= @EndDate&#xA;BEGIN&#xA;    DECLARE @IsHoliday BIT;&#xA;    DECLARE @HolidayName VARCHAR(100);&#xA;&#xA;    USE auxiliary;&#xA;    SELECT @IsHoliday = CASE WHEN COUNT(*) &gt; 0 THEN 1 ELSE 0 END,&#xA;           @HolidayName = COALESCE(MAX(Name), '')&#xA;    FROM Holidays&#xA;    WHERE date = @CurrentDate;&#xA;    USE SpotifyDW;&#xA;&#xA;    INSERT INTO Date (Year, Month, Day, MonthNumber, DayOfWeek, DayOfWeekNumber, WorkingDay, Vacation, VacationType)&#xA;    SELECT&#xA;        YEAR(@CurrentDate),&#xA;        FORMAT(@CurrentDate, 'MMMM'),&#xA;        DAY(@CurrentDate),&#xA;        MONTH(@CurrentDate),&#xA;        DATENAME(WEEKDAY, @CurrentDate),&#xA;        DATEPART(WEEKDAY, @CurrentDate),&#xA;        IIF(@IsHoliday = 1, 'Free day',&#xA;            IIF(DATENAME(WEEKDAY, @CurrentDate) IN ('Saturday', 'Sunday'), 'Free day', 'Working day')) AS WorkingDay,&#xA;        IIF(MONTH(@CurrentDate) IN (7, 8), 'Summer holidays',&#xA;            IIF(MONTH(@CurrentDate) IN (1, 2), 'Winter holidays', 'No holidays')) AS Vacation,&#xA;        IIF(@IsHoliday = 1, @HolidayName, 'None') AS VacationType&#xA;    SET @CurrentDate = DATEADD(DAY, 1, @CurrentDate);&#xA;END;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{0FEE9FD4-5C0A-4E35-92C9-BED367967BEB}"
+          SQLTask:SqlStatementSource="USE SpotifyDW;&#xA;&#xA;DECLARE @ID INT, @Name CHAR(15), @Surname CHAR(15), @Birth_date DATE, @Phone_Number CHAR(50), @Email CHAR(75), @Login CHAR(30), @Subscription CHAR(30);&#xA;&#xA;/*CLOSE customer_cursor;&#xA;DEALLOCATE customer_cursor;*/&#xA;&#xA;DECLARE customer_cursor CURSOR FOR&#xA;SELECT&#xA;    ID,&#xA;&#x9;NAME,&#xA;&#x9;SURNAME,&#xA;&#x9;BIRTH_DATE,&#xA;&#x9;PHONE_NUMBER,&#xA;&#x9;EMAIL,&#xA;    LOGIN,&#xA;    SUBSCRIPTION&#xA;FROM&#xA;    Spotify.dbo.CUSTOMER ORDER BY ID;&#xA;&#xA;OPEN customer_cursor;&#xA;FETCH NEXT FROM customer_cursor INTO @ID, @Name, @Surname, @Birth_date, @Phone_Number, @Email, @Login, @Subscription;&#xA;&#xA;WHILE @@FETCH_STATUS = 0&#xA;BEGIN&#xA;    DECLARE @RegistrationDate Date, @MostListenedGenre VARCHAR(100), @SongsInPrivateLibrary INT, @FollowersNumber INT, @LastLoginDatetime Datetime, @NumberOfDaysOfPremiumAccount INT, @MostUsedDevice VARCHAR(100);&#xA;    SELECT @RegistrationDate = RegistrationDate, @MostListenedGenre = MostListenedGenre, @SongsInPrivateLibrary = SongsInPrivateLibrary, @FollowersNumber = FollowersNumber, @LastLoginDatetime = LastLoginDatetime, @NumberOfDaysOfPremiumAccount = NumberOfDaysOfPremiumAccount, @MostUsedDevice = MostUsedDevice FROM auxiliary.dbo.SpotifyCustomersCSV WHERE CustomerID = @ID&#xA;    DECLARE @Age INT = YEAR(GETDATE()) - YEAR(@Birth_date)&#xA;    DECLARE @CustomerExperience INT = DATEDIFF(DAY, @RegistrationDate, GETDATE())&#xA;    IF NOT EXISTS (&#xA;        SELECT 1&#xA;        FROM Customer&#xA;        WHERE NameAndSurname = @Name + ' ' + @Surname&#xA;        AND Login = @Login&#xA;        AND LoginID = @ID&#xA;        AND Subscription = @Subscription&#xA;        AND AgeCategory =&#xA;            CASE&#xA;                WHEN @Age BETWEEN 10 AND 20 THEN '10-20'&#xA;                WHEN @Age BETWEEN 20 AND 30 THEN '20-30'&#xA;                WHEN @Age BETWEEN 30 AND 40 THEN '30-40'&#xA;                WHEN @Age BETWEEN 40 AND 50 THEN '40-50'&#xA;                WHEN @Age BETWEEN 50 AND 60 THEN '50-60'&#xA;                WHEN @Age BETWEEN 60 AND 70 THEN '60-70'&#xA;                WHEN @Age BETWEEN 70 AND 80 THEN '70-80'&#xA;                WHEN @Age BETWEEN 80 AND 90 THEN '80-90'&#xA;                WHEN @Age BETWEEN 90 AND 100 THEN '90-100'&#xA;                ELSE '100-'&#xA;            END&#xA;        AND Email = @Email&#xA;        AND PhoneNumber = @Phone_Number&#xA;        AND CustomerExperienceCategory =&#xA;            CASE&#xA;                WHEN @CustomerExperience BETWEEN 0 AND 20 THEN '0-10'&#xA;                WHEN @CustomerExperience BETWEEN 20 AND 40 THEN '20-40'&#xA;                WHEN @CustomerExperience BETWEEN 40 AND 60 THEN '40-60'&#xA;                WHEN @CustomerExperience BETWEEN 60 AND 80 THEN '60-80'&#xA;                WHEN @CustomerExperience BETWEEN 80 AND 100 THEN '80-100'&#xA;                ELSE '100-'&#xA;            END&#xA;        AND PreferredMusicGenre = @MostListenedGenre&#xA;        AND PreferredDevice = @MostUsedDevice&#xA;        AND UpToDate = 1&#xA;    )&#xA;    BEGIN&#xA;        IF NOT EXISTS (&#xA;&#x9;&#x9;&#x9;SELECT 1&#xA;&#x9;&#x9;&#x9;FROM Customer&#xA;&#x9;&#x9;&#x9;WHERE LoginID = @ID&#xA;&#x9;&#x9;)&#xA;        BEGIN&#xA;            INSERT INTO Customer (&#xA;                NameAndSurname,&#xA;                Login,&#xA;                LoginID,&#xA;                Subscription,&#xA;                AgeCategory,&#xA;                Email,&#xA;                PhoneNumber,&#xA;                CustomerExperienceCategory,&#xA;                PreferredMusicGenre,&#xA;                PreferredDevice,&#xA;                UpToDate&#xA;            )&#xA;            VALUES (&#xA;                @Name + ' ' + @Surname,&#xA;                @Login,&#xA;                @ID,&#xA;                @Subscription,&#xA;                CASE&#xA;                    WHEN @Age BETWEEN 10 AND 20 THEN '10-20'&#xA;                    WHEN @Age BETWEEN 20 AND 30 THEN '20-30'&#xA;                    WHEN @Age BETWEEN 30 AND 40 THEN '30-40'&#xA;                    WHEN @Age BETWEEN 40 AND 50 THEN '40-50'&#xA;                    WHEN @Age BETWEEN 50 AND 60 THEN '50-60'&#xA;                    WHEN @Age BETWEEN 60 AND 70 THEN '60-70'&#xA;                    WHEN @Age BETWEEN 70 AND 80 THEN '70-80'&#xA;                    WHEN @Age BETWEEN 80 AND 90 THEN '80-90'&#xA;                    WHEN @Age BETWEEN 90 AND 100 THEN '90-100'&#xA;                    ELSE '100-'&#xA;                END,&#xA;                @Email,&#xA;                @Phone_Number,&#xA;                CASE&#xA;                    WHEN @CustomerExperience BETWEEN 0 AND 20 THEN '0-10'&#xA;                    WHEN @CustomerExperience BETWEEN 20 AND 40 THEN '20-40'&#xA;                    WHEN @CustomerExperience BETWEEN 40 AND 60 THEN '40-60'&#xA;                    WHEN @CustomerExperience BETWEEN 60 AND 80 THEN '60-80'&#xA;                    WHEN @CustomerExperience BETWEEN 80 AND 100 THEN '80-100'&#xA;                    ELSE '100-'&#xA;                END,&#xA;                @MostListenedGenre,&#xA;                @MostUsedDevice,&#xA;                1&#xA;            );&#xA;        END&#xA;        ELSE&#xA;        BEGIN&#xA;            DECLARE @OldCustomerId INT;&#xA;        SELECT @OldCustomerId = ID FROM Customer WHERE LoginID = @ID AND UpToDate = 1;&#xA;        UPDATE Customer SET UpToDate = 0 WHERE LoginID = @ID;&#xA;&#xA;        INSERT INTO Customer (&#xA;            NameAndSurname,&#xA;            Login,&#xA;            LoginID,&#xA;            Subscription,&#xA;            AgeCategory,&#xA;            Email,&#xA;            PhoneNumber,&#xA;            CustomerExperienceCategory,&#xA;            PreferredMusicGenre,&#xA;            PreferredDevice,&#xA;            UpToDate&#xA;        )&#xA;        VALUES (&#xA;            @Name + ' ' + @Surname,&#xA;            @Login,&#xA;            @ID,&#xA;            @Subscription,&#xA;            CASE&#xA;                WHEN @Age BETWEEN 10 AND 20 THEN '10-20'&#xA;                WHEN @Age BETWEEN 20 AND 30 THEN '20-30'&#xA;                WHEN @Age BETWEEN 30 AND 40 THEN '30-40'&#xA;                WHEN @Age BETWEEN 40 AND 50 THEN '40-50'&#xA;                WHEN @Age BETWEEN 50 AND 60 THEN '50-60'&#xA;                WHEN @Age BETWEEN 60 AND 70 THEN '60-70'&#xA;                WHEN @Age BETWEEN 70 AND 80 THEN '70-80'&#xA;                WHEN @Age BETWEEN 80 AND 90 THEN '80-90'&#xA;                WHEN @Age BETWEEN 90 AND 100 THEN '90-100'&#xA;                ELSE '100-'&#xA;            END,&#xA;            @Email,&#xA;            @Phone_Number,&#xA;            CASE&#xA;                WHEN @CustomerExperience BETWEEN 0 AND 20 THEN '0-10'&#xA;                WHEN @CustomerExperience BETWEEN 20 AND 40 THEN '20-40'&#xA;                WHEN @CustomerExperience BETWEEN 40 AND 60 THEN '40-60'&#xA;                WHEN @CustomerExperience BETWEEN 60 AND 80 THEN '60-80'&#xA;                WHEN @CustomerExperience BETWEEN 80 AND 100 THEN '80-100'&#xA;                ELSE '100-'&#xA;            END,&#xA;            @MostListenedGenre,&#xA;            @MostUsedDevice,&#xA;            1&#xA;        );&#xA;&#xA;        DECLARE @NewCustomerId INT;&#xA;        SELECT @NewCustomerId = ID FROM Customer WHERE LoginID = @ID AND UpToDate = 1;&#xA;&#xA;        UPDATE Playback SET IDCustomer = @NewCustomerId WHERE IDCustomer = @OldCustomerId;&#xA;        UPDATE PlaylistCreation SET IDCustomer = @NewCustomerId WHERE IDCustomer = @OldCustomerId;&#xA;        END&#xA;    END&#xA;&#xA;    FETCH NEXT FROM customer_cursor INTO @ID, @Name, @Surname, @Birth_date, @Phone_Number, @Email, @Login, @Subscription;&#xA;END;&#xA;&#xA;CLOSE customer_cursor;&#xA;DEALLOCATE customer_cursor;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load Date"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Load Date"
+      DTS:DTSID="{ADC6DF9B-5BF5-4556-95DD-5C9B1E9F8603}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Date"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0FEE9FD4-5C0A-4E35-92C9-BED367967BEB}"
+          SQLTask:SqlStatementSource="DECLARE @EndDate DATE = '2025-12-31';&#xA;DECLARE @CurrentDate DATE = '1970-01-01';&#xA;&#xA;WHILE @CurrentDate &lt;= @EndDate&#xA;BEGIN&#xA;    DECLARE @IsHoliday BIT;&#xA;    DECLARE @HolidayName VARCHAR(100);&#xA;&#xA;    USE auxiliary;&#xA;    SELECT @IsHoliday = CASE WHEN COUNT(*) &gt; 0 THEN 1 ELSE 0 END,&#xA;           @HolidayName = COALESCE(MAX(Name), '')&#xA;    FROM Holidays&#xA;    WHERE date = @CurrentDate;&#xA;    USE SpotifyDW;&#xA;&#xA;    MERGE INTO SpotifyDW.dbo.Date AS Target&#xA;    USING (VALUES (&#xA;            YEAR(@CurrentDate),&#xA;            FORMAT(@CurrentDate, 'MMMM'),&#xA;            DAY(@CurrentDate),&#xA;            MONTH(@CurrentDate),&#xA;            DATENAME(WEEKDAY, @CurrentDate),&#xA;            DATEPART(WEEKDAY, @CurrentDate),&#xA;            CASE&#xA;                WHEN @IsHoliday = 1 THEN 'Free day'&#xA;                WHEN DATENAME(WEEKDAY, @CurrentDate) IN ('Saturday', 'Sunday') THEN 'Free day'&#xA;                ELSE 'Working day'&#xA;            END,&#xA;            CASE&#xA;                WHEN MONTH(@CurrentDate) IN (7, 8) THEN 'Summer holidays'&#xA;                WHEN MONTH(@CurrentDate) IN (1, 2) THEN 'Winter holidays'&#xA;                ELSE 'No holidays'&#xA;            END,&#xA;            CASE&#xA;                WHEN @IsHoliday = 1 THEN @HolidayName&#xA;                ELSE 'None'&#xA;            END&#xA;        )&#xA;    ) AS Source (Year, Month, Day, MonthNumber, DayOfWeek, DayOfWeekNumber, WorkingDay, Vacation, VacationType)&#xA;    ON Target.Year = Source.Year&#xA;        AND Target.MonthNumber = Source.MonthNumber&#xA;        AND Target.Day = Source.Day&#xA;    WHEN NOT MATCHED THEN&#xA;        INSERT (Year, Month, Day, MonthNumber, DayOfWeek, DayOfWeekNumber, WorkingDay, Vacation, VacationType)&#xA;        VALUES (Source.Year, Source.Month, Source.Day, Source.MonthNumber, Source.DayOfWeek, Source.DayOfWeekNumber, Source.WorkingDay, Source.Vacation, Source.VacationType);&#xA;&#xA;    SET @CurrentDate = DATEADD(DAY, 1, @CurrentDate);&#xA;END;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Load Junk"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
+      DTS:Description="Load Junk"
       DTS:DTSID="{E8AAABD0-4A24-48E4-B285-D864D94AC332}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -103,24 +182,109 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{9D26513D-7884-4825-924D-D1D22A8F9032}"
-          SQLTask:SqlStatementSource="USE SpotifyDW;&#xA;&#xA;DECLARE @ID INT, @Device CHAR(100);&#xA;&#xA;CLOSE junk_cursor;&#xA;DEALLOCATE junk_cursor;&#xA;&#xA;DECLARE junk_cursor CURSOR FOR&#xA;SELECT&#xA;    ID,&#xA;    DEVICE&#xA;FROM&#xA;    Spotify.dbo.PLAYBACK ORDER BY ID;&#xA;&#xA;OPEN junk_cursor;&#xA;FETCH NEXT FROM junk_cursor INTO @ID, @Device;&#xA;&#xA;WHILE @@FETCH_STATUS = 0&#xA;BEGIN&#xA;    IF NOT EXISTS (&#xA;        SELECT 1&#xA;        FROM Junk&#xA;        WHERE Device = @Device&#xA;    )&#xA;    BEGIN&#xA;        INSERT INTO Junk (&#xA;            Device&#xA;        )&#xA;        VALUES (&#xA;            @Device&#xA;        );&#xA;    END&#xA;&#xA;    FETCH NEXT FROM junk_cursor INTO @ID, @Device;&#xA;END;&#xA;&#xA;CLOSE junk_cursor;&#xA;DEALLOCATE junk_cursor;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{0FEE9FD4-5C0A-4E35-92C9-BED367967BEB}"
+          SQLTask:SqlStatementSource="USE SpotifyDW;&#xA;&#xA;DECLARE @ID INT, @Device CHAR(100);&#xA;&#xA;/*CLOSE junk_cursor;&#xA;DEALLOCATE junk_cursor;*/&#xA;&#xA;DECLARE junk_cursor CURSOR FOR&#xA;SELECT&#xA;    ID,&#xA;    DEVICE&#xA;FROM&#xA;    Spotify.dbo.PLAYBACK ORDER BY ID;&#xA;&#xA;OPEN junk_cursor;&#xA;FETCH NEXT FROM junk_cursor INTO @ID, @Device;&#xA;&#xA;WHILE @@FETCH_STATUS = 0&#xA;BEGIN&#xA;    IF NOT EXISTS (&#xA;        SELECT 1&#xA;        FROM Junk&#xA;        WHERE Device = @Device&#xA;    )&#xA;    BEGIN&#xA;        INSERT INTO Junk (&#xA;            Device&#xA;        )&#xA;        VALUES (&#xA;            @Device&#xA;        );&#xA;    END&#xA;&#xA;    FETCH NEXT FROM junk_cursor INTO @ID, @Device;&#xA;END;&#xA;&#xA;CLOSE junk_cursor;&#xA;DEALLOCATE junk_cursor;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Load time"
+      DTS:refId="Package\Load Playback"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{6EBBEE0A-3D50-4BA2-A700-132B5075F9B5}"
+      DTS:Description="Load Playback"
+      DTS:DTSID="{838B66F4-F833-4133-8EE9-0A16E30FC19B}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Load time"
-      DTS:ThreadHint="2">
+      DTS:ObjectName="Load Playback"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{9D26513D-7884-4825-924D-D1D22A8F9032}"
-          SQLTask:SqlStatementSource="USE SpotifyDW;&#xA;&#xA;DECLARE @Hour INT = 0;&#xA;DECLARE @Minute INT = 0;&#xA;DECLARE @Second INT = 0;&#xA;&#xA;WHILE @Hour &lt; 24&#xA;BEGIN&#xA;    WHILE @Minute &lt; 60&#xA;    BEGIN&#xA;        WHILE @Second &lt; 60&#xA;        BEGIN&#xA;            INSERT INTO Time (Hour, Minute, Second)&#xA;            VALUES (@Hour, @Minute, @Second);&#xA;            SET @Second = @Second + 1;&#xA;        END&#xA;        SET @Minute = @Minute + 1;&#xA;        SET @Second = 0;&#xA;    END&#xA;    SET @Hour = @Hour + 1;&#xA;    SET @Minute = 0;&#xA;END&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{0FEE9FD4-5C0A-4E35-92C9-BED367967BEB}"
+          SQLTask:SqlStatementSource="USE SpotifyDW;&#xA;&#xA;DECLARE @ID INT, @Date DATETIME, @Device CHAR(100), @Listening_Time TIME(0), @ID_c INT, @ID_t INT;&#xA;&#xA;/*CLOSE playback_cursor;&#xA;DEALLOCATE playback_cursor;*/&#xA;&#xA;DECLARE playback_cursor CURSOR FOR&#xA;SELECT&#xA;    ID,&#xA;    DATE,&#xA;    DEVICE,&#xA;    LISTENING_TIME,&#xA;    ID_C,&#xA;    ID_T&#xA;FROM&#xA;    Spotify.dbo.PLAYBACK ORDER BY ID;&#xA;&#xA;OPEN playback_cursor;&#xA;FETCH NEXT FROM playback_cursor INTO @ID, @Date, @Device, @Listening_Time, @ID_c, @ID_t;&#xA;&#xA;WHILE @@FETCH_STATUS = 0&#xA;BEGIN&#xA;    DECLARE @JunkId INT, @NumberOfSongsInLibrary INT, @NumberOfDaysWithPremiumAccount INT, @NumberOfFollowedArtists INT, @NumberOfHoursSinceLastLogin INT, @ListenedSongDuration INT, @CustomerId INT&#xA;    SELECT @JunkId = ID FROM Junk WHERE Device = @Device&#xA;    SELECT @NumberOfSongsInLibrary = SongsInPrivateLibrary, @NumberOfDaysWithPremiumAccount = NumberOfDaysOfPremiumAccount, @NumberOfFollowedArtists = FollowersNumber, @NumberOfHoursSinceLastLogin = DATEPART(HOUR, LastLoginDatetime) FROM auxiliary.dbo.SpotifyCustomersCSV WHERE CustomerID = @ID_c&#xA;    SELECT @CustomerId = ID FROM Customer WHERE LoginID = @ID_c AND UpToDate = 1&#xA;    SELECT @ListenedSongDuration = DATEPART(SECOND, LENGTH) FROM Spotify.dbo.TRACK WHERE ID = @ID_t&#xA;&#xA;    IF NOT EXISTS (&#xA;        SELECT 1&#xA;        FROM Playback&#xA;        WHERE Year = YEAR(@Date)&#xA;        AND MonthNumber = MONTH(@Date)&#xA;        AND Day = DAY(@Date)&#xA;        AND Hour = DATEPART(HOUR, @Date)&#xA;        AND Minute = DATEPART(MINUTE, @Date)&#xA;        AND Second = DATEPART(SECOND, @Date)&#xA;        AND IDSong = @ID_t&#xA;        AND IDCustomer = @CustomerId&#xA;        AND IDJunk = @JunkId&#xA;        AND NumberOfSongsInLibrary = @NumberOfSongsInLibrary&#xA;        AND NumberOfFollowedArtists = @NumberOfFollowedArtists&#xA;        AND NumberOfDaysWithPremiumAccount = @NumberOfDaysWithPremiumAccount&#xA;        AND NumberOfHoursSinceLastLogin = @NumberOfHoursSinceLastLogin&#xA;        AND ListenedSongDuration = @ListenedSongDuration&#xA;        AND CustomerListeningTimeDuration = DATEDIFF(SECOND, CAST('00:00:00' AS TIME), @Listening_Time)&#xA;    )&#xA;    BEGIN&#xA;        INSERT INTO Playback (&#xA;            Year,&#xA;            MonthNumber,&#xA;            Day,&#xA;            Hour,&#xA;            Minute,&#xA;            Second,&#xA;            IDSong,&#xA;            IDCustomer,&#xA;            IDJunk,&#xA;            NumberOfSongsInLibrary,&#xA;            NumberOfFollowedArtists,&#xA;            NumberOfDaysWithPremiumAccount,&#xA;            NumberOfHoursSinceLastLogin,&#xA;            ListenedSongDuration,&#xA;            CustomerListeningTimeDuration&#xA;        )&#xA;        VALUES (&#xA;            YEAR(@Date),&#xA;            MONTH(@Date),&#xA;            DAY(@Date),&#xA;            DATEPART(HOUR, @Date),&#xA;            DATEPART(MINUTE, @Date),&#xA;            DATEPART(SECOND, @Date),&#xA;            @ID_t,&#xA;            @CustomerId,&#xA;            @JunkId,&#xA;            @NumberOfSongsInLibrary,&#xA;            @NumberOfFollowedArtists,&#xA;            @NumberOfDaysWithPremiumAccount,&#xA;            @NumberOfHoursSinceLastLogin,&#xA;            @ListenedSongDuration,&#xA;            DATEDIFF(SECOND, CAST('00:00:00' AS TIME), @Listening_Time)&#xA;        );&#xA;    END&#xA;&#xA;    FETCH NEXT FROM playback_cursor INTO @ID, @Date, @Device, @Listening_Time, @ID_c, @ID_t;&#xA;END;&#xA;&#xA;CLOSE playback_cursor;&#xA;DEALLOCATE playback_cursor;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load Playlist"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Load Playlist"
+      DTS:DTSID="{85A874C2-882C-4610-8BA5-3DEF60C1A983}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Playlist"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0FEE9FD4-5C0A-4E35-92C9-BED367967BEB}"
+          SQLTask:SqlStatementSource="USE SpotifyDW;&#xA;&#xA;DECLARE @ID INT, @Name CHAR(30), @Privacy CHAR(30);&#xA;&#xA;/*CLOSE playlist_cursor;&#xA;DEALLOCATE playlist_cursor;*/&#xA;&#xA;DECLARE playlist_cursor CURSOR FOR&#xA;SELECT&#xA;    ID,&#xA;    NAME,&#xA;    PRIVACY&#xA;FROM&#xA;    Spotify.dbo.PLAYLIST ORDER BY ID;&#xA;&#xA;OPEN playlist_cursor;&#xA;FETCH NEXT FROM playlist_cursor INTO @ID, @Name, @Privacy;&#xA;&#xA;WHILE @@FETCH_STATUS = 0&#xA;BEGIN&#xA;    IF NOT EXISTS (&#xA;        SELECT 1&#xA;        FROM Playlist&#xA;        WHERE Name = @Name&#xA;        AND Privacy = @Privacy&#xA;    )&#xA;    BEGIN&#xA;        INSERT INTO Playlist (&#xA;            Name,&#xA;            Privacy&#xA;        )&#xA;        VALUES (&#xA;            @Name,&#xA;            @Privacy&#xA;        );&#xA;    END&#xA;&#xA;    FETCH NEXT FROM playlist_cursor INTO @ID, @Name, @Privacy;&#xA;END;&#xA;&#xA;CLOSE playlist_cursor;&#xA;DEALLOCATE playlist_cursor;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load Playlist Creation"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Load Playlist Creation"
+      DTS:DTSID="{157393B8-4853-44D2-9A58-46CE7562F182}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Playlist Creation"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0FEE9FD4-5C0A-4E35-92C9-BED367967BEB}"
+          SQLTask:SqlStatementSource="USE SpotifyDW;&#xA;&#xA;DECLARE @ID INT, @Creation_Time DATE, @Length TIME(0), @ID_c INT;&#xA;&#xA;/*CLOSE playlist_creation_cursor;&#xA;DEALLOCATE playlist_creation_cursor;*/&#xA;&#xA;DECLARE playlist_creation_cursor CURSOR FOR&#xA;SELECT&#xA;    ID,&#xA;    CREATION_DATE,&#xA;    LENGTH,&#xA;    ID_C&#xA;FROM&#xA;    Spotify.dbo.PLAYLIST ORDER BY ID;&#xA;&#xA;OPEN playlist_creation_cursor;&#xA;FETCH NEXT FROM playlist_creation_cursor INTO @ID, @Creation_Time, @Length, @ID_c;&#xA;&#xA;WHILE @@FETCH_STATUS = 0&#xA;BEGIN&#xA;    DECLARE @CustomerId INT&#xA;    SELECT @CustomerId = ID FROM Customer WHERE LoginID = @ID_c AND UpToDate = 1&#xA;&#xA;    DECLARE @SecondsLength INT = DATEDIFF(SECOND, CAST('00:00:00' AS TIME), @Length)&#xA;&#xA;    IF NOT EXISTS (&#xA;        SELECT 1&#xA;        FROM PlaylistCreation&#xA;        WHERE IDCustomer = @CustomerId&#xA;        AND IDPlaylist = @ID&#xA;        AND Year = YEAR(@Creation_Time)&#xA;        AND MonthNumber = MONTH(@Creation_Time)&#xA;        AND Day = DAY(@Creation_Time)&#xA;        AND PlaylistDuration = @SecondsLength&#xA;    )&#xA;    BEGIN&#xA;        INSERT INTO PlaylistCreation (&#xA;            IDCustomer,&#xA;            IDPlaylist,&#xA;            Year,&#xA;            MonthNumber,&#xA;            Day,&#xA;            PlaylistDuration&#xA;        )&#xA;        VALUES (&#xA;            @CustomerId,&#xA;            @ID,&#xA;            YEAR(@Creation_Time),&#xA;            MONTH(@Creation_Time),&#xA;            DAY(@Creation_Time),&#xA;            @SecondsLength&#xA;        );&#xA;    END&#xA;&#xA;    FETCH NEXT FROM playlist_creation_cursor INTO @ID, @Creation_Time, @Length, @ID_c;&#xA;END;&#xA;&#xA;CLOSE playlist_creation_cursor;&#xA;DEALLOCATE playlist_creation_cursor;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load Playlist Song"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Load Playlist Song"
+      DTS:DTSID="{32A1375F-79AC-4B16-BABA-4437063CCB57}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Playlist Song"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0FEE9FD4-5C0A-4E35-92C9-BED367967BEB}"
+          SQLTask:SqlStatementSource="USE SpotifyDW;&#xA;&#xA;DECLARE @ID_P INT, @ID_T INT;&#xA;&#xA;/*CLOSE playlist_song_cursor;&#xA;DEALLOCATE playlist_song_cursor;*/&#xA;&#xA;DECLARE playlist_song_cursor CURSOR FOR&#xA;SELECT&#xA;    ID_P,&#xA;    ID_T&#xA;FROM&#xA;    Spotify.dbo.PLAYLIST_TRACK ORDER BY ID_P, ID_T;&#xA;&#xA;OPEN playlist_song_cursor;&#xA;FETCH NEXT FROM playlist_song_cursor INTO @ID_P, @ID_T;&#xA;&#xA;WHILE @@FETCH_STATUS = 0&#xA;BEGIN&#xA;    IF NOT EXISTS (&#xA;        SELECT 1&#xA;        FROM PlaylistSong&#xA;        WHERE IDPlaylist = @ID_P&#xA;        AND IDSong = @ID_T&#xA;    )&#xA;    BEGIN&#xA;        INSERT INTO PlaylistSong (&#xA;            IDPlaylist,&#xA;            IDSong&#xA;        )&#xA;        VALUES (&#xA;            @ID_P,&#xA;            @ID_T&#xA;        );&#xA;    END&#xA;&#xA;    FETCH NEXT FROM playlist_song_cursor INTO @ID_P, @ID_T;&#xA;END;&#xA;&#xA;CLOSE playlist_song_cursor;&#xA;DEALLOCATE playlist_song_cursor;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load Song"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Load Song"
+      DTS:DTSID="{F023C73F-008B-4B60-9AAF-A2C82780A1F8}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Song"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0FEE9FD4-5C0A-4E35-92C9-BED367967BEB}"
+          SQLTask:SqlStatementSource="USE SpotifyDW;&#xA;&#xA;DECLARE @ID INT, @Title CHAR(30), @Number_In_Album INT, @ID_a INT;&#xA;&#xA;/*CLOSE song_cursor;&#xA;DEALLOCATE song_cursor;*/&#xA;&#xA;DECLARE song_cursor CURSOR FOR&#xA;SELECT&#xA;    ID,&#xA;    TITLE,&#xA;    NUMBER_IN_ALBUM,&#xA;    ID_A&#xA;FROM&#xA;    Spotify.dbo.TRACK ORDER BY ID;&#xA;&#xA;OPEN song_cursor;&#xA;FETCH NEXT FROM song_cursor INTO @ID, @Title, @Number_In_Album, @ID_a;&#xA;&#xA;WHILE @@FETCH_STATUS = 0&#xA;BEGIN&#xA;    IF NOT EXISTS (&#xA;        SELECT 1&#xA;        FROM Song&#xA;        WHERE Title = @Title&#xA;        AND NumberInAlbum = @Number_In_Album&#xA;        AND IDAlbum = @ID_a&#xA;    )&#xA;    BEGIN&#xA;        INSERT INTO Song (&#xA;            Title,&#xA;            NumberInAlbum,&#xA;            IDAlbum&#xA;        )&#xA;        VALUES (&#xA;            @Title,&#xA;            @Number_In_Album,&#xA;            @ID_a&#xA;        );&#xA;    END&#xA;&#xA;    FETCH NEXT FROM song_cursor INTO @ID, @Title, @Number_In_Album, @ID_a;&#xA;END;&#xA;&#xA;CLOSE song_cursor;&#xA;DEALLOCATE song_cursor;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load Time"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Load Time"
+      DTS:DTSID="{6EBBEE0A-3D50-4BA2-A700-132B5075F9B5}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Time"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0FEE9FD4-5C0A-4E35-92C9-BED367967BEB}"
+          SQLTask:SqlStatementSource="USE SpotifyDW;&#xA;&#xA;DECLARE @Hour INT = 0;&#xA;DECLARE @Minute INT = 0;&#xA;DECLARE @Second INT = 0;&#xA;&#xA;CREATE TABLE #NewTime (&#xA;    Hour INT,&#xA;    Minute INT,&#xA;    Second INT&#xA;);&#xA;&#xA;WHILE @Hour &lt; 24&#xA;BEGIN&#xA;    SET @Minute = 0;&#xA;    WHILE @Minute &lt; 60&#xA;    BEGIN&#xA;        SET @Second = 0;&#xA;        WHILE @Second &lt; 60&#xA;        BEGIN&#xA;            INSERT INTO #NewTime (Hour, Minute, Second)&#xA;            VALUES (@Hour, @Minute, @Second);&#xA;&#xA;            SET @Second = @Second + 1;&#xA;        END&#xA;        SET @Minute = @Minute + 1;&#xA;    END&#xA;    SET @Hour = @Hour + 1;&#xA;END&#xA;&#xA;MERGE INTO Time AS Target&#xA;USING #NewTime AS Source&#xA;ON Target.Hour = Source.Hour AND Target.Minute = Source.Minute AND Target.Second = Source.Second&#xA;WHEN NOT MATCHED THEN&#xA;    INSERT (Hour, Minute, Second)&#xA;    VALUES (Source.Hour, Source.Minute, Source.Second);&#xA;&#xA;DROP TABLE #NewTime;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -132,15 +296,103 @@
       DTS:From="Package\Load auxility tables"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Load Data" />
+      DTS:To="Package\Load Date" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{6EF3645B-A319-48E1-97E4-35377BC0BBA2}"
-      DTS:From="Package\Load Data"
+      DTS:DTSID="{DC126F0D-7B23-465C-AF78-12CBC88D0DDF}"
+      DTS:From="Package\Load Date"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Load Time" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 10]"
+      DTS:CreationName=""
+      DTS:DTSID="{18DFCD0F-ECD7-47DF-9F22-9FEB8B1C883C}"
+      DTS:From="Package\Load Junk"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 10"
+      DTS:To="Package\Load Playback" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 11]"
+      DTS:CreationName=""
+      DTS:DTSID="{377CAA9E-83A5-4287-8569-5EA478906777}"
+      DTS:From="Package\Load Playback"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 11"
       DTS:To="Package\Drop auxiliary tables" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 12]"
+      DTS:CreationName=""
+      DTS:DTSID="{EBD914AB-7500-40CE-BF5C-880F9C2F24CB}"
+      DTS:From="Package\Drop auxiliary tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 12"
+      DTS:To="Package\Analysis Services Processing Task" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{A12097B5-C08D-44A7-B870-38B85BE3BAF6}"
+      DTS:From="Package\Load Time"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Load Artist" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{69A1666C-E88C-4C1B-965F-326C37176121}"
+      DTS:From="Package\Load Artist"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Load Customer" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{35AF9DCD-7F23-46F3-95CA-187DACA2BF65}"
+      DTS:From="Package\Load Customer"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Load Album" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{6487A073-0363-46BA-AF3F-F17563D9F351}"
+      DTS:From="Package\Load Album"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Load Song" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{AD8E98BA-36E3-43D1-9005-74B751E1F45F}"
+      DTS:From="Package\Load Song"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\Load Playlist" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{8AC1977E-8E84-4FCB-BEEA-DBD789792DA6}"
+      DTS:From="Package\Load Playlist"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 7"
+      DTS:To="Package\Load Playlist Song" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 8]"
+      DTS:CreationName=""
+      DTS:DTSID="{E12D78A0-F075-4371-9D33-E2AA8EF97F84}"
+      DTS:From="Package\Load Playlist Song"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 8"
+      DTS:To="Package\Load Playlist Creation" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 9]"
+      DTS:CreationName=""
+      DTS:DTSID="{1C894D1A-A18E-45F6-A55E-128618CD8AB1}"
+      DTS:From="Package\Load Playlist Creation"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 9"
+      DTS:To="Package\Load Junk" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -153,41 +405,77 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="174.4,41.6"
+          Size="237.333333333334,42.6666666666667"
+          Id="Package\Analysis Services Processing Task"
+          TopLeft="652.843742141966,799.874987941235" />
+        <NodeLayout
+          Size="174.666666666667,41.3333333333334"
           Id="Package\Drop auxiliary tables"
-          TopLeft="230.714286205416,402.999999646755" />
+          TopLeft="686.183029418403,722.312493937003" />
         <NodeLayout
-          Size="168.8,41.6"
+          Size="164,42.6666666666667"
+          Id="Package\Load Album"
+          TopLeft="302.999996460974,469.31249277927" />
+        <NodeLayout
+          Size="164,42.6666666666667"
+          Id="Package\Load Artist"
+          TopLeft="310.968745448161,310.999994537234" />
+        <NodeLayout
+          Size="168.666666666667,41.3333333333334"
           Id="Package\Load auxility tables"
-          TopLeft="237.857143363478,73.4117646415341" />
+          TopLeft="315.200892210966,25.4742654987234" />
         <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Load Data"
-          TopLeft="235.000000500253,240.117646848351" />
+          Size="150.666666666667,42.6666666666667"
+          Id="Package\Load Customer"
+          TopLeft="312.062495878898,391.374993636459" />
         <NodeLayout
-          Size="125.6,41.6"
+          Size="128,42.6666666666667"
+          Id="Package\Load Date"
+          TopLeft="331.874999056703,119.867648998589" />
+        <NodeLayout
+          Size="126.666666666667,42.6666666666667"
           Id="Package\Load Junk"
-          TopLeft="43.5714286641807,245.470588020129" />
+          TopLeft="709.977668733954,549.34558258642" />
         <NodeLayout
-          Size="124.8,41.6"
-          Id="Package\Load time"
-          TopLeft="469.285715284701,244.705882138447" />
+          Size="164,42.6666666666667"
+          Id="Package\Load Playback"
+          TopLeft="693.156241094227,631.749990411103" />
+        <NodeLayout
+          Size="164,42.6666666666667"
+          Id="Package\Load Playlist"
+          TopLeft="313.312495413236,661.187488275394" />
+        <NodeLayout
+          Size="164,42.6666666666667"
+          Id="Package\Load Playlist Creation"
+          TopLeft="695.187490616925,454.687493040785" />
+        <NodeLayout
+          Size="164,42.6666666666667"
+          Id="Package\Load Playlist Song"
+          TopLeft="595.656241653021,344.24999447912" />
+        <NodeLayout
+          Size="164,42.6666666666667"
+          Id="Package\Load Song"
+          TopLeft="168.156248917338,576.49999139905" />
+        <NodeLayout
+          Size="124.666666666667,41.3333333333334"
+          Id="Package\Load Time"
+          TopLeft="334.910717287045,214.643382676006" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="319.228571931865,115.011764641534">
+          TopLeft="397.704612300501,66.8075988320567">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,125.105882206817"
+              EndConnector="0,53.0600501665318"
               Start="0,0"
-              End="0,117.605882206817">
+              End="0,45.5600501665318">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,117.605882206817" />
+                    End="0,45.5600501665318" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -198,18 +486,308 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="317.057143352835,281.717646848351">
+          TopLeft="396.55952483854,162.534315665255">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,121.282352798404"
+              EndConnector="0,52.1090670107511"
               Start="0,0"
-              End="0,113.782352798404">
+              End="0,44.6090670107511">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,113.782352798404" />
+                    End="0,44.6090670107511" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 10]"
+          TopLeft="774.233621580757,592.012249253087">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.7377411580162"
+              Start="0,0"
+              End="0,32.2377411580162">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.2377411580162" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 11]"
+          TopLeft="774.336301922982,674.41665707777">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.8958368592331"
+              Start="0,0"
+              End="0,40.3958368592331">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.3958368592331" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 12]"
+          TopLeft="772.513385780184,763.645827270336">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.2291606708994"
+              Start="0,0"
+              End="0,28.7291606708994">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.7291606708994" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="395.106398034269,255.97671600934">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55.0232785278947"
+              Start="0,0"
+              End="0,47.5232785278947">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.5232785278947" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="393.515620663529,353.666661203901">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.7083324325582"
+              Start="0,0"
+              End="0,30.2083324325582">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.2083324325582" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="386.197912836603,434.041660303126">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.2708324761439"
+              Start="0,0"
+              End="0,27.7708324761439">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.7708324761439" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="384.999996460974,511.979159445937">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-134.843747543637,64.5208319531134"
+              Start="0,0"
+              End="-134.843747543637,57.0208319531134">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.2604159765567" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.2604159765567"
+                    Point2="0,32.2604159765567"
+                    Point3="-4,32.2604159765567" />
+                  <mssgle:LineSegment
+                    End="-130.843747543637,32.2604159765567" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-130.843747543637,32.2604159765567"
+                    Point2="-134.843747543637,32.2604159765567"
+                    Point3="-134.843747543637,36.2604159765567" />
+                  <mssgle:LineSegment
+                    End="-134.843747543637,57.0208319531134" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="250.156248917338,619.166658065717">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="119.156246495899,42.0208302096772"
+              Start="0,0"
+              End="119.156246495899,34.5208302096772">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.9688991100981" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.9688991100981"
+                    Point2="0,24.9688991100981"
+                    Point3="4,24.9688991100981" />
+                  <mssgle:LineSegment
+                    End="115.156246495899,24.9688991100981" />
+                  <mssgle:CubicBezierSegment
+                    Point1="115.156246495899,24.9688991100981"
+                    Point2="119.156246495899,24.9688991100981"
+                    Point3="119.156246495899,28.9688991100981" />
+                  <mssgle:LineSegment
+                    End="119.156246495899,34.5208302096772" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="421.312495413236,661.187488275394">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="230.343746239785,-274.270827129607"
+              Start="0,0"
+              End="230.343746239785,-266.770827129607">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-133.135413564804" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-133.135413564804"
+                    Point2="0,-137.135413564804"
+                    Point3="4,-137.135413564804" />
+                  <mssgle:LineSegment
+                    End="226.343746239785,-137.135413564804" />
+                  <mssgle:CubicBezierSegment
+                    Point1="226.343746239785,-137.135413564804"
+                    Point2="230.343746239785,-137.135413564804"
+                    Point3="230.343746239785,-141.135413564804" />
+                  <mssgle:LineSegment
+                    End="230.343746239785,-266.770827129607" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 8]"
+          TopLeft="703.656241653021,386.916661145786">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="73.5312489639037,67.7708318949989"
+              Start="0,0"
+              End="73.5312489639037,60.2708318949989">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5012071457966" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.5012071457966"
+                    Point2="0,27.5012071457966"
+                    Point3="4,27.5012071457966" />
+                  <mssgle:LineSegment
+                    End="69.5312489639037,27.5012071457966" />
+                  <mssgle:CubicBezierSegment
+                    Point1="69.5312489639037,27.5012071457966"
+                    Point2="73.5312489639037,27.5012071457966"
+                    Point3="73.5312489639037,31.5012071457966" />
+                  <mssgle:LineSegment
+                    End="73.5312489639037,60.2708318949989" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 9]"
+          TopLeft="775.249246342106,497.354159707452">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.9914228789681"
+              Start="0,0"
+              End="0,44.4914228789681">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.4914228789681" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -221,5 +799,9 @@
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <ConnectionManager
+    design-time-name="Package.ConnectionManagers[DESKTOP-4SNGB4R]">
+    <ProjectReferenceName></ProjectReferenceName>
+  </ConnectionManager>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
