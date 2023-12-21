@@ -1,5 +1,5 @@
-DECLARE @EndDate DATE = '2025-12-31';
-DECLARE @CurrentDate DATE = '1970-01-01';
+DECLARE @EndDate DATE = '2040-12-31';
+DECLARE @CurrentDate DATE = '1990-01-01';
 
 WHILE @CurrentDate <= @EndDate
 BEGIN

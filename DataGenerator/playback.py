@@ -18,7 +18,7 @@ def generate_playbacks():
     for _ in range(PLAYBACK_NUMBER):
         track_id = random.randint(1, TRACK_NUMBER)
         entity = pd.DataFrame({
-            "DATE": [faker.date_time()],
+            "DATE": [faker.date_time_between(start_date='-3y')],
             "DEVICE": [random.choice(device_types)],
             "LISTENING_TIME": [faker.time()],
             "ID_C": [random.randint(1, CUSTOMER_NUMBER)],
@@ -35,7 +35,7 @@ def expand_playbacks():
     for _ in range(PLAYBACK_NUMBER):
         track_id = random.randint(1, TRACK_NUMBER)
         entity = pd.DataFrame({
-            "DATE": [faker.date_time()],
+            "DATE": [faker.date_time_between(start_date='-3y')],
             "DEVICE": [random.choice(device_types)],
             "LISTENING_TIME": [faker.time()],
             "ID_C": [random.randint(1, CUSTOMER_NUMBER)],

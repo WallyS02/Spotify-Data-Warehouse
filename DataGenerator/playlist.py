@@ -18,7 +18,7 @@ def generate_playlists():
     for _ in range(PLAYLIST_NUMBER):
         entity = pd.DataFrame({
             "NAME": [faker.word().capitalize() + " " + faker.word().capitalize()],
-            "CREATION_DATE": [faker.date()],
+            "CREATION_DATE": [faker.date_between()],
             "PRIVACY": [random.choice(privacy_type)],
             "LENGTH": [faker.time()],
             "ID_C": [random.randint(1, CUSTOMER_NUMBER)],
@@ -45,7 +45,7 @@ def expand_playlists():
     for _ in range(PLAYLIST_NUMBER):
         entity = pd.DataFrame({
             "NAME": [faker.word().capitalize() + " " + faker.word().capitalize()],
-            "CREATION_DATE": [faker.date()],
+            "CREATION_DATE": [faker.date_between()],
             "PRIVACY": [random.choice(privacy_type)],
             "LENGTH": [faker.time()],
             "ID_C": [random.randint(1, CUSTOMER_NUMBER)],

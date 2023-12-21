@@ -1,11 +1,11 @@
 USE SpotifyDW;
 
 CREATE TABLE Date (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
     Year INT,
     Month VARCHAR(20),
     Day INT,
     MonthNumber INT,
-    PRIMARY KEY(Year, MonthNumber, Day),
     DayOfWeek VARCHAR(20),
     DayOfWeekNumber INT,
     WorkingDay VARCHAR(20),
@@ -14,10 +14,10 @@ CREATE TABLE Date (
 );
 
 CREATE TABLE Time (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
     Hour INT,
     Minute INT,
-    Second INT,
-    PRIMARY KEY(Hour, Minute, Second)
+    Second INT
 );
 
 CREATE TABLE Artist (
@@ -32,10 +32,7 @@ CREATE TABLE Artist (
     FollowerNumberCategory VARCHAR(20),
     SongQuantityCategory VARCHAR(20),
     MusicGenre VARCHAR(20),
-    Year INT,
-	MonthNumber INT,
-	Day INT,
-	FOREIGN KEY(Year, MonthNumber, Day) REFERENCES DATE,
+	IDDate INT REFERENCES DATE,
     TotalHoursOfSongsCategory VARCHAR(20),
     UpToDate BIT,
     ArtistExperienceCategory VARCHAR(20)
@@ -60,10 +57,7 @@ CREATE TABLE Album (
     ID INT IDENTITY(1,1) PRIMARY KEY,
     Title VARCHAR(75),
     DurationCategory VARCHAR(20),
-    Year INT,
-	MonthNumber INT,
-	Day INT,
-	FOREIGN KEY(Year, MonthNumber, Day) REFERENCES DATE,
+	IDDate INT REFERENCES DATE,
     IDArtist INT REFERENCES Artist
 );
 
@@ -88,10 +82,8 @@ CREATE TABLE PlaylistSong (
 
 CREATE TABLE PlaylistCreation (
     IDCustomer INT REFERENCES Customer,
-    IDPlaylist INT REFERENCES Playlist,Year INT,
-	MonthNumber INT,
-	Day INT,
-	FOREIGN KEY(Year, MonthNumber, Day) REFERENCES DATE,
+    IDPlaylist INT REFERENCES Playlist,
+	IDDate INT REFERENCES DATE,
     PlaylistDuration INT
     PRIMARY KEY (IDCustomer, IDPlaylist)
 );
@@ -102,14 +94,9 @@ CREATE TABLE Junk (
 );
 
 CREATE TABLE Playback (
-    ID INT IDENTITY(1,1) PRIMARY KEY,Year INT,
-	MonthNumber INT,
-	Day INT,
-	FOREIGN KEY(Year, MonthNumber, Day) REFERENCES DATE,
-    Hour INT,
-	Minute INT,
-	Second INT,
-	FOREIGN KEY(Hour, Minute, Second) REFERENCES TIME,
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+	IDDate INT REFERENCES DATE,
+	IDTime INT REFERENCES TIME,
     IDSong INT REFERENCES Song,
     IDCustomer INT REFERENCES Customer,
     IDJunk INT REFERENCES Junk,

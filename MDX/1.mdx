@@ -1,0 +1,15 @@
+/* Podaj 5 najczêœciej ods³uchiwanych albumów w obecnym i zesz³ym miesi¹cu. */
+
+WITH 
+MEMBER [Measures].[Album Playback Count] AS
+COALESCEEMPTY([Measures].[Playback Count], 0)
+SELECT {[Measures].[Album Playback Count]} ON COLUMNS,
+TOPCOUNT(
+    [Song].[Album Title].[Album Title].Members,
+    5,
+    [Measures].[Playback Count]
+) ON ROWS
+FROM [Spotify DW]
+WHERE (
+    {([Date].[Year].[2023], [Date].[Month Number].[12]), ([Date].[Year].[2023], [Date].[Month Number].[11])}
+)

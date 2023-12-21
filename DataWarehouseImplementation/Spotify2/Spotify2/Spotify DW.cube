@@ -1,4 +1,4 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="fcb31f6a-7e50-489e-9d5c-269e699c716d" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="ea5da6c7-ab1b-4674-af4b-ae3a7e7d2bcc" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Spotify DW</ID>
   <Name>Spotify DW</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="52" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-12924" scrolltop="-3027" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="51664" y="31574" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="52" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-13038" scrolltop="-1788" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="96" x="51664" y="24765" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01ee0000900180380100065461686f6d61" />
             </font>
@@ -19,9 +19,9 @@
           <layoutmanager>
             <ddsxmlobj />
           </layoutmanager>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="PlaylistCreation" left="1872" top="5314" logicalid="26" controlid="1" masterid="0" hint1="0" hint2="0" width="3087" height="2946" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="PlaylistCreation" left="10924" top="6960" logicalid="26" controlid="1" masterid="0" hint1="0" hint2="0" width="3087" height="2240" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
-              <ddsxmlobjectstreaminitwrapper binary="000e00000f0c0000820b0000" />
+              <ddsxmlobjectstreaminitwrapper binary="000e00000f0c0000c0080000" />
             </control>
             <layoutobject>
               <ddsxmlobj>
@@ -30,9 +30,9 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Album" left="18263" top="1438" logicalid="27" controlid="2" masterid="0" hint1="0" hint2="0" width="3316" height="3298" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Album" left="11973" top="0" logicalid="27" controlid="2" masterid="0" hint1="0" hint2="0" width="3316" height="2593" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
-              <ddsxmlobjectstreaminitwrapper binary="000e0000f40c0000e20c0000" />
+              <ddsxmlobjectstreaminitwrapper binary="000e0000f40c0000210a0000" />
             </control>
             <layoutobject>
               <ddsxmlobj>
@@ -41,9 +41,9 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Date" left="14505" top="9072" logicalid="28" controlid="3" masterid="0" hint1="0" hint2="0" width="3634" height="4004" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Date" left="16411" top="5901" logicalid="28" controlid="3" masterid="0" hint1="0" hint2="0" width="3634" height="4357" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
-              <ddsxmlobjectstreaminitwrapper binary="000e0000320e0000a40f0000" />
+              <ddsxmlobjectstreaminitwrapper binary="000e0000320e000005110000" />
             </control>
             <layoutobject>
               <ddsxmlobj>
@@ -52,7 +52,7 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Junk" left="18033" top="17738" logicalid="29" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="1535" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Junk" left="11266" top="20300" logicalid="29" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="1535" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000ff050000" />
             </control>
@@ -63,7 +63,7 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="PlaylistSong" left="7359" top="353" logicalid="30" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="1535" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="PlaylistSong" left="20" top="5346" logicalid="30" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="1535" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000ff050000" />
             </control>
@@ -74,7 +74,7 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Song" left="12759" top="1" logicalid="31" controlid="6" masterid="0" hint1="0" hint2="0" width="3104" height="2240" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Song" left="5420" top="4994" logicalid="31" controlid="6" masterid="0" hint1="0" hint2="0" width="3104" height="2240" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000e0000200c0000c0080000" />
             </control>
@@ -85,7 +85,7 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Playback" left="9724" top="16006" logicalid="32" controlid="7" masterid="0" hint1="0" hint2="0" width="5909" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Playback" left="10253" top="14094" logicalid="32" controlid="7" masterid="0" hint1="0" hint2="0" width="5909" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000e00001517000088130000" />
             </control>
@@ -96,7 +96,7 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Playlist" left="7359" top="4288" logicalid="33" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="1887" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Playlist" left="20" top="9281" logicalid="33" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="1887" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00005f070000" />
             </control>
@@ -107,7 +107,7 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Artist" left="20610" top="8574" logicalid="34" controlid="9" masterid="0" hint1="0" hint2="0" width="4798" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Artist" left="22445" top="5580" logicalid="34" controlid="9" masterid="0" hint1="0" hint2="0" width="4798" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000e0000be12000088130000" />
             </control>
@@ -118,9 +118,9 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Time" left="11178" top="23406" logicalid="35" controlid="10" masterid="0" hint1="0" hint2="0" width="3000" height="1887" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Time" left="18985" top="17826" logicalid="35" controlid="10" masterid="0" hint1="0" hint2="0" width="3000" height="2240" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
-              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00005f070000" />
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000c0080000" />
             </control>
             <layoutobject>
               <ddsxmlobj>
@@ -129,7 +129,7 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Customer" left="20" top="10660" logicalid="36" controlid="11" masterid="0" hint1="0" hint2="0" width="4939" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Customer" left="1957" top="14964" logicalid="36" controlid="11" masterid="0" hint1="0" hint2="0" width="4939" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000e00004b13000088130000" />
             </control>
@@ -140,7 +140,7 @@
             </layoutobject>
             <shape groupshapeid="0" groupnode="0" />
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="4659" top="7037" logicalid="37" controlid="12" masterid="0" hint1="0" hint2="0" width="10146" height="4437" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="MSDDS.Polyline" left="2720" top="7780" logicalid="37" controlid="12" masterid="0" hint1="0" hint2="0" width="8504" height="2844" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
                 <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -148,19 +148,19 @@
             </control>
             <layoutobject>
               <ddsxmlobj>
-                <property name="LogicalObject" value="dataSet.Relations[FK__PlaylistCreation__3B75D760]" vartype="8" />
+                <property name="LogicalObject" value="dataSet.Relations[FK__PlaylistC__IDPla__2A164134]" vartype="8" />
                 <property name="Virtual" value="0" vartype="11" />
                 <property name="VisibleAP" value="0" vartype="3" />
               </ddsxmlobj>
             </layoutobject>
-            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="1" sourceattachpoint="20" destattachpoint="17" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-              <point x="14505" y="11074" />
-              <point x="9732" y="11074" />
-              <point x="9732" y="7337" />
-              <point x="4959" y="7337" />
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="1" sourceattachpoint="13" destattachpoint="12" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="3020" y="10224" />
+              <point x="6972" y="10224" />
+              <point x="6972" y="8080" />
+              <point x="10924" y="8080" />
             </connector>
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="2090" top="7960" logicalid="38" controlid="13" masterid="0" hint1="0" hint2="0" width="1625" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="MSDDS.Polyline" left="13711" top="7680" logicalid="38" controlid="13" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
                 <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -168,19 +168,39 @@
             </control>
             <layoutobject>
               <ddsxmlobj>
-                <property name="LogicalObject" value="dataSet.Relations[FK__PlaylistC__IDCus__398D8EEE]" vartype="8" />
+                <property name="LogicalObject" value="dataSet.Relations[FK__PlaylistC__IDDat__2B0A656D]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="1" sourceattachpoint="20" destattachpoint="13" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="16411" y="8079" />
+              <point x="15211" y="8079" />
+              <point x="15211" y="8080" />
+              <point x="14011" y="8080" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4027" top="8900" logicalid="39" controlid="14" masterid="0" hint1="0" hint2="0" width="8740" height="6564" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__PlaylistC__IDCus__29221CFB]" vartype="8" />
                 <property name="Virtual" value="0" vartype="11" />
                 <property name="VisibleAP" value="0" vartype="3" />
               </ddsxmlobj>
             </layoutobject>
             <connector lineroutestyle="MSDDS.Rectilinear" sourceid="11" destid="1" sourceattachpoint="8" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-              <point x="2489" y="10660" />
-              <point x="2489" y="9460" />
-              <point x="3415" y="9460" />
-              <point x="3415" y="8260" />
+              <point x="4426" y="14964" />
+              <point x="4426" y="11090" />
+              <point x="12467" y="11090" />
+              <point x="12467" y="9200" />
             </connector>
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="4659" top="4832" logicalid="39" controlid="14" masterid="0" hint1="0" hint2="0" width="3000" height="1155" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="MSDDS.Polyline" left="13881" top="2293" logicalid="40" controlid="15" masterid="0" hint1="0" hint2="0" width="11363" height="3787" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
                 <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -188,39 +208,19 @@
             </control>
             <layoutobject>
               <ddsxmlobj>
-                <property name="LogicalObject" value="dataSet.Relations[FK__PlaylistC__IDPla__3A81B327]" vartype="8" />
-                <property name="Virtual" value="0" vartype="11" />
-                <property name="VisibleAP" value="0" vartype="3" />
-              </ddsxmlobj>
-            </layoutobject>
-            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="1" sourceattachpoint="12" destattachpoint="11" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-              <point x="7359" y="5231" />
-              <point x="6159" y="5231" />
-              <point x="6159" y="5687" />
-              <point x="4959" y="5687" />
-            </connector>
-          </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="20171" top="4436" logicalid="40" controlid="15" masterid="0" hint1="0" hint2="0" width="3238" height="4638" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
-            <control>
-              <ddsxmlobj>
-                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
-              </ddsxmlobj>
-            </control>
-            <layoutobject>
-              <ddsxmlobj>
-                <property name="LogicalObject" value="dataSet.Relations[FK__Album__IDArtist__2E1BDC42]" vartype="8" />
+                <property name="LogicalObject" value="dataSet.Relations[FK__Album__IDArtist__1DB06A4F]" vartype="8" />
                 <property name="Virtual" value="0" vartype="11" />
                 <property name="VisibleAP" value="0" vartype="3" />
               </ddsxmlobj>
             </layoutobject>
             <connector lineroutestyle="MSDDS.Rectilinear" sourceid="9" destid="2" sourceattachpoint="8" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-              <point x="23009" y="8574" />
-              <point x="23009" y="6655" />
-              <point x="20471" y="6655" />
-              <point x="20471" y="4736" />
+              <point x="24844" y="5580" />
+              <point x="24844" y="4087" />
+              <point x="14181" y="4087" />
+              <point x="14181" y="2593" />
             </connector>
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="15923" top="4436" logicalid="41" controlid="16" masterid="0" hint1="0" hint2="0" width="3198" height="5136" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="MSDDS.Polyline" left="13331" top="2293" logicalid="41" controlid="16" masterid="0" hint1="0" hint2="0" width="5297" height="4108" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
                 <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -228,19 +228,19 @@
             </control>
             <layoutobject>
               <ddsxmlobj>
-                <property name="LogicalObject" value="dataSet.Relations[FK__Album__2D27B809]" vartype="8" />
+                <property name="LogicalObject" value="dataSet.Relations[FK__Album__IDDate__1CBC4616]" vartype="8" />
                 <property name="Virtual" value="0" vartype="11" />
                 <property name="VisibleAP" value="0" vartype="3" />
               </ddsxmlobj>
             </layoutobject>
-            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="2" sourceattachpoint="6" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-              <point x="16322" y="9072" />
-              <point x="16322" y="6904" />
-              <point x="18821" y="6904" />
-              <point x="18821" y="4736" />
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="2" sourceattachpoint="6" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="18228" y="5901" />
+              <point x="18228" y="4247" />
+              <point x="13631" y="4247" />
+              <point x="13631" y="2593" />
             </connector>
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="15563" top="821" logicalid="42" controlid="17" masterid="0" hint1="0" hint2="0" width="3000" height="2666" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="MSDDS.Polyline" left="6672" top="2094" logicalid="42" controlid="17" masterid="0" hint1="0" hint2="0" width="6809" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
                 <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -248,19 +248,19 @@
             </control>
             <layoutobject>
               <ddsxmlobj>
-                <property name="LogicalObject" value="dataSet.Relations[FK__Song__IDAlbum__30F848ED]" vartype="8" />
+                <property name="LogicalObject" value="dataSet.Relations[FK__Song__IDAlbum__208CD6FA]" vartype="8" />
                 <property name="Virtual" value="0" vartype="11" />
                 <property name="VisibleAP" value="0" vartype="3" />
               </ddsxmlobj>
             </layoutobject>
-            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="6" sourceattachpoint="14" destattachpoint="13" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-              <point x="18263" y="3087" />
-              <point x="17063" y="3087" />
-              <point x="17063" y="1121" />
-              <point x="15863" y="1121" />
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="6" sourceattachpoint="3" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="13081" y="2593" />
+              <point x="13081" y="3793" />
+              <point x="6972" y="3793" />
+              <point x="6972" y="4994" />
             </connector>
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="14028" top="12577" logicalid="43" controlid="18" masterid="0" hint1="0" hint2="0" width="2694" height="3729" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="MSDDS.Polyline" left="19745" top="7680" logicalid="43" controlid="18" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
                 <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -268,37 +268,19 @@
             </control>
             <layoutobject>
               <ddsxmlobj>
-                <property name="LogicalObject" value="dataSet.Relations[FK__Playback__412EB0B6]" vartype="8" />
-                <property name="Virtual" value="0" vartype="11" />
-                <property name="VisibleAP" value="0" vartype="3" />
-              </ddsxmlobj>
-            </layoutobject>
-            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="7" sourceattachpoint="7" destattachpoint="16" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-              <point x="16322" y="13076" />
-              <point x="16322" y="14541" />
-              <point x="14328" y="14541" />
-              <point x="14328" y="16006" />
-            </connector>
-          </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="17839" top="10675" logicalid="44" controlid="19" masterid="0" hint1="0" hint2="0" width="3071" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
-            <control>
-              <ddsxmlobj>
-                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
-              </ddsxmlobj>
-            </control>
-            <layoutobject>
-              <ddsxmlobj>
-                <property name="LogicalObject" value="dataSet.Relations[FK__Artist__286302EC]" vartype="8" />
+                <property name="LogicalObject" value="dataSet.Relations[FK__Artist__IDDate__17F790F9]" vartype="8" />
                 <property name="Virtual" value="0" vartype="11" />
                 <property name="VisibleAP" value="0" vartype="3" />
               </ddsxmlobj>
             </layoutobject>
             <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="9" sourceattachpoint="21" destattachpoint="26" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-              <point x="18139" y="11074" />
-              <point x="20610" y="11074" />
+              <point x="20045" y="8079" />
+              <point x="21245" y="8079" />
+              <point x="21245" y="8080" />
+              <point x="22445" y="8080" />
             </connector>
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="15333" top="18106" logicalid="45" controlid="20" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="MSDDS.Polyline" left="15107" top="9759" logicalid="44" controlid="19" masterid="0" hint1="0" hint2="0" width="3521" height="4635" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
                 <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -306,19 +288,19 @@
             </control>
             <layoutobject>
               <ddsxmlobj>
-                <property name="LogicalObject" value="dataSet.Relations[FK__Playback__IDJunk__44FF419A]" vartype="8" />
+                <property name="LogicalObject" value="dataSet.Relations[FK__Playback__IDDate__30C33EC3]" vartype="8" />
                 <property name="Virtual" value="0" vartype="11" />
                 <property name="VisibleAP" value="0" vartype="3" />
               </ddsxmlobj>
             </layoutobject>
-            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="7" sourceattachpoint="12" destattachpoint="31" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-              <point x="18033" y="18505" />
-              <point x="16833" y="18505" />
-              <point x="16833" y="18506" />
-              <point x="15633" y="18506" />
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="7" sourceattachpoint="7" destattachpoint="18" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="18228" y="10258" />
+              <point x="18228" y="13352" />
+              <point x="15407" y="13352" />
+              <point x="15407" y="14094" />
             </connector>
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="10059" top="722" logicalid="46" controlid="21" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="MSDDS.Polyline" left="11257" top="18794" logicalid="45" controlid="20" masterid="0" hint1="0" hint2="0" width="809" height="2006" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
                 <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -326,19 +308,19 @@
             </control>
             <layoutobject>
               <ddsxmlobj>
-                <property name="LogicalObject" value="dataSet.Relations[FK__PlaylistS__IDSon__36B12243]" vartype="8" />
+                <property name="LogicalObject" value="dataSet.Relations[FK__Playback__IDJunk__3493CFA7]" vartype="8" />
                 <property name="Virtual" value="0" vartype="11" />
                 <property name="VisibleAP" value="0" vartype="3" />
               </ddsxmlobj>
             </layoutobject>
-            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="5" sourceattachpoint="12" destattachpoint="13" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-              <point x="12759" y="1121" />
-              <point x="11559" y="1121" />
-              <point x="11559" y="1120" />
-              <point x="10359" y="1120" />
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="7" sourceattachpoint="0" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="11666" y="20300" />
+              <point x="11666" y="19697" />
+              <point x="11557" y="19697" />
+              <point x="11557" y="19094" />
             </connector>
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="8460" top="1588" logicalid="47" controlid="22" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1121" top="6581" logicalid="46" controlid="21" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
                 <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -346,17 +328,17 @@
             </control>
             <layoutobject>
               <ddsxmlobj>
-                <property name="LogicalObject" value="dataSet.Relations[FK__PlaylistS__IDPla__35BCFE0A]" vartype="8" />
+                <property name="LogicalObject" value="dataSet.Relations[FK__PlaylistS__IDPla__25518C17]" vartype="8" />
                 <property name="Virtual" value="0" vartype="11" />
                 <property name="VisibleAP" value="0" vartype="3" />
               </ddsxmlobj>
             </layoutobject>
             <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="5" sourceattachpoint="4" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-              <point x="8859" y="4288" />
-              <point x="8859" y="1888" />
+              <point x="1520" y="9281" />
+              <point x="1520" y="6881" />
             </connector>
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="12378" top="1742" logicalid="48" controlid="23" masterid="0" hint1="0" hint2="0" width="2333" height="14564" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="MSDDS.Polyline" left="2720" top="5715" logicalid="47" controlid="22" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
                 <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -364,19 +346,19 @@
             </control>
             <layoutobject>
               <ddsxmlobj>
-                <property name="LogicalObject" value="dataSet.Relations[FK__Playback__IDSong__4316F928]" vartype="8" />
+                <property name="LogicalObject" value="dataSet.Relations[FK__PlaylistS__IDSon__2645B050]" vartype="8" />
                 <property name="Virtual" value="0" vartype="11" />
                 <property name="VisibleAP" value="0" vartype="3" />
               </ddsxmlobj>
             </layoutobject>
-            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="7" sourceattachpoint="5" destattachpoint="10" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-              <point x="14311" y="2241" />
-              <point x="14311" y="9123" />
-              <point x="12678" y="9123" />
-              <point x="12678" y="16006" />
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="5" sourceattachpoint="12" destattachpoint="13" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="5420" y="6114" />
+              <point x="4220" y="6114" />
+              <point x="4220" y="6113" />
+              <point x="3020" y="6113" />
             </connector>
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="2090" top="15161" logicalid="49" controlid="24" masterid="0" hint1="0" hint2="0" width="9238" height="1199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="MSDDS.Polyline" left="6573" top="6735" logicalid="48" controlid="23" masterid="0" hint1="0" hint2="0" width="5834" height="7659" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
                 <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -384,21 +366,19 @@
             </control>
             <layoutobject>
               <ddsxmlobj>
-                <property name="LogicalObject" value="dataSet.Relations[FK__Playback__IDCust__440B1D61]" vartype="8" />
+                <property name="LogicalObject" value="dataSet.Relations[FK__Playback__IDSong__32AB8735]" vartype="8" />
                 <property name="Virtual" value="0" vartype="11" />
                 <property name="VisibleAP" value="0" vartype="3" />
               </ddsxmlobj>
             </layoutobject>
-            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="11" destid="7" sourceattachpoint="9" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-              <point x="2489" y="15660" />
-              <point x="2489" y="16060" />
-              <point x="6758" y="16060" />
-              <point x="6758" y="15606" />
-              <point x="11028" y="15606" />
-              <point x="11028" y="16006" />
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="7" sourceattachpoint="5" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6972" y="7234" />
+              <point x="6972" y="11840" />
+              <point x="12107" y="11840" />
+              <point x="12107" y="14094" />
             </connector>
           </ddscontrol>
-          <ddscontrol controlprogid="MSDDS.Polyline" left="12279" top="20706" logicalid="50" controlid="25" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="MSDDS.Polyline" left="6596" top="14865" logicalid="49" controlid="24" masterid="0" hint1="0" hint2="0" width="3957" height="929" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
                 <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -406,14 +386,36 @@
             </control>
             <layoutobject>
               <ddsxmlobj>
-                <property name="LogicalObject" value="dataSet.Relations[FK__Playback__4222D4EF]" vartype="8" />
+                <property name="LogicalObject" value="dataSet.Relations[FK__Playback__IDCust__339FAB6E]" vartype="8" />
                 <property name="Virtual" value="0" vartype="11" />
                 <property name="VisibleAP" value="0" vartype="3" />
               </ddsxmlobj>
             </layoutobject>
-            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="10" destid="7" sourceattachpoint="4" destattachpoint="11" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-              <point x="12678" y="23406" />
-              <point x="12678" y="21006" />
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="11" destid="7" sourceattachpoint="19" destattachpoint="26" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6896" y="15264" />
+              <point x="8574" y="15264" />
+              <point x="8574" y="15494" />
+              <point x="10253" y="15494" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="15862" top="17944" logicalid="50" controlid="25" masterid="0" hint1="0" hint2="0" width="3423" height="852" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__Playback__IDTime__31B762FC]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="10" destid="7" sourceattachpoint="10" destattachpoint="37" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="18985" y="18396" />
+              <point x="17574" y="18396" />
+              <point x="17574" y="18244" />
+              <point x="16162" y="18244" />
             </connector>
           </ddscontrol>
         </dds>
@@ -433,11 +435,11 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-      <Value>-12924</Value>
+      <Value>-13038</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>-3027</Value>
+      <Value>-1788</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -445,111 +447,302 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
-      <Value>1</Value>
+      <Value>0</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
-      <Value>100</Value>
+      <Value>96</Value>
     </Annotation>
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Dimensions>
-    <Dimension dwd:design-time-name="aea97387-cf0e-4ae1-a1d3-2d9f940b1408">
-      <ID>Date</ID>
+    <Dimension dwd:design-time-name="8b10bbc6-f640-431c-9ee7-2b41acdff05c">
+      <ID>ID Date</ID>
       <Name>Date</Name>
       <DimensionID>Date</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="1e9ac6fa-46a0-41db-a689-c767484a1bd4">
-          <AttributeID>Year</AttributeID>
-        </Attribute>
-      </Attributes>
-    </Dimension>
-    <Dimension dwd:design-time-name="e7043c0f-6738-4e13-ac62-1e2e5cc642b3">
-      <ID>Time</ID>
-      <Name>Time</Name>
-      <DimensionID>Time</DimensionID>
-      <Attributes>
-        <Attribute dwd:design-time-name="a626fb31-f5fa-4691-a396-5aca95de12bb">
-          <AttributeID>Hour</AttributeID>
-        </Attribute>
-      </Attributes>
-    </Dimension>
-    <Dimension dwd:design-time-name="560451af-724d-4144-861b-73f34a7d8a29">
-      <ID>ID Song - Year</ID>
-      <Name>ID Song - Year</Name>
-      <DimensionID>Date</DimensionID>
-      <Attributes>
-        <Attribute dwd:design-time-name="a6e96f05-b764-4f2a-a572-a88a2f42978e">
-          <AttributeID>Year</AttributeID>
-        </Attribute>
-      </Attributes>
-    </Dimension>
-    <Dimension dwd:design-time-name="6fc3bbcf-4640-4e39-8834-4bd4e4d6e727">
-      <ID>ID Song - Artist - Year</ID>
-      <Name>ID Song - Artist - Year</Name>
-      <DimensionID>Date</DimensionID>
-      <Attributes>
-        <Attribute dwd:design-time-name="b0cb142a-88b2-4ece-bb2d-24ec54736e59">
-          <AttributeID>Year</AttributeID>
-        </Attribute>
-      </Attributes>
-    </Dimension>
-    <Dimension dwd:design-time-name="7cfe6ebb-3e42-457a-b63e-c31901b78651">
-      <ID>Customer</ID>
-      <Name>Customer</Name>
-      <DimensionID>Customer</DimensionID>
-      <Attributes>
-        <Attribute dwd:design-time-name="97fa8f81-0b25-4f8f-9c8c-538e83dbc89d">
+        <Attribute dwd:design-time-name="f7eb038b-02da-4973-b31e-484a1a1bcedb">
           <AttributeID>ID</AttributeID>
         </Attribute>
-      </Attributes>
-    </Dimension>
-    <Dimension dwd:design-time-name="915803cf-0a10-4b39-addd-c2b71854ed1e">
-      <ID>Song</ID>
-      <Name>Song</Name>
-      <DimensionID>Song</DimensionID>
-      <Attributes>
-        <Attribute dwd:design-time-name="4aaaaab8-e9bd-4e27-8c09-a4d4e57dba97">
-          <AttributeID>ID</AttributeID>
-        </Attribute>
-        <Attribute dwd:design-time-name="ea116f39-c25b-40bf-9cf2-9748eb9f264f">
-          <AttributeID>Album - ID</AttributeID>
-        </Attribute>
-        <Attribute dwd:design-time-name="4f428e5f-16f2-4c5b-b57b-0f597cf5b6ec">
+        <Attribute dwd:design-time-name="679805df-8888-4e48-833b-99923913d510">
           <AttributeID>Year</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="a34ac06d-f3f4-431c-8fc2-7a9a68b778f6">
-          <AttributeID>Artist - ID</AttributeID>
+        <Attribute dwd:design-time-name="48dd2650-9140-441c-a490-a9aa2b62f3d5">
+          <AttributeID>Month</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="01755af3-4b7e-4970-b0c5-d9e4ca3e8641">
-          <AttributeID>Artist - Year</AttributeID>
+        <Attribute dwd:design-time-name="afb9144f-4d07-42ea-8560-adbc179f44ae">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6f19eaa2-934b-4b7a-a9ff-89758e23b767">
+          <AttributeID>Month Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4f46a074-5b26-4410-90d5-8dec756078d5">
+          <AttributeID>Day Of Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7564b1e3-3890-431b-b979-c928a59375c6">
+          <AttributeID>Day Of Week Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="03823b66-277c-4fe7-bbad-0c3d10e50d4a">
+          <AttributeID>Working Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="befd208b-2e43-40b4-8626-457a11d1433c">
+          <AttributeID>Vacation</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5061a0d6-e3ba-43ea-8297-6ffea4b6de76">
+          <AttributeID>Vacation Type</AttributeID>
         </Attribute>
       </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="733c3d4a-18eb-4462-a1c1-472e1c5a5245">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="bcd2d186-4542-4564-a142-7d275c6d93a7">
+    <Dimension dwd:design-time-name="dbad284a-167d-4f5c-968e-1888c0ff05e8">
+      <ID>ID Song - ID Date</ID>
+      <Name>ID Song - ID Date</Name>
+      <DimensionID>Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="dc1e4ceb-3bef-409a-9d0b-419963e9e05f">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c1414bd3-b714-4fa9-96fc-1fdabf5a7f23">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1956f580-0ae8-4540-bbc4-d8855d93f6c0">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f8c2767a-f30d-4712-8ccf-34cab140752e">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dd945154-672e-49de-a8f6-c2a3180157d0">
+          <AttributeID>Month Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4cf988dc-befe-47cb-8aa8-4068500f99c8">
+          <AttributeID>Day Of Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="667c8bd1-02a3-431b-a123-88303eac8438">
+          <AttributeID>Day Of Week Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="47abdfb7-3b52-4668-92c0-e28fb92ab60e">
+          <AttributeID>Working Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="892bb754-c5e8-4773-b89c-546b3a807b37">
+          <AttributeID>Vacation</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d85027a1-c586-4ee3-9321-604c1074c38b">
+          <AttributeID>Vacation Type</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="836b436b-f8a9-4d8b-b136-69b73e0388ef">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="502b75f0-5a07-4076-8a96-ee7604a9be93">
+      <ID>ID Song - Artist - ID Date</ID>
+      <Name>ID Song - Artist - ID Date</Name>
+      <DimensionID>Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="98f7a44e-a206-416f-a122-981938122328">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e3482324-f6f4-4f3d-b801-4b3c43cee2d4">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1563d4d8-fde0-4e83-a316-8e9fd5c830af">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="af167283-14f3-44d0-bb8b-37b5e2264a50">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f0a1dd54-b4f1-49db-8e06-94e289ecbaa5">
+          <AttributeID>Month Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d3d5b043-aa45-4e9c-8fe8-07e7ec0799c0">
+          <AttributeID>Day Of Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="690bb4b6-3106-4bb2-9806-b6c3d242a64f">
+          <AttributeID>Day Of Week Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="177008a5-bf90-4edb-b24d-4073771f06cf">
+          <AttributeID>Working Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="036e798d-1239-400f-87f4-43f727246fc4">
+          <AttributeID>Vacation</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3abed1db-cd23-46a3-b531-f70302bb7b5a">
+          <AttributeID>Vacation Type</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="f0f3d990-955c-4932-85e1-ca430fe75469">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="48f55083-6fe1-469b-b5d2-cec1bda1c5e4">
       <ID>Junk</ID>
       <Name>Junk</Name>
       <DimensionID>Junk</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="fac6829b-9bc5-47c6-80cd-3e362750be86">
+        <Attribute dwd:design-time-name="ff2d6778-8510-4f36-9d38-e5c04cadb745">
           <AttributeID>ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7bd529de-d3f7-419f-9a77-6c4955bc98dc">
+          <AttributeID>Device</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
-    <Dimension dwd:design-time-name="6d0b9d51-af32-4568-b0a2-aaa1cb2d3854">
+    <Dimension dwd:design-time-name="9e5cdb1c-b824-4f78-9ec7-9adf455f59a2">
+      <ID>Customer</ID>
+      <Name>Customer</Name>
+      <DimensionID>Customer</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="ac7527b7-96cf-4e5f-8630-8545babb993a">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4a8e5a81-bb57-453e-a367-c59bd3529293">
+          <AttributeID>Name And Surname</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bb5b92ad-60d7-4778-9158-bcde6440f209">
+          <AttributeID>Login</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ea3d224e-8295-4467-9c4e-9b3a9545ee9b">
+          <AttributeID>Login ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cef514e8-b0ce-4c50-a7c4-66d3048d6d1f">
+          <AttributeID>Subscription</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="12c85eb6-6b6a-4f3f-8f41-dc07293f9e79">
+          <AttributeID>Age Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="276deeff-6d1c-4ea5-89cc-dcd1a85191eb">
+          <AttributeID>Email</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="74fe0ef7-6b23-466f-969b-7931d8bf1be3">
+          <AttributeID>Phone Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ec24d6d2-f6cf-42f4-9b91-532a71b57a5e">
+          <AttributeID>Customer Experience Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="111db9df-48c8-4f6b-a358-07097e56609f">
+          <AttributeID>Preferred Music Genre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f4093e2f-94e1-4fc5-af4d-b2adf22ed405">
+          <AttributeID>Preferred Device</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="ead98534-c609-4e94-8ddd-eb6b90c37639">
+      <ID>Time</ID>
+      <Name>Time</Name>
+      <DimensionID>Time</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="0352eb18-7bd4-41ef-8a46-bcf51f36cd43">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8cd79e2c-9070-4aa1-9fae-195ef1d22877">
+          <AttributeID>Hour</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="942c0beb-d7d6-42cb-be7d-508baa8704eb">
+          <AttributeID>Minute</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="36d038e4-eb65-47a1-9c35-e6338da7bf49">
+          <AttributeID>Second</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="223a8744-6468-4381-b830-d961f1cd15b2">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="41870cb7-9e9d-4ed1-b201-2ce8f028557a">
+      <ID>Song</ID>
+      <Name>Song</Name>
+      <DimensionID>Song</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b208e7fb-a194-44c8-9ed1-5f8d94f4f784">
+          <AttributeID>ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="61cf0134-7afe-43ae-9487-d73579c21c1d">
+          <AttributeID>Album - ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="51a6d202-6603-4bfb-87e3-bb89a6d57873">
+          <AttributeID>Artist - ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4d25fc11-733e-4092-8c65-f35e44246b6d">
+          <AttributeID>Title</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7cf5d89f-0538-4c6b-b955-401f00f38b77">
+          <AttributeID>Number In Album</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bbcadab4-814c-431f-acc6-5b8b338dc18f">
+          <AttributeID>Title 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f444bf66-3ea2-4320-96c3-4c47823b257f">
+          <AttributeID>Duration Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2ad87cc6-0110-4441-8442-69f4ee99042b">
+          <AttributeID>Pseudonym</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bf3cd15d-4956-4f51-bd91-a946ae123540">
+          <AttributeID>Pseudonym ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="62b78cdd-3dce-494f-8c88-4503feda9fc3">
+          <AttributeID>Name And Surname</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2620bf1b-163a-4e18-8889-5bedeff00ceb">
+          <AttributeID>Age Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1a544c53-5920-4942-8f0f-5a53d06e632d">
+          <AttributeID>Email</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8149f24f-7b41-47ce-b33f-a8fde3098c74">
+          <AttributeID>Phone Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f940bfcd-54de-4c90-b92b-630b1c3aedf7">
+          <AttributeID>Origin Country</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="803bfbf4-6e3b-44aa-b3de-afbdf66523a8">
+          <AttributeID>Follower Number Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e5f8f756-cdeb-4c80-8c11-9315abdb43ed">
+          <AttributeID>Song Quantity Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c8db7b64-4847-4139-96a7-f69fb83087ea">
+          <AttributeID>Music Genre</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9ed3e805-3d1f-42bc-b8a9-bf502518eccc">
+          <AttributeID>Total Hours Of Songs Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5d6c15ac-8000-4d7c-9225-392fe084d344">
+          <AttributeID>Artist Experience Category</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="ba50ba42-4f27-4cea-bf8d-29f0bdf95522">
       <ID>Playlist</ID>
       <Name>Playlist</Name>
       <DimensionID>Playlist</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="a08ed76e-97e2-4876-96fa-c0617219b101">
+        <Attribute dwd:design-time-name="1e77410c-011d-4f86-ad59-d080e0c98d35">
           <AttributeID>ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bd201c60-a938-4e97-8a5c-f48edbca1d24">
+          <AttributeID>Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d0ee8351-674c-45ec-a451-c7e2d643a28b">
+          <AttributeID>Privacy</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
   </Dimensions>
   <MeasureGroups>
-    <MeasureGroup dwd:design-time-name="eb03a95b-7bc2-48a5-9578-3a53adedba3f">
+    <MeasureGroup dwd:design-time-name="6715e329-ab0b-464f-b60b-cc51bf12db24">
       <ID>Playback</ID>
       <Name>Playback</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -557,80 +750,80 @@
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
-        <Measure dwd:design-time-name="b8c25941-1648-4a51-93c5-60617697c720">
+        <Measure dwd:design-time-name="9f6297d8-e10b-4590-abfd-002f35e583e9">
           <ID>Number Of Songs In Library</ID>
           <Name>Number Of Songs In Library</Name>
-          <Source dwd:design-time-name="e22a34b3-1a07-43f5-b424-d9645dc88c8b">
+          <Source dwd:design-time-name="5f04d569-ddee-4db0-8cb8-740f5bee0e0d">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="e85cf0ee-5eff-4ca2-bb40-c152c09c95b2">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="390a3a06-1ebb-4960-b5ab-155f9403ac58">
               <TableID>dbo_Playback</TableID>
               <ColumnID>NumberOfSongsInLibrary</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="b2fe9c7c-ac48-49d6-9c8a-3392a8622f5b">
+        <Measure dwd:design-time-name="ee3ec4e3-6260-4eda-bc7b-20ebf5b13c80">
           <ID>Number Of Followed Artists</ID>
           <Name>Number Of Followed Artists</Name>
-          <Source dwd:design-time-name="0a2c67e3-984a-4924-a5be-ac790b179313">
+          <Source dwd:design-time-name="5d7cdfc0-db2e-465e-94f3-70a754df6205">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="695430be-a761-4212-9064-21c6341f0aa8">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6e3d4fcf-dd95-4695-814d-3325fe172f8e">
               <TableID>dbo_Playback</TableID>
               <ColumnID>NumberOfFollowedArtists</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="5db2cc41-a172-4c70-a29c-9eb941786fa4">
+        <Measure dwd:design-time-name="b7b36228-5dfe-448f-821d-3b98f0f34fd7">
           <ID>Number Of Days With Premium Account</ID>
           <Name>Number Of Days With Premium Account</Name>
-          <Source dwd:design-time-name="51bb310c-7eee-48eb-b38e-abe31144db7d">
+          <Source dwd:design-time-name="4822dcf6-d203-43c5-a208-28608cf7f930">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="187169cb-b049-40e3-bdc1-9a46db62ad32">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f566fda0-ccca-4d45-9e71-6901f44b852e">
               <TableID>dbo_Playback</TableID>
               <ColumnID>NumberOfDaysWithPremiumAccount</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="7bfd04c4-77b2-4507-a6e3-60eadabc4a5d">
+        <Measure dwd:design-time-name="491c2074-3835-4bef-8044-e0f108e51729">
           <ID>Number Of Hours Since Last Login</ID>
           <Name>Number Of Hours Since Last Login</Name>
-          <Source dwd:design-time-name="0059ccab-c52f-48f0-8e4d-f47fed846666">
+          <Source dwd:design-time-name="18041c7f-0d06-40ba-bd2f-96aba8a98b63">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="38514921-2923-4377-9efd-ff96a166d446">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c4cd1e3b-a44f-4c3b-928f-e504a0b3455d">
               <TableID>dbo_Playback</TableID>
               <ColumnID>NumberOfHoursSinceLastLogin</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="c5ec96ce-568f-47a7-875a-f2b56383c882">
+        <Measure dwd:design-time-name="8dafdf99-9a99-4743-a962-c5c51203fd16">
           <ID>Listened Song Duration</ID>
           <Name>Listened Song Duration</Name>
-          <Source dwd:design-time-name="fcf1c0db-91fc-4f43-bf8d-e5340cdd0e7f">
+          <Source dwd:design-time-name="102dac7c-fd52-4d54-a573-1945b6231fca">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="207d51a2-3ec6-4f95-a2a4-186d80b29db5">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="30c266fd-b0b5-4c80-a515-4cdd92638425">
               <TableID>dbo_Playback</TableID>
               <ColumnID>ListenedSongDuration</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="9495a7c4-bcba-41f1-b437-e6073a6db1d6">
+        <Measure dwd:design-time-name="dba3c008-7c6b-4390-8d9c-379190257b6b">
           <ID>Customer Listening Time Duration</ID>
           <Name>Customer Listening Time Duration</Name>
-          <Source dwd:design-time-name="886c1ea1-287b-4a37-89d0-957f48d557b6">
+          <Source dwd:design-time-name="60c14608-46d7-4365-9399-9e7becde2a34">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="be050434-f199-481b-8138-529131ff33ce">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="3f463426-57be-4685-9bf4-13756f79988d">
               <TableID>dbo_Playback</TableID>
               <ColumnID>CustomerListeningTimeDuration</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="2b8f57b4-ed7b-4d55-805e-75eb7a830d62">
+        <Measure dwd:design-time-name="c1a887ec-dce5-476e-95eb-afa8cd9f4418">
           <ID>Playback Count</ID>
           <Name>Playback Count</Name>
           <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="5fe8be5c-efec-470e-987d-26035a095f2a">
+          <Source dwd:design-time-name="4fbe6eeb-22ff-4d7e-b436-55e8277f9be3">
             <DataType>Integer</DataType>
             <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="ea643888-8d95-453c-b39f-1aa5770bc06e">
+            <Source xsi:type="RowBinding" dwd:design-time-name="f75c7d8f-a60e-4370-8742-f523fa35e508">
               <TableID>dbo_Playback</TableID>
             </Source>
           </Source>
@@ -639,124 +832,16 @@
       <StorageMode>Molap</StorageMode>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="bb4bb93b-a3d9-4fde-9f37-054e42b540b4">
-          <CubeDimensionID>Date</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="4c7103e7-8a78-40af-905c-9bedb2008844">
-              <AttributeID>Year</AttributeID>
-              <KeyColumns>
-                <KeyColumn dwd:design-time-name="f6de519b-3e26-4f2a-902b-c61a9decf69f">
-                  <DataType>Integer</DataType>
-                  <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f1c0b391-b573-4819-8654-6745deeb6c57">
-                    <TableID>dbo_Playback</TableID>
-                    <ColumnID>Year</ColumnID>
-                  </Source>
-                </KeyColumn>
-                <KeyColumn dwd:design-time-name="d7999fe0-713a-4307-9885-480a444de364">
-                  <DataType>Integer</DataType>
-                  <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="596d7586-7517-4c66-a9a2-68428ed46755">
-                    <TableID>dbo_Playback</TableID>
-                    <ColumnID>MonthNumber</ColumnID>
-                  </Source>
-                </KeyColumn>
-                <KeyColumn dwd:design-time-name="75bfa437-dba1-4c37-b18b-a92659f39e92">
-                  <DataType>Integer</DataType>
-                  <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="faabbda7-7494-4fdf-b3d4-6f31c626b9ac">
-                    <TableID>dbo_Playback</TableID>
-                    <ColumnID>Day</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-        </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="70e679ec-815b-47ea-8826-e8d8d0ad60ee">
-          <CubeDimensionID>Time</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="0141ade8-0025-4099-b92b-ed879bee379e">
-              <AttributeID>Hour</AttributeID>
-              <KeyColumns>
-                <KeyColumn dwd:design-time-name="b8385356-26d6-4e66-a7e7-5e8b86c7c0cb">
-                  <DataType>Integer</DataType>
-                  <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="50ed7e72-b1c5-4c06-a86a-d5e6e5a3192a">
-                    <TableID>dbo_Playback</TableID>
-                    <ColumnID>Hour</ColumnID>
-                  </Source>
-                </KeyColumn>
-                <KeyColumn dwd:design-time-name="0e206261-b4f7-47b8-823b-be02f7e057a0">
-                  <DataType>Integer</DataType>
-                  <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5b571fa7-1831-4ad9-9899-295215f90005">
-                    <TableID>dbo_Playback</TableID>
-                    <ColumnID>Minute</ColumnID>
-                  </Source>
-                </KeyColumn>
-                <KeyColumn dwd:design-time-name="cc24710e-1c42-461c-b035-5cfe24827684">
-                  <DataType>Integer</DataType>
-                  <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="786b724a-5211-46c0-b6bc-ba559d901188">
-                    <TableID>dbo_Playback</TableID>
-                    <ColumnID>Second</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-        </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="7d8aae18-cd27-44d7-8828-27cb8bb74f24">
-          <CubeDimensionID>Customer</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="c37c8192-b333-4782-be0e-1bfa29bd3a28">
-              <AttributeID>ID</AttributeID>
-              <KeyColumns>
-                <KeyColumn dwd:design-time-name="8c39fd11-013f-4bf8-aed3-60a4ba1eab6d">
-                  <DataType>Integer</DataType>
-                  <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f3c9aa6e-d0e0-4037-a793-941b4a8561d2">
-                    <TableID>dbo_Playback</TableID>
-                    <ColumnID>IDCustomer</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-        </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2c329644-29ab-4f60-b36f-602903e623d9">
-          <CubeDimensionID>Song</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="d7f2a070-ecf8-48a9-9c27-155e2a37a98d">
-              <AttributeID>ID</AttributeID>
-              <KeyColumns>
-                <KeyColumn dwd:design-time-name="208d71a3-3752-4bad-a5bc-bf165dbd701c">
-                  <DataType>Integer</DataType>
-                  <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="db821f3f-af64-4fd6-83de-9554487ec3c7">
-                    <TableID>dbo_Playback</TableID>
-                    <ColumnID>IDSong</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-        </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8a5ec767-54aa-44db-846d-8d6e5078b0e6">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="99d3ccb5-560a-4d08-8417-ae7ac00fe5c3">
           <CubeDimensionID>Junk</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="759f9893-e57d-4cbf-9f22-8a25c727c317">
+            <Attribute dwd:design-time-name="5364e551-72e6-45f1-9ede-cf552105a92b">
               <AttributeID>ID</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="931fdd87-d85d-41df-82b8-d2ff3b2cdd4e">
+                <KeyColumn dwd:design-time-name="11339d57-ad89-4f00-a236-4a7ac950baae">
                   <DataType>Integer</DataType>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="544a4ce9-c99d-428e-8a64-82aa3bf42cef">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="48ee9bfb-82bc-4fa3-8704-502e1af7ace1">
                     <TableID>dbo_Playback</TableID>
                     <ColumnID>IDJunk</ColumnID>
                   </Source>
@@ -766,40 +851,90 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="6176d3d5-b44a-432b-989e-ca0255f44ac0">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1c28feea-a427-4eef-ae6b-8c8101eb9226">
+          <CubeDimensionID>ID Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="23dde404-dabf-4c83-aa7a-416105445401">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0be6c31f-6fd9-4549-bb66-b80230834844">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7213cea3-da03-4248-a3c2-a495793cacea">
+                    <TableID>dbo_Playback</TableID>
+                    <ColumnID>IDDate</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="47d7ba95-9354-4ac6-b7d6-388fd4c7615a">
+          <CubeDimensionID>Customer</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c4dadcc4-255f-450d-81cf-bba58e42bcfd">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ab9b9888-7d49-45eb-88ae-4af936ee3832">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="26420db7-972a-4ae8-ade2-c79fb46821da">
+                    <TableID>dbo_Playback</TableID>
+                    <ColumnID>IDCustomer</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="439a869b-359f-41bf-a8cc-de376e5b2b8d">
+          <CubeDimensionID>Time</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="cec6434f-a294-4d89-a9e9-323e3ab0d261">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="96895d9a-8482-4be4-bebd-3a3aa10a459a">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="79e6283c-5442-4173-9fcb-7a63bbb8e03f">
+                    <TableID>dbo_Playback</TableID>
+                    <ColumnID>IDTime</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="25feea8e-442d-44c6-80b5-733556df5ad6">
+          <CubeDimensionID>Song</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="cb3754cd-2403-408b-a4e5-89fd1318ca81">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="89262b6b-24d2-409c-ad88-15b8f04d75ad">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ae09e32e-eeb0-45da-aafb-16e0ecb4b958">
+                    <TableID>dbo_Playback</TableID>
+                    <ColumnID>IDSong</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="0370ea7c-1440-4ca9-b9df-961d114361b7">
           <CubeDimensionID>Playlist</CubeDimensionID>
           <MeasureGroupID>Playlist Song</MeasureGroupID>
-        </Dimension>
-        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="32f4c64e-278f-4e85-8972-fa9374acd232">
-          <CubeDimensionID>ID Song - Year</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="f22e7b9d-5846-41d7-a7bf-526a0792a8f1">
-              <AttributeID>Year</AttributeID>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-          <IntermediateCubeDimensionID>Song</IntermediateCubeDimensionID>
-          <IntermediateGranularityAttributeID>Year</IntermediateGranularityAttributeID>
-          <Materialization>Regular</Materialization>
-          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-        </Dimension>
-        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="83e1d53e-492b-4a4c-8b58-22ed878a145f">
-          <CubeDimensionID>ID Song - Artist - Year</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="4969be59-c0c6-4240-a2a2-19fda1780e89">
-              <AttributeID>Year</AttributeID>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-          <IntermediateCubeDimensionID>Song</IntermediateCubeDimensionID>
-          <IntermediateGranularityAttributeID>Artist - Year</IntermediateGranularityAttributeID>
-          <Materialization>Regular</Materialization>
-          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
         </Dimension>
       </Dimensions>
       <Partitions />
     </MeasureGroup>
-    <MeasureGroup dwd:design-time-name="38ea91c2-bace-450d-9d46-6e69fc89c25f">
+    <MeasureGroup dwd:design-time-name="85043cfc-2f5f-4cbf-9d64-ef6bcfc0f9d2">
       <ID>Playlist Creation</ID>
       <Name>Playlist Creation</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -807,25 +942,25 @@
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
-        <Measure dwd:design-time-name="e8e0c934-723e-4766-93e1-8985ee2e0031">
+        <Measure dwd:design-time-name="72ea7688-5ef5-44fa-aea1-7182f3f7a9fc">
           <ID>Playlist Duration</ID>
           <Name>Playlist Duration</Name>
-          <Source dwd:design-time-name="562ceee5-6ac1-465c-bddc-65d80294061d">
+          <Source dwd:design-time-name="16a4e02e-4c14-4a02-b312-3589ad2d855c">
             <DataType>Integer</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="7eb2ba81-fb63-4f44-ab16-40243317b078">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="cb4e27f2-22f8-4ba5-b6fe-f423121510ce">
               <TableID>dbo_PlaylistCreation</TableID>
               <ColumnID>PlaylistDuration</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="2a668ac8-7edb-41ca-b400-3c4ee6853133">
+        <Measure dwd:design-time-name="f964b07f-a418-411c-8d3c-89bb6360c268">
           <ID>Playlist Creation Count</ID>
           <Name>Playlist Creation Count</Name>
           <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="8616170d-8124-440f-9b7b-c74ca5bed1ba">
+          <Source dwd:design-time-name="9262278b-495c-4c4c-9c4e-eb4806ca8875">
             <DataType>Integer</DataType>
             <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="895c1513-11fe-4efa-8913-c76625b0d69a">
+            <Source xsi:type="RowBinding" dwd:design-time-name="a54ab5e0-39f2-4480-8310-df4492af565a">
               <TableID>dbo_PlaylistCreation</TableID>
             </Source>
           </Source>
@@ -834,15 +969,15 @@
       <StorageMode>Molap</StorageMode>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="446a8c78-e4f1-4791-be83-11266dcffea7">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d3cc327a-a39b-4e6b-b420-ddfbcac7d056">
           <CubeDimensionID>Playlist</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="fab5764b-962a-48a4-819b-009a8ab4fcf0">
+            <Attribute dwd:design-time-name="2014ddfe-f8c9-41bb-9c54-45cf00a6b86b">
               <AttributeID>ID</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="7fec43b6-0e6f-4b4c-97bc-81c6af252113">
+                <KeyColumn dwd:design-time-name="13270c91-8d69-44b4-88d8-25b97d8a7e5a">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2b069aa1-befe-4799-a963-17b1c4ca915e">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ee002ffd-cad8-46fe-8649-8fb9c5f8b729">
                     <TableID>dbo_PlaylistCreation</TableID>
                     <ColumnID>IDPlaylist</ColumnID>
                   </Source>
@@ -852,15 +987,34 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="700c78a1-fb73-4308-ab25-8bb2fde76f13">
-          <CubeDimensionID>Customer</CubeDimensionID>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ed2a4c7e-ca27-443b-ac87-56e5e0c46f1a">
+          <CubeDimensionID>ID Date</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="a5397e90-792d-4c82-ad95-14984171ab6c">
+            <Attribute dwd:design-time-name="56a71e79-a843-49ed-bcf6-c034a75c3452">
               <AttributeID>ID</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="fb033229-c48d-4f23-bb2b-f9e1d0b7318a">
+                <KeyColumn dwd:design-time-name="de1d76e8-8b0a-420c-81c9-57d3b0f6c12b">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="903fe147-390f-47be-bd9f-667a0597a639">
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c93f62db-bd10-4333-8cb9-7e29e23feaf5">
+                    <TableID>dbo_PlaylistCreation</TableID>
+                    <ColumnID>IDDate</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="27acd057-40c8-4a68-8fad-c30c8e212eef">
+          <CubeDimensionID>Customer</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="64010885-8f3e-4564-b412-a33ba8d687c2">
+              <AttributeID>ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2ceb6c2d-ef9c-4981-b2ad-c121bca128c2">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d9489402-e3ab-462d-be83-e4d13cc52bdf">
                     <TableID>dbo_PlaylistCreation</TableID>
                     <ColumnID>IDCustomer</ColumnID>
                   </Source>
@@ -870,49 +1024,14 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ca6cdf52-0209-45c0-84d1-1f18b52e9a6b">
-          <CubeDimensionID>Date</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="682a20dc-3802-4147-a195-8fbe230408b1">
-              <AttributeID>Year</AttributeID>
-              <KeyColumns>
-                <KeyColumn dwd:design-time-name="85b1c9b1-d05e-4ce8-8ff1-8ee78e6e0b22">
-                  <DataType>Integer</DataType>
-                  <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d908c1b6-bff8-440a-b188-afc42b8aeaa0">
-                    <TableID>dbo_PlaylistCreation</TableID>
-                    <ColumnID>Year</ColumnID>
-                  </Source>
-                </KeyColumn>
-                <KeyColumn dwd:design-time-name="ec6e6217-05f5-42c0-8962-1a5750eccd60">
-                  <DataType>Integer</DataType>
-                  <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="19aa80b8-59dd-41a2-967f-ad8701744d9f">
-                    <TableID>dbo_PlaylistCreation</TableID>
-                    <ColumnID>MonthNumber</ColumnID>
-                  </Source>
-                </KeyColumn>
-                <KeyColumn dwd:design-time-name="57efa402-cc92-4b88-b993-2c9f28698e4b">
-                  <DataType>Integer</DataType>
-                  <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1ab1595d-f8c8-4758-9dd6-d76f14fea98c">
-                    <TableID>dbo_PlaylistCreation</TableID>
-                    <ColumnID>Day</ColumnID>
-                  </Source>
-                </KeyColumn>
-              </KeyColumns>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-        </Dimension>
-        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="7912b338-cbc5-40bf-bede-160b22226898">
+        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="5821a00a-d3b1-4f37-ab42-736fb161c2f7">
           <CubeDimensionID>Song</CubeDimensionID>
           <MeasureGroupID>Playlist Song</MeasureGroupID>
         </Dimension>
       </Dimensions>
       <Partitions />
     </MeasureGroup>
-    <MeasureGroup dwd:design-time-name="75279e58-e56a-4c69-b184-e9c10f71f77f">
+    <MeasureGroup dwd:design-time-name="2107f65c-aaf4-4045-b792-0ffd0f9d62ff">
       <ID>Playlist Song</ID>
       <Name>Playlist Song</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -920,14 +1039,14 @@
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
-        <Measure dwd:design-time-name="571800e9-80b7-4998-b9ba-5bdae5b9655f">
+        <Measure dwd:design-time-name="cbbc65e2-cd93-44ba-9d65-701b1c4d93e6">
           <ID>Playlist Song Count</ID>
           <Name>Playlist Song Count</Name>
           <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="23e5b821-3475-44cf-ab22-29293740d809">
+          <Source dwd:design-time-name="28787ba6-d5ca-49c1-a848-0f560b10521f">
             <DataType>Integer</DataType>
             <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="0f05c719-b60c-44d3-aa95-e5173c74be9a">
+            <Source xsi:type="RowBinding" dwd:design-time-name="51a2e5d8-40a4-4165-ac8c-2d4d62d35d74">
               <TableID>dbo_PlaylistSong</TableID>
             </Source>
           </Source>
@@ -936,15 +1055,15 @@
       <StorageMode>Molap</StorageMode>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="46d1d4e8-60bb-472d-9993-0d3ed981915a">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="28f30bb0-ab34-4da0-9a43-fbc0c91a29fb">
           <CubeDimensionID>Playlist</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="bfab3238-25b0-4097-b7d2-3d5369263a5b">
+            <Attribute dwd:design-time-name="83c55374-9d85-4fae-bd1f-b5ac32093e6e">
               <AttributeID>ID</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="b66934e2-2146-4627-9fbf-489dec460b18">
+                <KeyColumn dwd:design-time-name="b59e9741-5de2-4eeb-b8dc-6a977114f3d0">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="af641412-34a8-4828-8e17-bda7b398f11d">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="aa766949-9e3d-4e09-adcb-f04cde6fee86">
                     <TableID>dbo_PlaylistSong</TableID>
                     <ColumnID>IDPlaylist</ColumnID>
                   </Source>
@@ -954,15 +1073,15 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4504c8e9-bbd6-4347-9ca8-e65d3ead565c">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="00a567f9-060e-458f-8bb3-355704ca48a4">
           <CubeDimensionID>Song</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="e2ebf92e-83d4-42e9-8e64-2f31c75c6294">
+            <Attribute dwd:design-time-name="ca8d3b41-6d6a-4ec4-bec3-e6d70aabbffc">
               <AttributeID>ID</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="1c3cdf80-33f6-4185-a370-88ac67866172">
+                <KeyColumn dwd:design-time-name="a28456d4-770b-4869-b5c5-51ddc508206f">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1009e25f-a306-48b8-974e-c466658d1b42">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a3699cb8-79ce-4ad9-9730-52a0a809c5c9">
                     <TableID>dbo_PlaylistSong</TableID>
                     <ColumnID>IDSong</ColumnID>
                   </Source>
@@ -972,37 +1091,11 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="d2a1dd61-16f6-4557-9d3c-7007babc4b0a">
-          <CubeDimensionID>ID Song - Year</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="2dc480c5-bd66-46c4-9a25-2212507f8f83">
-              <AttributeID>Year</AttributeID>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-          <IntermediateCubeDimensionID>Song</IntermediateCubeDimensionID>
-          <IntermediateGranularityAttributeID>Year</IntermediateGranularityAttributeID>
-          <Materialization>Regular</Materialization>
-          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-        </Dimension>
-        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="c8011a27-d8a9-4bb4-b505-d7a9cd8866e6">
-          <CubeDimensionID>ID Song - Artist - Year</CubeDimensionID>
-          <Attributes>
-            <Attribute dwd:design-time-name="a025c075-2bf2-496f-bb33-2a9a2e89f2ae">
-              <AttributeID>Year</AttributeID>
-              <Type>Granularity</Type>
-            </Attribute>
-          </Attributes>
-          <IntermediateCubeDimensionID>Song</IntermediateCubeDimensionID>
-          <IntermediateGranularityAttributeID>Artist - Year</IntermediateGranularityAttributeID>
-          <Materialization>Regular</Materialization>
-          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-        </Dimension>
       </Dimensions>
       <Partitions />
     </MeasureGroup>
   </MeasureGroups>
-  <Source dwd:design-time-name="8462a60d-6e55-4143-94ec-c263b506f8c0">
+  <Source dwd:design-time-name="a5c7d5f5-ae65-40d0-893d-7bc3d041b3c9">
     <DataSourceViewID>Spotify DW</DataSourceViewID>
   </Source>
 </Cube>

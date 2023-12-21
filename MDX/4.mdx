@@ -1,0 +1,16 @@
+/* Podaj 5 klientów z kontem premium posiadanym przynajmniej od miesi¹ca, którzy wykonali najwiêcej odtworzeñ w obecnym i zesz³ym miesi¹cu. */
+
+SELECT
+NON EMPTY {[Measures].[Playback Count]} ON COLUMNS,
+NON EMPTY {
+    TOPCOUNT(
+		[Customer].[Login ID].[Login ID].Members,
+		5,
+		[Measures].[Playback Count]
+	)
+} ON ROWS
+FROM [Spotify DW]
+WHERE (
+    {([Date].[Year].[2023], [Date].[Month Number].[12]), ([Date].[Year].[2023], [Date].[Month Number].[11])},
+	{[Customer].[Subscription].[paid]}
+)

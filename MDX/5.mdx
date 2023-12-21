@@ -1,0 +1,26 @@
+/* Porównaj iloœæ odtworzeñ wykonanych w obecnym i zesz³ym miesi¹cu przypisanych artystom pod wzglêdem zale¿noœci od gatunków wykonywanych przez artystów jak i ich krajów pochodzenia. */
+
+WITH
+MEMBER [Measures].[PlaybackCountCurrentMonth] AS
+    (
+        [Date].[Year].[2023], 
+        [Date].[Month Number].[12], 
+        [Measures].[Playback Count]
+    )
+
+MEMBER [Measures].[PlaybackCountPreviousMonth] AS
+    (
+        [Date].[Year].[2023], 
+        [Date].[Month Number].[11], 
+        [Measures].[Playback Count]
+    )
+
+SELECT
+NON EMPTY {[Measures].[PlaybackCountCurrentMonth], [Measures].[PlaybackCountPreviousMonth]} ON COLUMNS,
+NON EMPTY {
+    (
+        [Song].[Origin Country].[Origin Country].MEMBERS *
+        [Song].[Music Genre].[Music Genre].MEMBERS
+    )
+} ON ROWS
+FROM [Spotify DW]

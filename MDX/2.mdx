@@ -1,0 +1,30 @@
+/* Porównaj iloœæ odtworzeñ utworów d³u¿szych ni¿ 3 minuty z utworami trwaj¹cych poni¿ej 3 minut w obecnym i zesz³ym miesi¹cu. */
+
+WITH
+MEMBER [Song].[Duration Category].[Below3Minutes] AS
+    Aggregate({
+        [Song].[Duration Category].[0-60],
+        [Song].[Duration Category].[60-120],
+        [Song].[Duration Category].[120-180]
+    })
+
+MEMBER [Song].[Duration Category].[Above3Minutes] AS
+    Aggregate({
+        [Song].[Duration Category].[180-240],
+        [Song].[Duration Category].[240-300],
+        [Song].[Duration Category].[300-360],
+        [Song].[Duration Category].[360-420],
+        [Song].[Duration Category].[420-]
+    })
+
+SELECT {[Measures].[Playback Count]} ON COLUMNS,
+NON EMPTY {
+    CrossJoin(
+        {[Date].[Year].[2023]},
+        {[Date].[Month Number].[12], [Date].[Month Number].[11]}
+    ) * {
+        {[Song].[Duration Category].[Below3Minutes]},
+        {[Song].[Duration Category].[Above3Minutes]}
+    }
+} ON ROWS
+FROM [Spotify DW]

@@ -1,0 +1,47 @@
+/* Porównaj œredni¹ liczbê utworów w bibliotece u¿ytkownika i liczbê obserwowanych artystów przez u¿ytkownika w zale¿noœci od ich wieku. */
+
+/*WITH 
+    MEMBER [Measures].[AvgSongsPerUser] AS
+        Avg(
+            [Customer].[Age Category].CurrentMember,
+            [Measures].[Number Of Songs In Library]
+        )
+    
+    MEMBER [Measures].[AvgFollowedArtistsPerUser] AS
+        Avg(
+            [Customer].[Age Category].CurrentMember,
+            [Measures].[Number Of Followed Artists]
+        )
+SELECT 
+    {
+        [Measures].[AvgSongsPerUser],
+        [Measures].[AvgFollowedArtistsPerUser]
+    } ON COLUMNS,
+    [Customer].[Age Category].Members ON ROWS
+FROM [Spotify DW]*/
+
+WITH 
+    MEMBER [Measures].[AvgSongsPerUser] AS
+        Avg(
+            NonEmpty(
+                [Customer].[Age Category].CurrentMember,
+                [Measures].[Number Of Songs In Library]
+            ),
+            [Measures].[Number Of Songs In Library]
+        )
+    
+    MEMBER [Measures].[AvgFollowedArtistsPerUser] AS
+        Avg(
+            NonEmpty(
+                [Customer].[Age Category].CurrentMember,
+                [Measures].[Number Of Followed Artists]
+            ),
+            [Measures].[Number Of Followed Artists]
+        )
+SELECT 
+    {
+        [Measures].[AvgSongsPerUser],
+        [Measures].[AvgFollowedArtistsPerUser]
+    } ON COLUMNS,
+    [Customer].[Age Category].[Age Category].Members ON ROWS
+FROM [Spotify DW]

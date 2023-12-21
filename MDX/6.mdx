@@ -1,0 +1,46 @@
+/* Porównaj liczbê ods³uchañ utworów przez osoby które maj¹ oraz takie które nie maj¹ subskrypcji w analizowanym miesi¹cu w stosunku do poprzednich miesiêcy. */
+
+WITH 
+MEMBER [Measures].[Playback SubscribedCurrentMonth] AS
+    (
+        [Date].[Year].[2023],
+        [Date].[Month Number].[12],
+        [Customer].[Subscription].[paid],
+        [Measures].[Playback Count]
+    )
+
+MEMBER [Measures].[Playback SubscribedPreviousMonth] AS
+    (
+        [Date].[Year].[2023],
+        [Date].[Month Number].[11],
+        [Customer].[Subscription].[paid],
+        [Measures].[Playback Count]
+    )
+
+MEMBER [Measures].[Playback NonSubscribedCurrentMonth] AS
+    (
+        [Date].[Year].[2023],
+        [Date].[Month Number].[12],
+        [Customer].[Subscription].[free],
+        [Measures].[Playback Count]
+    )
+
+MEMBER [Measures].[Playback NonSubscribedPreviousMonth] AS
+    (
+        [Date].[Year].[2023],
+        [Date].[Month Number].[11],
+        [Customer].[Subscription].[free],
+        [Measures].[Playback Count]
+    )
+
+SELECT
+NON EMPTY {
+    [Measures].[Playback SubscribedCurrentMonth],
+    [Measures].[Playback SubscribedPreviousMonth],
+    [Measures].[Playback NonSubscribedCurrentMonth],
+    [Measures].[Playback NonSubscribedPreviousMonth]
+} ON COLUMNS,
+NON EMPTY {
+    [Date].[Year].[2023]
+} ON ROWS
+FROM [Spotify DW]

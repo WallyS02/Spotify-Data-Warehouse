@@ -1,0 +1,25 @@
+/* Porównaj iloœæ odtworzeñ na ró¿nych urz¹dzeniach w analizowanym miesi¹cu relatywnie do poprzednich. */
+
+WITH 
+MEMBER [Measures].[Playback Difference] AS
+    (
+        [Date].[Year].CurrentMember,
+        [Date].[Month Number].CurrentMember,
+        [Measures].[Playback Count]
+    ) - (
+        [Date].[Year].PrevMember,
+        [Date].[Month Number].PrevMember,
+        [Measures].[Playback Count]
+    )
+
+SELECT
+NON EMPTY {[Measures].[Playback Count], [Measures].[Playback Difference]} ON COLUMNS,
+NON EMPTY {
+	CrossJoin(
+        {[Date].[Year].[2023]},
+        {[Date].[Month Number].[12], [Date].[Month Number].[11]}
+    ) * {
+        {[Junk].[Device].[Device].Members}
+    }
+} ON ROWS
+FROM [Spotify DW]

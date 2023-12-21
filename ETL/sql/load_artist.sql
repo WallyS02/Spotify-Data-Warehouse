@@ -22,10 +22,11 @@ FETCH NEXT FROM artist_cursor INTO @ID, @Name, @Surname, @Birth_date, @Phone_Num
 
 WHILE @@FETCH_STATUS = 0
 BEGIN
-    DECLARE @Country VARCHAR(100), @Followers INT, @NumberOfTracks INT, @Genre VARCHAR(100), @DebutDate DATE, @TotalListeningHours DECIMAL(10, 2), @AverageTrackLength DECIMAL(10, 2);
+    DECLARE @Country VARCHAR(100), @Followers INT, @NumberOfTracks INT, @Genre VARCHAR(100), @DebutDate DATE, @TotalListeningHours DECIMAL(10, 2), @AverageTrackLength DECIMAL(10, 2), @DateId INT;
     SELECT @Country = Country, @Followers = Followers, @NumberOfTracks = NumberOfTracks, @Genre = Genre, @DebutDate = DebutDate, @TotalListeningHours = TotalListeningHours, @AverageTrackLength = AverageTrackLength FROM auxiliary.dbo.SpotifyArtistsCSV WHERE ArtistID = @ID
     DECLARE @Age INT = YEAR(GETDATE()) - YEAR(@Birth_date)
     DECLARE @ArtistExperience INT = DATEDIFF(DAY, @DebutDate, GETDATE())
+	SELECT @DateId = ID FROM Date WHERE Year = YEAR(@DebutDate) AND MonthNumber = MONTH(@DebutDate) AND Day = DAY(@DebutDate)
     IF NOT EXISTS (
         SELECT 1
         FROM Artist
@@ -76,10 +77,7 @@ BEGIN
                 WHEN @NumberOfTracks BETWEEN 90 AND 100 THEN '90-100'
                 ELSE '100-'
             END
-        AND MusicGenre = @Genre
-        AND Year = YEAR(@DebutDate)
-        AND MonthNumber = MONTH(@DebutDate)
-        AND Day = DAY(@DebutDate)
+        AND IDDate = @DateId
         AND TotalHoursOfSongsCategory =
             CASE
                 WHEN @TotalListeningHours BETWEEN 0 AND 1 THEN '0-1'
@@ -123,9 +121,7 @@ BEGIN
 				FollowerNumberCategory,
 				SongQuantityCategory,
 				MusicGenre,
-				Year,
-				MonthNumber,
-				Day,
+				IDDate,
 				TotalHoursOfSongsCategory,
 				UpToDate,
 				ArtistExperienceCategory
@@ -176,9 +172,7 @@ BEGIN
 					ELSE '100-'
 				END,
 				@Genre,
-				YEAR(@DebutDate),
-				MONTH(@DebutDate),
-				DAY(@DebutDate),
+				@DateId,
 				CASE
 					WHEN @TotalListeningHours BETWEEN 0 AND 1 THEN '0-1'
 					WHEN @TotalListeningHours BETWEEN 1 AND 2 THEN '1-2'
@@ -219,9 +213,7 @@ BEGIN
 				FollowerNumberCategory,
 				SongQuantityCategory,
 				MusicGenre,
-				Year,
-				MonthNumber,
-				Day,
+				IDDate,
 				TotalHoursOfSongsCategory,
 				UpToDate,
 				ArtistExperienceCategory
@@ -272,9 +264,7 @@ BEGIN
 					ELSE '100-'
 				END,
 				@Genre,
-				YEAR(@DebutDate),
-				MONTH(@DebutDate),
-				DAY(@DebutDate),
+				@DateId,
 				CASE
 					WHEN @TotalListeningHours BETWEEN 0 AND 1 THEN '0-1'
 					WHEN @TotalListeningHours BETWEEN 1 AND 2 THEN '1-2'

@@ -21,8 +21,9 @@ FETCH NEXT FROM album_cursor INTO @ID, @Title, @Length, @Release_date, @ID_a;
 WHILE @@FETCH_STATUS = 0
 BEGIN
     DECLARE @SecondsLength INT = DATEDIFF(SECOND, CAST('00:00:00' AS TIME), @Length)
-    DECLARE @ArtistId INT
+    DECLARE @ArtistId INT, @DateId INT
     SELECT @ArtistId = ID FROM Artist WHERE PseudonymID = @ID_a AND UpToDate = 1
+    SELECT @DateId = ID FROM Date WHERE Year = YEAR(@Release_date) AND MonthNumber = MONTH(@Release_date) AND Day = DAY(@Release_date)
     IF NOT EXISTS (
         SELECT 1
         FROM Album
@@ -38,18 +39,14 @@ BEGIN
                 WHEN @SecondsLength BETWEEN 360 AND 420 THEN '360-420'
                 ELSE '420-'
             END
-        AND Year = YEAR(@Release_date)
-        AND MonthNumber = MONTH(@Release_date)
-        AND Day = DAY(@Release_date)
+        AND IDDate = @DateId
         AND IDArtist = @ArtistId
     )
     BEGIN
         INSERT INTO Album (
             Title,
             DurationCategory,
-            Year,
-            MonthNumber,
-            Day,
+			IDDate,
             IDArtist
         )
         VALUES (
@@ -64,9 +61,7 @@ BEGIN
                 WHEN @SecondsLength BETWEEN 360 AND 420 THEN '360-420'
                 ELSE '420-'
             END,
-            YEAR(@Release_date),
-            MONTH(@Release_date),
-            DAY(@Release_date),
+            @DateId,
             @ArtistId
         );
     END

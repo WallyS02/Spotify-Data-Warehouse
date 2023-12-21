@@ -17,7 +17,7 @@ def generate_albums():
         entity = pd.DataFrame({
             "TITLE": [faker.word().capitalize() + " " + faker.word().capitalize()],
             "LENGTH": [faker.time()],
-            "RELEASE_DATE": [faker.date()],
+            "RELEASE_DATE": [faker.date_between().strftime('%Y-%m-%d')],
             "ID_A": [random.randint(1, ARTISTS_NUMBER)]
         })
         df = pd.concat([df, entity], ignore_index=True)
@@ -32,7 +32,7 @@ def expand_albums():
         entity = pd.DataFrame({
             "TITLE": [faker.word().capitalize() + " " + faker.word().capitalize()],
             "LENGTH": [faker.time()],
-            "RELEASE_DATE": [faker.date()],
+            "RELEASE_DATE": [faker.date_between().strftime('%Y-%m-%d')],
             "ID_A": [random.randint(1, ARTISTS_NUMBER)]
         })
         df = pd.concat([df, entity], ignore_index=True)

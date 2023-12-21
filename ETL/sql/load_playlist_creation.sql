@@ -19,9 +19,9 @@ FETCH NEXT FROM playlist_creation_cursor INTO @ID, @Creation_Time, @Length, @ID_
 
 WHILE @@FETCH_STATUS = 0
 BEGIN
-    DECLARE @CustomerId INT
+    DECLARE @CustomerId INT, @DateId INT
     SELECT @CustomerId = ID FROM Customer WHERE LoginID = @ID_c AND UpToDate = 1
-
+    SELECT @DateId = ID FROM Date WHERE Year = YEAR(@Creation_Time) AND MonthNumber = MONTH(@Creation_Time) AND Day = DAY(@Creation_Time)
     DECLARE @SecondsLength INT = DATEDIFF(SECOND, CAST('00:00:00' AS TIME), @Length)
 
     IF NOT EXISTS (
@@ -29,26 +29,20 @@ BEGIN
         FROM PlaylistCreation
         WHERE IDCustomer = @CustomerId
         AND IDPlaylist = @ID
-        AND Year = YEAR(@Creation_Time)
-        AND MonthNumber = MONTH(@Creation_Time)
-        AND Day = DAY(@Creation_Time)
+        AND IDDate = @DateId
         AND PlaylistDuration = @SecondsLength
     )
     BEGIN
         INSERT INTO PlaylistCreation (
             IDCustomer,
             IDPlaylist,
-            Year,
-            MonthNumber,
-            Day,
+            IDDate,
             PlaylistDuration
         )
         VALUES (
             @CustomerId,
             @ID,
-            YEAR(@Creation_Time),
-            MONTH(@Creation_Time),
-            DAY(@Creation_Time),
+            @DateId,
             @SecondsLength
         );
     END

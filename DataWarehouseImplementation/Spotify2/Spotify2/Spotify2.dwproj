@@ -20,24 +20,24 @@
   </Cubes>
   <Dimensions>
     <ProjectItem>
-      <Name>Date.dim</Name>
-      <FullPath>Date.dim</FullPath>
+      <Name>Junk.dim</Name>
+      <FullPath>Junk.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Time.dim</Name>
-      <FullPath>Time.dim</FullPath>
+      <Name>Date.dim</Name>
+      <FullPath>Date.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Customer.dim</Name>
       <FullPath>Customer.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Song.dim</Name>
-      <FullPath>Song.dim</FullPath>
+      <Name>Time.dim</Name>
+      <FullPath>Time.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Junk.dim</Name>
-      <FullPath>Junk.dim</FullPath>
+      <Name>Song.dim</Name>
+      <FullPath>Song.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Playlist.dim</Name>

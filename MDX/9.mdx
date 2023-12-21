@@ -1,0 +1,17 @@
+/* Którzy artyœci zdobyli najwiêksz¹ liczbê ods³uchañ w bie¿¹cym i poprzednim miesi¹cu w zale¿noœci od regionu? */
+
+SELECT
+    NON EMPTY {[Measures].[Playback Count]} ON COLUMNS,
+    NON EMPTY { CrossJoin(
+        {[Date].[Year].[2023]},
+        {[Date].[Month Number].[12], [Date].[Month Number].[11]},
+		{[Song].[Origin Country].[Origin Country].Members}
+    ) * {
+		TOPCOUNT(
+			[Song].[Pseudonym ID].[Pseudonym ID].Members,
+			10,
+			[Measures].[Playback Count]
+		)
+    }
+    } ON ROWS
+FROM [Spotify DW]

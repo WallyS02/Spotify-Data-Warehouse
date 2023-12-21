@@ -12,19 +12,19 @@
     </DataSources>
     <Dimensions>
       <Dimension>
-        <ID>Date</ID>
+        <ID>Junk</ID>
       </Dimension>
       <Dimension>
-        <ID>Time</ID>
+        <ID>Date</ID>
       </Dimension>
       <Dimension>
         <ID>Customer</ID>
       </Dimension>
       <Dimension>
-        <ID>Song</ID>
+        <ID>Time</ID>
       </Dimension>
       <Dimension>
-        <ID>Junk</ID>
+        <ID>Song</ID>
       </Dimension>
       <Dimension>
         <ID>Playlist</ID>

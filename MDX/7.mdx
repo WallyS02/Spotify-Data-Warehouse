@@ -1,0 +1,18 @@
+/* Podaj najbardziej ods³uchiwanych artystów na Spotify w zale¿noœci od gatunku miesi¹cu w stosunku do poprzednich miesiêcy. */
+
+SELECT
+NON EMPTY {[Measures].[Playback Count]} ON COLUMNS,
+NON EMPTY {
+	CrossJoin(
+        {[Date].[Year].[2023]},
+        {[Date].[Month Number].[12], [Date].[Month Number].[11]},
+		{[Song].[Music Genre].[Music Genre].Members}
+    ) * {
+		TOPCOUNT(
+			[Song].[Pseudonym ID].[Pseudonym ID].Members,
+			10,
+			[Measures].[Playback Count]
+		)
+    }
+} ON ROWS
+FROM [Spotify DW]

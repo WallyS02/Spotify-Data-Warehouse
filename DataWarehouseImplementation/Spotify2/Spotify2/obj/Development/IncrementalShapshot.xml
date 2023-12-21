@@ -19,63 +19,63 @@
     <ObjectSnapshots>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
-        <TimeStamp>9NB7hzZuLbDN7C7+FarBv7jnRS0=15.12.2023 12:45:4015.12.2023 12:45:40</TimeStamp>
+        <TimeStamp>w+Gq4SD2DnnVZznbsJUJaUSNg5I=21.12.2023 16:16:4621.12.2023 16:16:46</TimeStamp>
         <ID>
           <String>Spotify DW</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>z4aAL8m+va5AkHBM8bm8IlEegs8=15.12.2023 12:46:2315.12.2023 12:46:23</TimeStamp>
+        <TimeStamp>g6vl/8MlekV8c+l8P72G6OwGYk8=21.12.2023 16:16:5721.12.2023 16:16:57</TimeStamp>
         <ID>
           <String>Spotify DW</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>XYGJmUac1dXoqQS1/FQH8x8rj64=15.12.2023 12:48:3815.12.2023 10:15:58</TimeStamp>
-        <ID>
-          <String>Date</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>6l88ElaFEETA/Y2YVOyvpWvIWa8=15.12.2023 12:48:3815.12.2023 10:15:58</TimeStamp>
-        <ID>
-          <String>Time</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>j+frYWFGWBuQbrGQK8uCpbh+74o=15.12.2023 12:48:3815.12.2023 12:48:38</TimeStamp>
-        <ID>
-          <String>Customer</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>GbyDSdnVv2E67PELT0siymxUV10=15.12.2023 12:48:3815.12.2023 12:48:38</TimeStamp>
-        <ID>
-          <String>Song</String>
-        </ID>
-      </ObjectSnapshot>
-      <ObjectSnapshot>
-        <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>vn3309UwWsMWkMtasgafIkZkd+Q=15.12.2023 12:48:3815.12.2023 12:48:38</TimeStamp>
+        <TimeStamp>di3Sc9DpsqsUsDZpjPj9YV6sEh0=21.12.2023 16:17:4121.12.2023 16:17:27</TimeStamp>
         <ID>
           <String>Junk</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>o3dUFvGsSd5sPbM2gbPmTFfAulw=15.12.2023 12:48:3815.12.2023 12:48:38</TimeStamp>
+        <TimeStamp>iRZTfN9lybSGqG3i0Z24qUGArfg=21.12.2023 16:18:0821.12.2023 16:17:27</TimeStamp>
+        <ID>
+          <String>Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>ecOEwT+oKSAm+KIcgaTk/04b2rA=21.12.2023 16:20:5321.12.2023 16:17:27</TimeStamp>
+        <ID>
+          <String>Customer</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>s0+X3QSjsvALqO7EcCJmW+0RgTY=21.12.2023 16:18:5721.12.2023 16:17:27</TimeStamp>
+        <ID>
+          <String>Time</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>0kIAol/c+7InqJ9zCGsltiyYeNA=21.12.2023 16:20:5521.12.2023 16:17:27</TimeStamp>
+        <ID>
+          <String>Song</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>qCyzcSKS1jgP5YkBs1NyZqXrinM=21.12.2023 16:19:0821.12.2023 16:17:27</TimeStamp>
         <ID>
           <String>Playlist</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>IIDjohHRXTW7foD4UNsnnHQ86ZQ=15.12.2023 14:35:0915.12.2023 12:47:07br6K0MwgWzfOsbTvih7fckxx5q8=15.12.2023 12:48:3815.12.2023 12:47:07</TimeStamp>
+        <TimeStamp>dqYTvgqqOyfrv78JF7lsVcZuryo=21.12.2023 16:23:4621.12.2023 16:17:27S7MlKeRkJR+z1jOfc59Lwt/BAMk=21.12.2023 16:17:2721.12.2023 16:17:27</TimeStamp>
         <ID>
           <String>Spotify DW</String>
         </ID>
@@ -92,5 +92,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2023-12-15T13:35:13.306667Z</LastDeployed>
+  <LastDeployed>2023-12-21T15:23:51.17Z</LastDeployed>
 </DeploymentSnapshot>

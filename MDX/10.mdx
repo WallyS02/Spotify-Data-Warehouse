@@ -1,0 +1,21 @@
+/* Porównaj œredni¹ d³ugoœæ utworu w analizowanym miesi¹cu w stosunku do œredniej d³ugoœci utworu w poprzednich miesi¹cach. */
+
+WITH 
+    MEMBER [Measures].[AvgSongLengthCurrentMonth] AS
+        Avg(
+            [Date].[Year].[Month Number].[12],
+            [Measures].[Listened Song Duration]
+        )
+    
+    MEMBER [Measures].[AvgSongLengthPreviousMonth] AS
+        Avg(
+            [Date].[Year].[Month Number].[11],
+            [Measures].[Listened Song Duration]
+        )
+SELECT 
+    {
+        [Measures].[AvgSongLengthCurrentMonth],
+        [Measures].[AvgSongLengthPreviousMonth]
+    } ON COLUMNS,
+    [Date].[Year].[2023] ON ROWS
+FROM [Spotify DW]
